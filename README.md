@@ -8,16 +8,16 @@
 
 ## Architecture
 ```mermaid
-flowchart LR
-    UI[Streamlit UI] -->|POST /v1/chat/completions| API[FastAPI]
-    API --> DECISION[DecisionEngine]
-    DECISION -->|use_rag?| RAG[RetrievalPipeline]
-    RAG --> CTX[ContextBuilder]
-    DECISION --> STRAT[LLM Strategy]
-    STRAT --> LLM[HuggingFace Provider]
-    CTX --> LLM
-    LLM --> RESP[Response]
-    RESP --> UI
+graph LR;
+    UI[Streamlit UI] -->|POST /v1/chat/completions| API[FastAPI];
+    API --> DECISION[DecisionEngine];
+    DECISION -->|use_rag?| RAG[RetrievalPipeline];
+    RAG --> CTX[ContextBuilder];
+    DECISION --> STRAT[LLM Strategy];
+    STRAT --> LLM[LLM Provider HuggingFace];
+    CTX --> LLM;
+    LLM --> RESP[Response];
+    RESP --> UI;
 ```
 
 ## Key Rules
@@ -68,4 +68,3 @@ All tests in [tests](file:///Users/tatas/Downloads/fadel/tests):
 ## Notes
 - Deberta-v3-base is encoder-only and not compatible with generative chat. Use generative models compatible with `AutoModelForCausalLM`.
 - HuggingFace cache persisted with Docker volume to avoid re-downloads.
-

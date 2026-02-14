@@ -8,16 +8,16 @@
 
 ## Arsitektur Sistem (Flow Diagram)
 ```mermaid
-flowchart LR
-    UI[Streamlit UI] -->|POST /v1/chat/completions| API[FastAPI]
-    API --> DECISION[DecisionEngine]
-    DECISION -->|use_rag?| RAG[RetrievalPipeline]
-    RAG --> CTX[ContextBuilder]
-    DECISION --> STRAT[LLM Strategy Selector]
-    STRAT --> LLM[LLM Provider (HuggingFace)]
-    CTX --> LLM
-    LLM --> RESP[Response Builder]
-    RESP --> UI
+graph LR;
+    UI[Streamlit UI] -->|POST /v1/chat/completions| API[FastAPI];
+    API --> DECISION[DecisionEngine];
+    DECISION -->|use_rag?| RAG[RetrievalPipeline];
+    RAG --> CTX[ContextBuilder];
+    DECISION --> STRAT[LLM Strategy];
+    STRAT --> LLM[LLM Provider HuggingFace];
+    CTX --> LLM;
+    LLM --> RESP[Response];
+    RESP --> UI;
 ```
 
 ## ERD (Simplifikasi)
@@ -101,4 +101,3 @@ sequenceDiagram
 ## Catatan
 - Model generatif wajib (AutoModelForCausalLM). Deberta-v3-base tidak kompatibel untuk chat generatif.
 - Cache HuggingFace dipersist dengan volume `hf_cache`.
-
