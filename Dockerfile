@@ -6,8 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     USE_TF=0 \
     USE_TORCH=1 \
-    # Set default model to a smaller one for memory efficiency (0.5B ~1-2GB RAM)
-    DEFAULT_MODEL_ID="microsoft/deberta-v3-base"
+    # Default generative model (CPU friendly, bilingual)
+    DEFAULT_MODEL_ID="Qwen/Qwen2.5-0.5B-Instruct"
 
 # Set working directory
 WORKDIR /app
