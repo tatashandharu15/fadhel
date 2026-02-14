@@ -1,0 +1,1 @@
+{"response":"[ID]\nMaaf, saya tidak bisa menjawab pertanyaan ini.\n\n[EN]\nI'm sorry, I can't answer that question.","sources":[],"latency_ms":27367.236375808716,"trace":{"query_type":"domain_factual","use_rag":true,"retrieval_strategy":"vector_similarity","llm_strategy":"context_aware","model_id":"Qwen/Qwen2.5-0.5B-Instruct","confidence":0.8,"context_length":0}}

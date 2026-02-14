@@ -1,0 +1,87 @@
+/* Global Theme */
+.stApp {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Chat Input Styling */
+.stTextInput > div > div > input {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+/* Button Styling */
+.stButton > button {
+    border-radius: 8px;
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    font-weight: 600;
+}
+.stButton > button:hover {
+    background-color: #0052a3;
+    border-color: #0052a3;
+    color: white;
+}
+
+/* Answer Section Styling */
+.answer-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+.answer-id {
+    background-color: #f8fbff;
+    border-left: 4px solid #0066cc;
+}
+
+.answer-en {
+    background-color: #fff9f9;
+    border-left: 4px solid #cc0000;
+}
+
+.answer-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1em;
+}
+
+.refusal-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Source Box Styling */
+.source-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.source-header {
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    justify-content: space-between;
+}
+
+.source-score {
+    color: #28a745;
+    font-family: monospace;
+    font-weight: bold;
+}

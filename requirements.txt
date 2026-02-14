@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+requests
+httpx
+numpy==1.26.4
+sentence-transformers
+faiss-cpu
+transformers
+accelerate
+pypdf
+tiktoken
+# Torch will be installed separately in Dockerfile to target CPU-only wheel to save space
+sentencepiece
+protobuf

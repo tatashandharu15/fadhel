@@ -1,0 +1,38 @@
+services:
+  backend:
+    build: .
+    container_name: automotive-rag-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DEFAULT_MODEL_ID=Qwen/Qwen2.5-0.5B-Instruct
+      - USE_TF=0
+      - USE_TORCH=1
+      # Optionally set Hugging Face token via environment variable (do not commit secrets)
+      # - HF_TOKEN=${HF_TOKEN}
+      # Hugging Face Cache directory
+      - HF_HOME=/home/appuser/.cache/huggingface
+      # Prevent FAISS/OpenMP Deadlocks
+      - OMP_NUM_THREADS=1
+      - MKL_NUM_THREADS=1
+    volumes:
+      # Mount local directory for development (optional, remove for production)
+      - .:/app
+      # Persist Hugging Face models so they aren't downloaded on every restart
+      - hf_cache:/home/appuser/.cache/huggingface
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 60s
+      timeout: 30s
+      retries: 5
+      start_period: 300s # Give 5 minutes for initial model download
+
+volumes:
+  hf_cache:

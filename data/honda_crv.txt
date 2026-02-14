@@ -1,0 +1,25 @@
+Honda CR-V 2024 Specifications
+
+Engine & Performance
+The 2024 Honda CR-V comes with a 1.5L VTEC Turbo engine.
+- Max Power: 190 PS at 6000 rpm
+- Max Torque: 240 Nm at 1700-5000 rpm
+- Transmission: CVT with Earth Dreams Technology
+
+Hybrid Variant
+The CR-V e:HEV features a 2.0L i-VTEC engine combined with 2 electric motors.
+- System Power: 207 PS
+- System Torque: 335 Nm
+
+Dimensions
+- Length: 4691 mm
+- Width: 1866 mm
+- Height: 1681 mm
+- Wheelbase: 2701 mm
+
+Safety
+Equipped with Honda SENSING:
+- CMBS (Collision Mitigation Braking System)
+- LKAS (Lane Keeping Assist System)
+- RDM (Road Departure Mitigation)
+- ACC with LSF (Adaptive Cruise Control with Low Speed Follow)

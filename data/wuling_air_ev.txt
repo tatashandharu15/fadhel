@@ -1,0 +1,24 @@
+Wuling Air EV Specifications
+
+Battery & Range
+- Standard Range: 17.3 kWh battery, up to 200 km range.
+- Long Range: 26.7 kWh battery, up to 300 km range.
+- Battery Type: Lithium Ferro-Phosphate (LFP) IP67 Rating.
+
+Charging
+- AC Charging only.
+- Standard Range: ~8.5 hours (2.0 kW)
+- Long Range: ~4 hours (6.6 kW)
+
+Dimensions
+- Length: 2974 mm
+- Width: 1505 mm
+- Height: 1631 mm
+- Wheelbase: 2010 mm
+- Seating Capacity: 4 persons
+
+Features
+- IoV (Internet of Vehicle) via Wuling Remote Control App
+- WIND (Wuling Indonesian Command)
+- 10.25" Dual Screen (Long Range)
+- Easy Charging at home
