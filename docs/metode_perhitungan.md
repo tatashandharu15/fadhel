@@ -17,11 +17,9 @@ Dokumen ini menjelaskan secara akademik tiga komponen utama tersebut:
 ## 2. Embedding
 
 ### 2.1 Definisi
-**Embedding** adalah representasi numerik dari teks dalam bentuk vektor berdimensi tetap, misalnya $\mathbb{R}^d$. Setiap kalimat atau dokumen diubah menjadi vektor:
+**Embedding** adalah representasi numerik dari teks dalam bentuk vektor berdimensi tetap, misalnya ruang berdimensi *d* (sering ditulis sebagai R^d). Setiap kalimat atau dokumen diubah menjadi vektor:
 
-$$
-\text{teks} \rightarrow \mathbf{v} = [v_1, v_2, \dots, v_d]
-$$
+- teks → v = [v1, v2, ..., vd]
 
 Tujuan embedding:
 - Menangkap **makna semantik** teks.
@@ -38,13 +36,12 @@ Di dalam project ini:
 
 ### 3.1 Konsep
 Setelah teks diubah menjadi vektor, kita perlu ukuran “seberapa mirip” dua vektor:
-- Vektor query: $\mathbf{q}$
-- Vektor dokumen: $\mathbf{d}$
+- Vektor query: q
+- Vektor dokumen: d
 
 **Vector similarity** adalah fungsi:
-$$
-\text{sim}(\mathbf{q}, \mathbf{d}) \rightarrow \mathbb{R}
-$$
+
+- sim(q, d) → R
 
 Semakin besar nilai similarity, semakin mirip query dan dokumen secara semantik. Berbagai metrik dapat digunakan:
 - Dot product
@@ -57,29 +54,28 @@ FAISS digunakan sebagai **vector store** untuk:
 - Melakukan pencarian tetangga terdekat (nearest neighbors) berbasis similarity.
 
 Secara konseptual:
-1. Sistem menyiapkan matriks vektor dokumen \(D \in \mathbb{R}^{n \times d}\).
-2. Untuk setiap query \(\mathbf{q}\), FAISS mencari dokumen dengan similarity tertinggi.
+1. Sistem menyiapkan matriks vektor dokumen D berukuran n × d.
+2. Untuk setiap query q, FAISS mencari dokumen dengan similarity tertinggi.
 
 ---
 
 ## 4. Cosine Similarity
 
 ### 4.1 Definisi Matematis
-**Cosine similarity** mengukur sudut antara dua vektor:
+**Cosine similarity** mengukur sudut antara dua vektor.
 
-$$
-\text{cosine sim}(\mathbf{q}, \mathbf{d}) =
-\frac{\mathbf{q} \cdot \mathbf{d}}{\|\mathbf{q}\| \, \|\mathbf{d}\|}
-$$
+Secara sederhana, didefinisikan sebagai:
+
+- `cosine_sim(q, d) = (q · d) / (|q| × |d|)`
 
 Dengan:
-- $\mathbf{q} \cdot \mathbf{d}$ = dot product antara dua vektor
-- $\|\mathbf{q}\|$ = norma (panjang) vektor $\mathbf{q}$
-- $\|\mathbf{d}\|$ = norma vektor $\mathbf{d}$
+- `q · d` = dot product antara dua vektor
+- `|q|` = norma (panjang) vektor q
+- `|d|` = norma vektor d
 
 Nilai cosine similarity berada pada interval:
-- \(-1 \leq \text{cosine\_sim} \leq 1\)
-- Untuk embedding teks yang sudah dinormalisasi, nilai umumnya di rentang \([0, 1]\).
+- -1 ≤ cosine_sim ≤ 1
+- Untuk embedding teks yang sudah dinormalisasi, nilai umumnya di rentang [0, 1].
 
 Interpretasi:
 - Semakin mendekati **1** → vektor semakin searah → teks sangat mirip.
@@ -92,59 +88,48 @@ Interpretasi:
 
 ### 5.1 Data
 Misalkan:
-- Query vector: $\mathbf{q} = [0.2, 0.5, 0.1]$
-- Document vector: $\mathbf{d} = [0.3, 0.4, 0.2]$
+- Query vector: q = [0.2, 0.5, 0.1]
+- Document vector: d = [0.3, 0.4, 0.2]
 
-Tujuan: hitung cosine similarity antara $\mathbf{q}$ dan $\mathbf{d}$.
+Tujuan: hitung cosine similarity antara q dan d.
 
 ### 5.2 Langkah 1 – Dot Product
 
-$$
-\mathbf{q} \cdot \mathbf{d} =
-(0.2 \times 0.3) + (0.5 \times 0.4) + (0.1 \times 0.2)
-= 0.06 + 0.20 + 0.02 = 0.28
-$$
+Hitung dot product:
+
+- q · d = (0.2 × 0.3) + (0.5 × 0.4) + (0.1 × 0.2)
+- q · d = 0.06 + 0.20 + 0.02 = 0.28
 
 ### 5.3 Langkah 2 – Norma Masing-masing Vektor
 
 Norma (panjang) vektor didefinisikan sebagai:
-$$
-\|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + \dots + v_d^2}
-$$
 
-#### 5.3.1 Norma Query $\|\mathbf{q}\|$
-$$
-\|\mathbf{q}\| = \sqrt{0.2^2 + 0.5^2 + 0.1^2}
-= \sqrt{0.04 + 0.25 + 0.01}
-= \sqrt{0.30}
-\approx 0.5477
-$$
+- |v| = sqrt(v1² + v2² + ... + vd²)
 
-#### 5.3.2 Norma Dokumen $\|\mathbf{d}\|$
-$$
-\|\mathbf{d}\| = \sqrt{0.3^2 + 0.4^2 + 0.2^2}
-= \sqrt{0.09 + 0.16 + 0.04}
-= \sqrt{0.29}
-\approx 0.5385
-$$
+#### 5.3.1 Norma Query |q|
+
+- |q| = sqrt(0.2² + 0.5² + 0.1²)
+- |q| = sqrt(0.04 + 0.25 + 0.01) = sqrt(0.30) ≈ 0.5477
+
+#### 5.3.2 Norma Dokumen |d|
+
+- |d| = sqrt(0.3² + 0.4² + 0.2²)
+- |d| = sqrt(0.09 + 0.16 + 0.04) = sqrt(0.29) ≈ 0.5385
 
 ### 5.4 Langkah 3 – Cosine Similarity
 
 Masukkan ke rumus:
-$$
-\text{cosine\_sim}(\mathbf{q}, \mathbf{d}) =
-\frac{0.28}{0.5477 \times 0.5385}
-$$
+
+- cosine_sim(q, d) = (q · d) / (|q| × |d|)
+- cosine_sim(q, d) = 0.28 / (0.5477 × 0.5385)
 
 Hitung penyebut:
-$$
-0.5477 \times 0.5385 \approx 0.2945
-$$
+
+- 0.5477 × 0.5385 ≈ 0.2945
 
 Sehingga:
-$$
-\text{cosine\_sim} \approx \frac{0.28}{0.2945} \approx 0.95
-$$
+
+- cosine_sim(q, d) ≈ 0.28 / 0.2945 ≈ 0.95
 
 ### 5.5 Interpretasi Hasil
 
