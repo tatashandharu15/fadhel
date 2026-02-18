@@ -17,11 +17,11 @@ Dokumen ini menjelaskan secara akademik tiga komponen utama tersebut:
 ## 2. Embedding
 
 ### 2.1 Definisi
-**Embedding** adalah representasi numerik dari teks dalam bentuk vektor berdimensi tetap, misalnya \(\mathbb{R}^d\). Setiap kalimat atau dokumen diubah menjadi vektor:
+**Embedding** adalah representasi numerik dari teks dalam bentuk vektor berdimensi tetap, misalnya $\mathbb{R}^d$. Setiap kalimat atau dokumen diubah menjadi vektor:
 
-\[
+$$
 \text{teks} \rightarrow \mathbf{v} = [v_1, v_2, \dots, v_d]
-\]
+$$
 
 Tujuan embedding:
 - Menangkap **makna semantik** teks.
@@ -38,13 +38,13 @@ Di dalam project ini:
 
 ### 3.1 Konsep
 Setelah teks diubah menjadi vektor, kita perlu ukuran “seberapa mirip” dua vektor:
-- Vektor query: \(\mathbf{q}\)
-- Vektor dokumen: \(\mathbf{d}\)
+- Vektor query: $\mathbf{q}$
+- Vektor dokumen: $\mathbf{d}$
 
 **Vector similarity** adalah fungsi:
-\[
+$$
 \text{sim}(\mathbf{q}, \mathbf{d}) \rightarrow \mathbb{R}
-\]
+$$
 
 Semakin besar nilai similarity, semakin mirip query dan dokumen secara semantik. Berbagai metrik dapat digunakan:
 - Dot product
@@ -67,15 +67,15 @@ Secara konseptual:
 ### 4.1 Definisi Matematis
 **Cosine similarity** mengukur sudut antara dua vektor:
 
-\[
+$$
 \text{cosine\_sim}(\mathbf{q}, \mathbf{d}) =
 \frac{\mathbf{q} \cdot \mathbf{d}}{\|\mathbf{q}\| \, \|\mathbf{d}\|}
-\]
+$$
 
 Dengan:
-- \(\mathbf{q} \cdot \mathbf{d}\) = dot product antara dua vektor
-- \(\|\mathbf{q}\|\) = norma (panjang) vektor \(\mathbf{q}\)
-- \(\|\mathbf{d}\|\) = norma vektor \(\mathbf{d}\)
+- $\mathbf{q} \cdot \mathbf{d}$ = dot product antara dua vektor
+- $\|\mathbf{q}\|$ = norma (panjang) vektor $\mathbf{q}$
+- $\|\mathbf{d}\|$ = norma vektor $\mathbf{d}$
 
 Nilai cosine similarity berada pada interval:
 - \(-1 \leq \text{cosine\_sim} \leq 1\)
@@ -92,65 +92,63 @@ Interpretasi:
 
 ### 5.1 Data
 Misalkan:
-- Query vector: \(\mathbf{q} = [0.2, 0.5, 0.1]\)
-- Document vector: \(\mathbf{d} = [0.3, 0.4, 0.2]\)
+- Query vector: $\mathbf{q} = [0.2, 0.5, 0.1]$
+- Document vector: $\mathbf{d} = [0.3, 0.4, 0.2]$
 
-Tujuan: hitung cosine similarity antara \(\mathbf{q}\) dan \(\mathbf{d}\).
+Tujuan: hitung cosine similarity antara $\mathbf{q}$ dan $\mathbf{d}$.
 
 ### 5.2 Langkah 1 – Dot Product
 
-\[
+$$
 \mathbf{q} \cdot \mathbf{d} =
 (0.2 \times 0.3) + (0.5 \times 0.4) + (0.1 \times 0.2)
-\]
-\[
 = 0.06 + 0.20 + 0.02 = 0.28
-\]
+$$
 
 ### 5.3 Langkah 2 – Norma Masing-masing Vektor
 
 Norma (panjang) vektor didefinisikan sebagai:
-\[
+$$
 \|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + \dots + v_d^2}
-\]
+$$
 
-#### 5.3.1 Norma Query \(\|\mathbf{q}\|\)
-\[
+#### 5.3.1 Norma Query $\|\mathbf{q}\|$
+$$
 \|\mathbf{q}\| = \sqrt{0.2^2 + 0.5^2 + 0.1^2}
 = \sqrt{0.04 + 0.25 + 0.01}
 = \sqrt{0.30}
 \approx 0.5477
-\]
+$$
 
-#### 5.3.2 Norma Dokumen \(\|\mathbf{d}\|\)
-\[
+#### 5.3.2 Norma Dokumen $\|\mathbf{d}\|$
+$$
 \|\mathbf{d}\| = \sqrt{0.3^2 + 0.4^2 + 0.2^2}
 = \sqrt{0.09 + 0.16 + 0.04}
 = \sqrt{0.29}
 \approx 0.5385
-\]
+$$
 
 ### 5.4 Langkah 3 – Cosine Similarity
 
 Masukkan ke rumus:
-\[
+$$
 \text{cosine\_sim}(\mathbf{q}, \mathbf{d}) =
 \frac{0.28}{0.5477 \times 0.5385}
-\]
+$$
 
 Hitung penyebut:
-\[
+$$
 0.5477 \times 0.5385 \approx 0.2945
-\]
+$$
 
 Sehingga:
-\[
+$$
 \text{cosine\_sim} \approx \frac{0.28}{0.2945} \approx 0.95
-\]
+$$
 
 ### 5.5 Interpretasi Hasil
 
-Nilai cosine similarity \(\approx 0.95\) sangat mendekati 1. Secara interpretasi:
+Nilai cosine similarity $\approx 0.95$ sangat mendekati 1. Secara interpretasi:
 - Vektor query dan vektor dokumen **sangat searah** di ruang vektor.
 - Secara semantik, ini berarti **dokumen sangat relevan** dengan query.
 
@@ -166,4 +164,3 @@ Ringkasnya:
 - **Embedding**: Mengubah teks dokumen dan query menjadi vektor numerik menggunakan model embedding (Sentence-Transformers).
 - **Vector similarity (Cosine)**: Digunakan oleh FAISS untuk mencari dokumen yang paling mirip dengan query.
 - **RAG**: Dokumen yang ditemukan dikombinasikan dengan query dan diproses oleh LLM (Qwen/Qwen2.5-0.5B-Instruct) untuk menghasilkan jawaban bilingual yang sesuai dengan domain otomotif.
-
