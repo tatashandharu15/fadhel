@@ -68,7 +68,7 @@ Secara konseptual:
 **Cosine similarity** mengukur sudut antara dua vektor:
 
 $$
-\text{cosine\_sim}(\mathbf{q}, \mathbf{d}) =
+\text{cosine sim}(\mathbf{q}, \mathbf{d}) =
 \frac{\mathbf{q} \cdot \mathbf{d}}{\|\mathbf{q}\| \, \|\mathbf{d}\|}
 $$
 
