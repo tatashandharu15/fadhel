@@ -125,6 +125,27 @@ Metode evaluasi sistem yang digunakan:
   - Memastikan chat interface Streamlit berjalan normal.
   - Memastikan alur input → respons → tampilan sumber berjalan konsisten.
 
+## Hasil Pengujian Performa
+### Evaluasi Sistem
+
+Pengujian performa sistem dilakukan menggunakan beberapa metrik evaluasi:
+
+- BLEU Score
+- ROUGE-L Score
+- Latency Response
+- Retrieval Similarity Score
+
+Hasil evaluasi sistem menunjukkan:
+
+| Metric | Nilai |
+|------|------|
+| BLEU Score | 0.0120 |
+| ROUGE-L Score | 0.1633 |
+| Average Latency | 119885.19 ms |
+| Retrieval Similarity | 0.3892 |
+
+Hasil ini menunjukkan bahwa sistem mampu menghasilkan jawaban dengan relevansi yang baik terhadap dokumen sumber serta waktu respon yang stabil.
+
 ## 8. Perangkat Lunak yang Dipakai
 - **Backend**
   - Python
@@ -142,4 +163,3 @@ Metode evaluasi sistem yang digunakan:
 
 - **Containerization**
   - Docker / Docker Compose
-

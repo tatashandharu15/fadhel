@@ -11,6 +11,8 @@ transformers
 accelerate
 pypdf
 tiktoken
+nltk
+rouge-score
 # Torch will be installed separately in Dockerfile to target CPU-only wheel to save space
 sentencepiece
 protobuf
