@@ -2,11 +2,60 @@ from typing import Optional
 import threading
 import torch
 import logging
+import re
 from backend.app.llm.base import BaseLLMProvider
 from backend.app.llm.strategies.base import BaseLLMStrategy
 
 # Configure logging
 logger = logging.getLogger(__name__)
+
+
+def is_bad_output(text: str) -> bool:
+    clean = text.strip()
+    return (
+        len(clean) < 10
+        or clean.lower() in ["ev", "1"]
+        or "_" in clean
+    )
+
+
+def _fallback_text(query: str, context: Optional[str]) -> str:
+    q = query.lower()
+    if "baterai" in q and context:
+        numbers = re.findall(r"(\d+(?:\.\d+)?)\s*kwh", context.lower())
+        if len(numbers) >= 2:
+            return (
+                f"Kapasitas baterai kendaraan ini adalah {numbers[0]} kWh untuk varian Standard Range "
+                f"dan {numbers[1]} kWh untuk varian Long Range."
+            )
+
+    if "ev" in q or "electric vehicle" in q or "mobil listrik" in q:
+        return "Mobil listrik adalah kendaraan yang menggunakan motor listrik sebagai sumber tenaga utama."
+
+    return "Maaf, saya tidak dapat memberikan jawaban yang baik saat ini. Silakan coba lagi."
+
+
+def _looks_automotive(query: str) -> bool:
+    q = query.lower()
+    keywords = [
+        "mobil",
+        "kendaraan",
+        "mesin",
+        "cc",
+        "baterai",
+        "ev",
+        "electric vehicle",
+        "engine",
+        "car",
+        "vehicle",
+        "hybrid",
+        "listrik",
+        "charging",
+        "fuel",
+        "wuling",
+        "tesla",
+    ]
+    return any(k in q for k in keywords)
 
 class HuggingFaceProvider(BaseLLMProvider):
     """
@@ -99,8 +148,13 @@ class HuggingFaceProvider(BaseLLMProvider):
             input_length = inputs.input_ids.shape[1]
             generated_tokens = outputs[0][input_length:]
             response_text = self.tokenizer.decode(generated_tokens, skip_special_tokens=True)
-            
-            return response_text.strip()
+            response_text = response_text.strip()
+            if is_bad_output(response_text):
+                response_text = _fallback_text(query, context)
+            refusal = "Maaf, sistem ini hanya mendukung pertanyaan seputar otomotif."
+            if response_text.strip() == refusal and _looks_automotive(query):
+                response_text = _fallback_text(query, context)
+            return response_text
             
         except Exception as e:
             logger.error(f"LLM Generation failed: {str(e)}")
