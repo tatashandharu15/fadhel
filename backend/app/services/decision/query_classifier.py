@@ -9,16 +9,25 @@ class RegexQueryClassifier(BaseQueryClassifier):
     
     async def classify(self, query: str) -> QueryType:
         q = query.lower()
-        
-        # Rule 1: DOMAIN_FACTUAL (Fakta/Spesifikasi)
-        factual_keywords = ["spesifikasi", "mesin", "kapasitas", "tahun", "cc", "harga", "kapan", "dimana", "berapa", "mobil", "fitur"]
-        if any(k in q for k in factual_keywords):
+
+        auto_keywords = [
+            "mobil",
+            "kendaraan",
+            "mesin",
+            "cc",
+            "baterai",
+            "ev",
+            "electric vehicle",
+            "engine",
+            "car",
+            "vehicle",
+            "hybrid",
+            "listrik",
+            "charging",
+            "fuel",
+        ]
+
+        if any(k in q for k in auto_keywords):
             return QueryType.DOMAIN_FACTUAL
-            
-        # Rule 2: RECOMMENDATION (Analisis/Perbandingan)
-        rec_keywords = ["bandingkan", "lebih baik", "vs", "rekomendasi"]
-        if any(k in q for k in rec_keywords):
-            return QueryType.RECOMMENDATION
-            
-        # Rule 3: GENERAL_KNOWLEDGE (Default)
+
         return QueryType.GENERAL_KNOWLEDGE

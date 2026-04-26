@@ -9,7 +9,6 @@ class ChatRequest(BaseModel):
     filters: Optional[Dict] = None
 
 class ChatResponse(BaseModel):
-    response: str
+    answer: Dict[str, str]
     sources: List[Dict[str, Any]] = []
-    latency_ms: float = 0.0
-    trace: Optional[Dict[str, Any]] = None # Added for debugging/tracing
+    trace: Optional[Dict[str, Any]] = None

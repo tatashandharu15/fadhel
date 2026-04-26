@@ -95,7 +95,14 @@ class InMemoryRetriever(BaseRetriever):
                 filtered.append(r)
         
         print(f"[Retriever] Found {len(filtered)} results after filtering.")
-        return filtered
+        return [
+            {
+                "id": doc.get("id"),
+                "content": doc.get("content", doc.get("payload", {}).get("content", "")),
+                "score": float(doc.get("score", 0.0) or 0.0),
+            }
+            for doc in filtered
+        ]
 
     def add_documents(self, vectors: List[List[float]], documents: List[Dict[str, Any]]):
         print(f"[Retriever] Adding {len(documents)} documents to store.")

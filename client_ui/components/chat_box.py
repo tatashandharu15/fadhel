@@ -6,8 +6,8 @@ def render_chat_input():
     """Renders the chat input form using st.chat_input."""
     
     # Placeholder varies by language
-    lang = st.session_state.get("language", "ID")
-    placeholder = "Tanyakan seputar otomotif..." if lang == "ID" else "Ask about automotive..."
+    lang = st.session_state.get("language", "id")
+    placeholder = "Tanyakan seputar otomotif..." if lang == "id" else "Ask about automotive..."
     
     # st.chat_input creates a text box fixed to the bottom or inline with chat
     # It returns the user input when submitted

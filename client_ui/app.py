@@ -1,6 +1,4 @@
 import streamlit as st
-import time
-import re
 import sys
 import os
 
@@ -27,7 +25,10 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "language" not in st.session_state:
-    st.session_state.language = "ID"  # Default
+    st.session_state.language = "id"  # Default
+
+if "show_both_language" not in st.session_state:
+    st.session_state.show_both_language = False
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SIDEBAR SETTINGS
@@ -36,10 +37,11 @@ with st.sidebar:
     st.header("Settings")
     st.session_state.language = st.radio(
         "Language / Bahasa",
-        options=["ID", "EN"],
-        index=0 if st.session_state.language == "ID" else 1,
+        options=["id", "en"],
+        index=0 if st.session_state.language == "id" else 1,
         horizontal=True
     )
+    st.session_state.show_both_language = st.checkbox("Show both language", value=st.session_state.show_both_language)
     st.caption("Select your preferred language for the answer.")
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -135,34 +137,15 @@ st.markdown("""
 # LOGIC HANDLERS
 # ─────────────────────────────────────────────────────────────────────────────
 
-def parse_response(full_text: str, lang: str) -> str:
-    """
-    Extracts the [ID] or [EN] section from the response.
-    Format is usually:
-    [ID]
-    ...
-    [EN]
-    ...
-    """
-    # Normalize newlines
-    text = full_text.replace("\r\n", "\n")
-    
-    # Try regex match
-    # Match [ID] content until [EN] or end
-    id_match = re.search(r'\[ID\](.*?)(?=\[EN\]|$)', text, re.DOTALL | re.IGNORECASE)
-    en_match = re.search(r'\[EN\](.*)', text, re.DOTALL | re.IGNORECASE)
-    
-    id_text = id_match.group(1).strip() if id_match else ""
-    en_text = en_match.group(1).strip() if en_match else ""
-    
-    # Fallback logic if parsing fails
-    if not id_text and not en_text:
-        return full_text # Return raw if format is totally broken
-        
-    if lang == "ID":
-        return id_text if id_text else "Maaf, respon bahasa Indonesia tidak tersedia."
-    else:
-        return en_text if en_text else "Sorry, English response is not available."
+def parse_response(answer_data: dict, lang: str, show_both: bool = False) -> str:
+    """Returns response text from structured answer contract."""
+    id_text = str(answer_data.get("id", "")).strip()
+    en_text = str(answer_data.get("en", "")).strip()
+    if show_both:
+        return f"🇮🇩 {id_text}\n\n🇬🇧 {en_text}".strip()
+    if lang == "id":
+        return id_text or "Maaf, respon bahasa Indonesia tidak tersedia."
+    return en_text or "Sorry, English response is not available."
 
 def handle_input(query: str):
     """
@@ -182,10 +165,12 @@ def handle_input(query: str):
         try:
             # Call API
             response_data = api.get_chat_response(query)
-            raw_response = response_data.get("response", "")
-            
-            # Parse based on selected language
-            final_response = parse_response(raw_response, st.session_state.language)
+            answer = response_data.get("answer", {}) or {}
+            final_response = parse_response(
+                answer_data=answer,
+                lang=st.session_state.language,
+                show_both=st.session_state.show_both_language,
+            )
             
             # Add to history
             st.session_state.messages.append({"role": "assistant", "content": final_response})

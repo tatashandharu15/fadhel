@@ -12,7 +12,7 @@ def init_session_state():
         st.session_state.last_query = ""
         
     if "language" not in st.session_state:
-        st.session_state.language = "ID"  # Default to Indonesian
+        st.session_state.language = "id"  # Default to Indonesian
 
 def set_response(response_data):
     """Update the current response in session state."""

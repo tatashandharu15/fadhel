@@ -101,7 +101,7 @@ class FaissVectorStore(BaseVectorStore):
                 print(f"[NumpyStore] Candidate idx={idx} score={score}")
                 
                 meta = self.metadatas[idx].copy()
-                meta['score'] = score
+                meta['score'] = float(score)
                 results.append(meta)
                 
             print(f"[NumpyStore] Found {len(results)} results.")

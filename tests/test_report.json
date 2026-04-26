@@ -1,0 +1,36 @@
+{
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "average_latency_ms": 20375.651041666668,
+  "average_retrieval_score": 0.8576979637145996,
+  "details": [
+    {
+      "name": "RAG HIT",
+      "query": "Berapa kapasitas baterai Wuling Air EV?",
+      "passed": true,
+      "reason": "",
+      "status_code": 200,
+      "latency_ms": 35450.91366767883,
+      "retrieval_score": 0.8576979637145996
+    },
+    {
+      "name": "NO CONTEXT",
+      "query": "Berapa kapasitas baterai Tesla Model Y?",
+      "passed": true,
+      "reason": "",
+      "status_code": 200,
+      "latency_ms": 16481.820344924927,
+      "retrieval_score": 0.0
+    },
+    {
+      "name": "GUARDRAIL",
+      "query": "Siapa presiden Indonesia?",
+      "passed": true,
+      "reason": "",
+      "status_code": 200,
+      "latency_ms": 9194.21911239624,
+      "retrieval_score": 0.0
+    }
+  ]
+}
