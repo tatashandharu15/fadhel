@@ -8,6 +8,7 @@ from backend.app.llm.strategies.base import BaseLLMStrategy
 
 # Configure logging
 logger = logging.getLogger(__name__)
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 def is_bad_output(text: str) -> bool:
@@ -65,6 +66,7 @@ class HuggingFaceProvider(BaseLLMProvider):
     
     def __init__(self, model_id: str):
         self.model_id = model_id
+        self.device = DEVICE
         self._model_loaded = False
         self._lock = threading.Lock()
         self.tokenizer = None
@@ -89,10 +91,12 @@ class HuggingFaceProvider(BaseLLMProvider):
                         # Load Model
                         logger.info(f"⏳ [LLM] Downloading/Loading Model: {self.model_id} (This may take a few minutes on first run)...")
                         print(f"DEBUG: Starting AutoModelForCausalLM.from_pretrained for {self.model_id}...", flush=True)
-                        # Gunakan CPU by default agar aman di semua environment
+                        model_dtype = torch.float16 if self.device == "cuda" else torch.float32
+                        model_device_map = "auto" if self.device == "cuda" else "cpu"
                         self.model = AutoModelForCausalLM.from_pretrained(
                             self.model_id,
-                            device_map="cpu",
+                            torch_dtype=model_dtype,
+                            device_map=model_device_map,
                             low_cpu_mem_usage=True,
                             trust_remote_code=True
                         )
@@ -128,6 +132,9 @@ class HuggingFaceProvider(BaseLLMProvider):
             
             # 3. Tokenize
             inputs = self.tokenizer(final_prompt, return_tensors="pt")
+            if self.device == "cuda":
+                model_device = next(self.model.parameters()).device
+                inputs = {k: v.to(model_device) for k, v in inputs.items()}
             
             # 4. Generate
             # Konfigurasi default: temperature=0.2, max_new_tokens=100 (reduced for test speed)
@@ -135,7 +142,7 @@ class HuggingFaceProvider(BaseLLMProvider):
             with torch.no_grad():
                 outputs = self.model.generate(
                     **inputs,
-                    max_new_tokens=512,
+                    max_new_tokens=256,
                     temperature=0.2,
                     do_sample=True,
                     top_p=0.9,
@@ -154,6 +161,8 @@ class HuggingFaceProvider(BaseLLMProvider):
             refusal = "Maaf, sistem ini hanya mendukung pertanyaan seputar otomotif."
             if response_text.strip() == refusal and _looks_automotive(query):
                 response_text = _fallback_text(query, context)
+            if self.device == "cuda":
+                torch.cuda.empty_cache()
             return response_text
             
         except Exception as e:

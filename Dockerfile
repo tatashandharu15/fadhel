@@ -1,5 +1,5 @@
-# Use lightweight Python base image
-FROM python:3.12-slim
+# Use CUDA runtime base image
+FROM nvidia/cuda:12.3.0-runtime-ubuntu22.04
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -12,16 +12,20 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies
-# build-essential for compiling some python packages
-# curl for healthchecks
+# Install system dependencies and Python runtime
 RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
     build-essential \
     curl \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PyTorch CPU-only first to reduce image size (avoid CUDA bloat)
-RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# Ensure `python` points to Python 3
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Install PyTorch with CUDA support
+RUN pip install --no-cache-dir torch torchvision torchaudio
 
 # Copy requirements
 COPY requirements.txt .
