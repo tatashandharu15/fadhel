@@ -2,12 +2,15 @@ services:
   backend:
     build: .
     container_name: automotive-rag-api
+    runtime: nvidia
     ports:
       - "8000:8000"
     environment:
       - DEFAULT_MODEL_ID=Qwen/Qwen2.5-0.5B-Instruct
       - USE_TF=0
       - USE_TORCH=1
+      - CUDA_VISIBLE_DEVICES=0
+      - TOKENIZERS_PARALLELISM=false
       # Optionally set Hugging Face token via environment variable (do not commit secrets)
       # - HF_TOKEN=${HF_TOKEN}
       # Hugging Face Cache directory
