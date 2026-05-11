@@ -44,12 +44,15 @@ async def lifespan(app: FastAPI):
         logger.warning(f"⚠️ No data directory found at {data_path}. Skipping ingestion.")
 
     # 3. Preload LLM (Optional but recommended for user experience)
-    # Skipped to allow faster startup and prevent healthcheck timeouts in Docker
-    # The model will load lazily on the first request.
+    # Now enabled to prevent healthcheck timeout during first query
     default_model_id = os.getenv("DEFAULT_MODEL_ID", "Qwen/Qwen2.5-0.5B-Instruct")
-    logger.info(f"📦 LLM {default_model_id} will be loaded lazily on first request.")
-    # provider = LLMFactory.get_provider(default_model_id)
-    # await provider._ensure_model_loaded()
+    logger.info(f"📦 Preloading LLM {default_model_id}...")
+    try:
+        provider = LLMFactory.get_provider(default_model_id)
+        await provider._ensure_model_loaded()
+        logger.info(f"✅ LLM {default_model_id} preloaded successfully.")
+    except Exception as e:
+        logger.warning(f"⚠️ LLM preloading failed (will retry on first request): {e}")
     
     logger.info("✅ System Ready. Models will load on demand.")
     yield

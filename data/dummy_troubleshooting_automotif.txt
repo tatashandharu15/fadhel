@@ -1,0 +1,124 @@
+TOPIK: Aki Mobil Cepat Soak
+KATEGORI: troubleshooting kelistrikan mobil
+
+Pertanyaan terkait:
+- Kenapa aki mobil cepat soak?
+- Kenapa aki baru cepat tekor?
+- Apa penyebab aki mobil drop?
+- Kenapa mobil susah distarter padahal aki baru?
+
+Jawaban utama:
+Aki mobil yang cepat soak biasanya disebabkan oleh sistem pengisian alternator yang tidak optimal, arus bocor, terminal aki kotor atau longgar, mobil jarang digunakan, atau penggunaan aksesori listrik saat mesin mati. Aki baru juga bisa cepat tekor jika alternator tidak mengisi dengan baik atau ada komponen yang tetap mengambil arus ketika kendaraan mati.
+
+Gejala umum:
+- Starter terasa berat.
+- Lampu depan terlihat redup.
+- Klakson melemah.
+- Tegangan aki turun setelah mobil didiamkan.
+- Mobil sulit hidup pada pagi hari.
+
+Pemeriksaan yang disarankan:
+- Cek tegangan aki saat mesin mati.
+- Cek tegangan pengisian saat mesin hidup.
+- Periksa terminal aki dari karat, kotoran, atau kelonggaran.
+- Periksa kemungkinan arus bocor dari alarm, audio, lampu kabin, atau aksesori tambahan.
+- Periksa kondisi alternator dan kabel massa.
+
+Solusi awal:
+Bersihkan dan kencangkan terminal aki, matikan aksesori saat mesin mati, gunakan mobil secara rutin, dan lakukan pengecekan alternator serta arus bocor di bengkel jika aki terus melemah.
+
+---
+
+TOPIK: Alternator Lemah
+KATEGORI: komponen kelistrikan mobil
+
+Pertanyaan terkait:
+- Apa fungsi alternator?
+- Apa tanda alternator mobil rusak?
+- Kenapa aki tidak mengisi saat mesin hidup?
+- Apa hubungan alternator dengan aki?
+
+Jawaban utama:
+Alternator berfungsi mengisi ulang aki saat mesin hidup dan menyuplai listrik untuk sistem kendaraan. Jika alternator lemah atau rusak, aki tidak mendapatkan pengisian yang cukup sehingga aki cepat habis dan mobil bisa sulit distarter.
+
+Gejala alternator bermasalah:
+- Lampu indikator aki menyala di dashboard.
+- Lampu mobil redup saat mesin hidup.
+- Aki sering habis walaupun sudah diganti.
+- Muncul bunyi kasar dari area alternator.
+- Tegangan pengisian tidak stabil.
+
+Pemeriksaan yang disarankan:
+Tegangan pengisian normal umumnya berada sekitar 13,8 sampai 14,5 volt saat mesin hidup. Jika tegangan jauh di bawah angka tersebut, alternator atau sistem pengisian perlu diperiksa.
+
+---
+
+TOPIK: Mesin Mobil Overheat
+KATEGORI: troubleshooting sistem pendingin
+
+Pertanyaan terkait:
+- Kenapa mesin mobil cepat panas?
+- Apa penyebab mobil overheat?
+- Kenapa temperatur mesin naik?
+- Apa yang harus dilakukan saat mobil overheat?
+
+Jawaban utama:
+Mesin mobil overheat biasanya disebabkan oleh coolant kurang, radiator tersumbat, kipas radiator tidak bekerja, thermostat macet, water pump lemah, atau kebocoran pada sistem pendingin. Overheat tidak boleh dibiarkan karena dapat merusak gasket silinder, kepala silinder, dan komponen mesin lain.
+
+Gejala umum:
+- Jarum temperatur naik melewati batas normal.
+- Muncul uap dari ruang mesin.
+- AC terasa tidak dingin saat macet.
+- Coolant cepat habis.
+- Mesin terasa kasar atau kehilangan tenaga.
+
+Tindakan awal:
+Matikan AC, menepi di tempat aman, biarkan mesin dingin, jangan langsung membuka tutup radiator saat panas, lalu periksa level coolant setelah suhu turun. Jika coolant habis atau mesin kembali panas, kendaraan sebaiknya diperiksa di bengkel.
+
+---
+
+TOPIK: Rem Mobil Berbunyi
+KATEGORI: troubleshooting sistem rem
+
+Pertanyaan terkait:
+- Kenapa rem mobil bunyi?
+- Apa penyebab rem berdecit?
+- Kenapa rem bunyi saat diinjak?
+- Apakah kampas rem habis bisa bunyi?
+
+Jawaban utama:
+Rem mobil berbunyi dapat disebabkan oleh kampas rem yang mulai habis, permukaan cakram tidak rata, debu pada sistem rem, kampas rem terlalu keras, atau kaliper rem yang tidak bekerja normal. Bunyi berdecit ringan bisa muncul karena debu, tetapi bunyi kasar atau berulang perlu diperiksa.
+
+Gejala yang perlu diperhatikan:
+- Rem berdecit saat pedal diinjak.
+- Bunyi gesekan logam.
+- Pedal rem terasa bergetar.
+- Jarak pengereman menjadi lebih panjang.
+- Mobil menarik ke satu sisi saat direm.
+
+Solusi awal:
+Periksa ketebalan kampas rem, bersihkan area rem, cek kondisi cakram, dan pastikan kaliper bekerja normal. Jika terdengar bunyi logam bergesekan, jangan menunda pemeriksaan karena kampas rem mungkin sudah habis.
+
+---
+
+TOPIK: Ban Mobil Aus Tidak Rata
+KATEGORI: troubleshooting kaki-kaki dan ban
+
+Pertanyaan terkait:
+- Kenapa ban mobil aus tidak rata?
+- Apa penyebab ban makan sebelah?
+- Kenapa setir mobil terasa narik?
+- Kapan perlu spooring balancing?
+
+Jawaban utama:
+Ban mobil aus tidak rata biasanya disebabkan oleh tekanan angin yang tidak sesuai, spooring tidak tepat, balancing buruk, komponen kaki-kaki aus, atau gaya mengemudi yang sering mengerem dan menikung keras. Ban yang makan sebelah sering menandakan sudut roda perlu disetel ulang.
+
+Gejala umum:
+- Tapak ban habis di satu sisi.
+- Setir terasa menarik ke kiri atau kanan.
+- Setir bergetar pada kecepatan tertentu.
+- Ban cepat habis meskipun belum lama diganti.
+- Mobil terasa tidak stabil.
+
+Solusi awal:
+Periksa tekanan angin secara rutin, lakukan rotasi ban, cek spooring dan balancing, serta periksa komponen kaki-kaki seperti tie rod, ball joint, dan shockbreaker.

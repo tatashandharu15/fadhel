@@ -1,0 +1,78 @@
+DATABASE RAG OTOMOTIF - DATASET KHUSUS CVT MOTOR
+Format ini dibuat agar mudah di-chunk, di-embedding, dan diambil oleh retrieval.
+Setiap blok berisi pertanyaan utama, pertanyaan terkait, jawaban utama, dan kata kunci.
+
+---
+ID: cvt_qa_001
+JENIS: Motor
+TOPIK: CVT, transmisi otomatis, komponen CVT
+KATA_KUNCI: motor, CVT, transmisi otomatis, roller, v-belt, pulley, kopling ganda
+PERTANYAAN_UTAMA: Apa itu CVT pada motor?
+PERTANYAAN_TERKAIT:
+- Apa itu CVT pada motor?
+- Bagaimana cara kerja CVT motor?
+- Apa fungsi CVT pada motor matik?
+JAWABAN_UTAMA:
+CVT atau Continuously Variable Transmission adalah sistem transmisi otomatis pada motor matik yang menyalurkan tenaga mesin ke roda belakang tanpa perpindahan gigi manual. Komponen utamanya biasanya meliputi pulley depan, pulley belakang, roller, v-belt, dan kopling ganda. Sistem ini dirancang agar perpindahan tenaga terasa halus dan praktis untuk penggunaan harian.
+CATATAN_RAG:
+Gunakan blok ini untuk pertanyaan definisi CVT, fungsi CVT, dan gambaran umum cara kerjanya.
+
+---
+ID: cvt_qa_002
+JENIS: Motor
+TOPIK: CVT, suara berisik, roller, v-belt
+KATA_KUNCI: motor, CVT berisik, roller aus, v-belt retak, rumah CVT kotor
+PERTANYAAN_UTAMA: Kenapa CVT motor berisik?
+PERTANYAAN_TERKAIT:
+- Kenapa CVT motor berisik?
+- Apa penyebab suara kasar dari CVT motor?
+- Mengapa CVT matik mengeluarkan bunyi saat akselerasi?
+JAWABAN_UTAMA:
+CVT motor yang berisik biasanya disebabkan oleh roller yang aus, v-belt yang mulai retak, rumah CVT yang kotor, atau kampas kopling yang tidak lagi bekerja halus. Suara kasar biasanya lebih terasa saat awal akselerasi atau ketika putaran mesin mulai naik. Pemeriksaan awal sebaiknya dilakukan pada roller, v-belt, kampas kopling, dan kebersihan rumah CVT.
+CATATAN_RAG:
+Prioritaskan blok ini untuk pertanyaan tentang CVT berisik, bunyi kasar, atau suara tidak normal dari transmisi matik.
+
+---
+ID: cvt_qa_003
+JENIS: Motor
+TOPIK: roller CVT, akselerasi
+KATA_KUNCI: motor, roller CVT, akselerasi, putaran mesin, pulley
+PERTANYAAN_UTAMA: Apa fungsi roller pada CVT motor?
+PERTANYAAN_TERKAIT:
+- Apa fungsi roller pada CVT motor?
+- Untuk apa roller CVT digunakan?
+- Mengapa roller penting pada transmisi matik?
+JAWABAN_UTAMA:
+Roller pada CVT berfungsi membantu mengatur perubahan diameter kerja pulley depan sesuai putaran mesin. Dengan gerakan roller, rasio transmisi dapat berubah secara otomatis sehingga akselerasi dan kecepatan motor dapat menyesuaikan kondisi berkendara. Jika roller aus atau bentuknya tidak lagi rata, respons akselerasi motor biasanya menjadi kurang halus.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang fungsi roller, pengaruh roller aus, dan hubungan roller dengan akselerasi.
+
+---
+ID: cvt_qa_004
+JENIS: Motor
+TOPIK: v-belt, transmisi CVT
+KATA_KUNCI: motor, v-belt, CVT, tenaga mesin, pulley
+PERTANYAAN_UTAMA: Apa fungsi v-belt pada CVT motor?
+PERTANYAAN_TERKAIT:
+- Apa fungsi v-belt pada CVT motor?
+- Untuk apa v-belt digunakan pada motor matik?
+- Mengapa v-belt penting pada sistem CVT?
+JAWABAN_UTAMA:
+V-belt berfungsi menyalurkan tenaga dari pulley depan ke pulley belakang pada sistem CVT motor matik. Komponen ini bekerja bersama pulley untuk mengubah rasio transmisi secara otomatis sesuai putaran mesin. Jika v-belt aus, retak, atau mulai selip, tenaga motor dapat terasa berkurang dan akselerasi menjadi tidak normal.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang fungsi v-belt dan dampak kerusakan v-belt pada motor matik.
+
+---
+ID: cvt_qa_005
+JENIS: Motor
+TOPIK: CVT, akselerasi, tarikan awal
+KATA_KUNCI: motor, tarikan berat, CVT, roller, v-belt, kampas kopling
+PERTANYAAN_UTAMA: Kenapa tarikan awal motor matik terasa berat?
+PERTANYAAN_TERKAIT:
+- Kenapa tarikan awal motor matik terasa berat?
+- Apa penyebab akselerasi awal motor CVT terasa lemah?
+- Mengapa motor matik terasa ngempos saat mulai jalan?
+JAWABAN_UTAMA:
+Tarikan awal motor matik yang terasa berat biasanya berkaitan dengan komponen CVT seperti roller aus, v-belt menurun kualitasnya, kampas kopling kotor, atau rumah CVT yang sudah banyak debu. Kondisi mesin dan suplai bahan bakar juga tetap dapat memengaruhi respons awal kendaraan. Pemeriksaan awal sebaiknya difokuskan pada roller, v-belt, kampas kopling, serta kebersihan area CVT.
+CATATAN_RAG:
+Prioritaskan untuk pertanyaan tentang tarikan awal berat, ngempos, atau akselerasi lemah pada motor matik.

@@ -1,0 +1,51 @@
+Gunakan pertanyaan berikut untuk mengetes apakah RAG mengambil data dari file dummy_troubleshooting_automotif.txt.
+
+1. Kenapa aki mobil cepat soak padahal baru diganti?
+Ekspektasi jawaban:
+Jawaban menyebut alternator, arus bocor, terminal aki, mobil jarang digunakan, atau aksesori listrik saat mesin mati.
+
+2. Apa tanda alternator mobil mulai lemah?
+Ekspektasi jawaban:
+Jawaban menyebut aki tidak terisi, lampu indikator aki, lampu redup, atau tegangan pengisian tidak stabil.
+
+3. Berapa tegangan normal alternator saat mesin hidup?
+Ekspektasi jawaban:
+Jawaban menyebut sekitar 13,8 sampai 14,5 volt.
+
+4. Apa penyebab mesin mobil overheat?
+Ekspektasi jawaban:
+Jawaban menyebut coolant kurang, radiator tersumbat, kipas radiator, thermostat, water pump, atau kebocoran sistem pendingin.
+
+5. Apa yang harus dilakukan saat mobil overheat?
+Ekspektasi jawaban:
+Jawaban menyebut menepi, matikan AC, tunggu mesin dingin, jangan langsung membuka tutup radiator saat panas, dan periksa coolant.
+
+6. Kenapa rem mobil bunyi berdecit?
+Ekspektasi jawaban:
+Jawaban menyebut kampas rem mulai habis, cakram tidak rata, debu rem, kampas terlalu keras, atau kaliper bermasalah.
+
+7. Kapan rem bunyi harus segera diperiksa?
+Ekspektasi jawaban:
+Jawaban menyebut bunyi logam bergesekan, pedal bergetar, jarak pengereman lebih panjang, atau kampas rem mungkin habis.
+
+8. Kenapa ban mobil aus tidak rata?
+Ekspektasi jawaban:
+Jawaban menyebut tekanan angin tidak sesuai, spooring tidak tepat, balancing buruk, kaki-kaki aus, atau gaya mengemudi.
+
+9. Apa tanda mobil perlu spooring balancing?
+Ekspektasi jawaban:
+Jawaban menyebut setir menarik ke kiri atau kanan, setir bergetar, ban makan sebelah, atau mobil tidak stabil.
+
+10. Kenapa mobil susah distarter pada pagi hari?
+Ekspektasi jawaban:
+Jawaban kemungkinan mengarah ke aki lemah, aki drop setelah didiamkan, arus bocor, terminal aki, atau alternator.
+
+Pertanyaan pembanding non-otomotif:
+
+11. Siapa presiden Indonesia?
+Ekspektasi jawaban:
+Sistem menolak karena bukan pertanyaan otomotif.
+
+12. Berapa harga emas hari ini?
+Ekspektasi jawaban:
+Sistem menolak karena bukan pertanyaan otomotif.

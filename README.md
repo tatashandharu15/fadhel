@@ -12,10 +12,12 @@ graph LR;
     UI[Streamlit UI] -->|POST /v1/chat/completions| API[FastAPI];
     API --> DECISION[DecisionEngine];
     DECISION -->|use_rag?| RAG[RetrievalPipeline];
+  RAG --> RERANK[DeBERTa v3 Reranker];
     RAG --> CTX[ContextBuilder];
     DECISION --> STRAT[LLM Strategy];
     STRAT --> LLM[LLM Provider HuggingFace];
-    CTX --> LLM;
+  RERANK --> CTX;
+  CTX --> LLM;
     LLM --> RESP[Response];
     RESP --> UI;
 ```
@@ -39,13 +41,14 @@ graph LR;
 ## Setup
 1. Prerequisites: Docker, Python 3.12
 2. Install:
-   - `docker compose up -d --build`
+  - `pwsh -File start-8gb.ps1`
 3. Run UI:
    - `streamlit run client_ui/app.py`
 
 ## Configuration
 - Model via env:
   - `DEFAULT_MODEL_ID=Qwen/Qwen2.5-0.5B-Instruct` in docker-compose.yml or Dockerfile.
+  - `RERANKER_MODEL_ID=cross-encoder/ms-marco-deberta-v3-base` for the retrieval reranker.
 - Hugging Face token:
   - Do not commit secrets. Set `HF_TOKEN` via environment variable at runtime (e.g., shell or CI secrets).
 
@@ -66,5 +69,5 @@ All tests in [tests](file:///Users/tatas/Downloads/fadel/tests):
 - Schemas: [backend/app/schemas](file:///Users/tatas/Downloads/fadel/backend/app/schemas)
 
 ## Notes
-- Deberta-v3-base is encoder-only and not compatible with generative chat. Use generative models compatible with `AutoModelForCausalLM`.
+- DeBERTa v3 is used only as a reranker. Keep the chat model generative and compatible with `AutoModelForCausalLM`.
 - HuggingFace cache persisted with Docker volume to avoid re-downloads.

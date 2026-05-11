@@ -1,0 +1,1503 @@
+﻿DATABASE RAG OTOMOTIF - 100 PERTANYAAN DAN JAWABAN MOTOR
+Format ini dibuat agar mudah di-chunk, di-embedding, dan diambil oleh retrieval.
+Setiap blok berisi pertanyaan, variasi pertanyaan, jawaban utama, dan kata kunci.
+
+---
+ID: motor_qa_001
+JENIS: Motor
+TOPIK: rem, mesin pengapian, kelistrikan
+KATA_KUNCI: rem, mesin pengapian, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa rem motor saya berbunyi berdecit saat digunakan terutama di kecepatan rendah?
+PERTANYAAN_TERKAIT:
+- Kenapa rem motor saya berbunyi berdecit saat digunakan terutama di kecepatan rendah?
+- Apa penyebab Kenapa rem motor saya berbunyi berdecit saat digunakan terutama di kecepatan rendah?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Bunyi berdecit pada sistem pengereman motor umumnya disebabkan oleh kampas rem yang sudah mulai menipis atau materialnya mengalami pengerasan sehingga tidak menghasilkan gesekan yang optimal. Selain itu permukaan piringan rem yang kotor akibat debu jalanan juga dapat menimbulkan suara. Dalam beberapa kasus kualitas kampas rem yang kurang baik juga berkontribusi terhadap munculnya bunyi tersebut. Untuk mengatasinya disarankan melakukan pembersihan piringan rem serta mengganti kampas rem jika ketebalannya sudah di bawah standar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_002
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, ban roda suspensi
+KATA_KUNCI: mesin pengapian, bahan bakar, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa bergetar saat langsam atau idle apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa bergetar saat langsam atau idle apa penyebabnya?
+- Apa penyebab Motor terasa bergetar saat langsam atau idle apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Getaran pada kondisi idle biasanya terjadi karena proses pembakaran di dalam mesin tidak berlangsung secara stabil. Hal ini bisa disebabkan oleh busi yang kotor atau sudah aus sehingga percikan api tidak optimal. Selain itu setelan idle yang tidak tepat atau suplai bahan bakar dari karburator maupun injektor yang tidak konsisten juga dapat memicu getaran. Pemeriksaan pada sistem pembakaran sangat disarankan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_003
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan, pendinginan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sulit dihidupkan saat pagi hari?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sulit dihidupkan saat pagi hari?
+- Apa penyebab Kenapa motor sulit dihidupkan saat pagi hari?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kesulitan menghidupkan motor di pagi hari sering disebabkan oleh aki yang mulai melemah sehingga tidak mampu memberikan arus listrik yang cukup ke sistem starter. Selain itu suhu dingin dapat memengaruhi penguapan bahan bakar sehingga pembakaran tidak optimal. Faktor lain seperti busi yang kotor juga dapat memperburuk kondisi ini.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_004
+JENIS: Motor
+TOPIK: bahan bakar, ban roda suspensi
+KATA_KUNCI: bahan bakar, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor tersendat saat digas kenapa hal ini bisa terjadi?
+PERTANYAAN_TERKAIT:
+- Motor tersendat saat digas kenapa hal ini bisa terjadi?
+- Apa penyebab Motor tersendat saat digas kenapa hal ini bisa terjadi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Gejala tersendat saat akselerasi biasanya disebabkan oleh suplai bahan bakar yang tidak lancar. Pada motor karburator hal ini sering terjadi karena karburator kotor atau setelan campuran tidak seimbang. Pada motor injeksi penyebabnya bisa karena injektor tersumbat atau sensor throttle yang tidak bekerja optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_005
+JENIS: Motor
+TOPIK: bahan bakar, knalpot
+KATA_KUNCI: bahan bakar, knalpot, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa knalpot motor mengeluarkan asap hitam?
+PERTANYAAN_TERKAIT:
+- Kenapa knalpot motor mengeluarkan asap hitam?
+- Apa penyebab Kenapa knalpot motor mengeluarkan asap hitam?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Asap hitam menandakan campuran bahan bakar terlalu kaya sehingga pembakaran tidak sempurna. Hal ini bisa disebabkan oleh filter udara kotor injektor bocor atau setelan bahan bakar yang tidak tepat. Kondisi ini juga dapat menyebabkan konsumsi bahan bakar menjadi lebih boros.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_006
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa kurang bertenaga saat digunakan apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa kurang bertenaga saat digunakan apa penyebabnya?
+- Apa penyebab Motor terasa kurang bertenaga saat digunakan apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Penurunan tenaga mesin dapat disebabkan oleh beberapa faktor seperti filter udara yang kotor busi yang sudah lemah atau suplai bahan bakar yang tidak optimal. Selain itu kompresi mesin yang menurun juga dapat memengaruhi performa kendaraan secara keseluruhan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_007
+JENIS: Motor
+TOPIK: kelistrikan
+KATA_KUNCI: kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa lampu motor terlihat redup saat dinyalakan?
+PERTANYAAN_TERKAIT:
+- Kenapa lampu motor terlihat redup saat dinyalakan?
+- Apa penyebab Kenapa lampu motor terlihat redup saat dinyalakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Lampu yang redup biasanya menunjukkan adanya masalah pada sistem kelistrikan seperti aki yang mulai lemah atau sistem pengisian yang tidak bekerja dengan baik. Komponen seperti spul dan regulator perlu diperiksa untuk memastikan arus listrik tetap stabil.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_008
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor cepat panas saat digunakan dalam perjalanan jauh kenapa?
+PERTANYAAN_TERKAIT:
+- Motor cepat panas saat digunakan dalam perjalanan jauh kenapa?
+- Apa penyebab Motor cepat panas saat digunakan dalam perjalanan jauh kenapa?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Mesin yang cepat panas dapat disebabkan oleh pelumasan yang tidak optimal akibat oli yang sudah menurun kualitasnya. Selain itu sistem pendinginan yang tidak bekerja maksimal juga dapat mempercepat kenaikan suhu mesin terutama saat digunakan dalam waktu lama.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_009
+JENIS: Motor
+TOPIK: mesin pengapian, oli pelumasan
+KATA_KUNCI: mesin pengapian, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin motor terdengar lebih kasar dari biasanya?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin motor terdengar lebih kasar dari biasanya?
+- Apa penyebab Kenapa suara mesin motor terdengar lebih kasar dari biasanya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara mesin yang kasar biasanya disebabkan oleh kurangnya pelumasan atau adanya keausan pada komponen internal mesin. Kondisi ini dapat memperbesar gesekan antar komponen sehingga menghasilkan suara yang tidak normal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_010
+JENIS: Motor
+TOPIK: rem, mesin pengapian, rantai transmisi, ban roda suspensi
+KATA_KUNCI: rem, mesin pengapian, rantai transmisi, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa berat saat dikendarai apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa berat saat dikendarai apa penyebabnya?
+- Apa penyebab Motor terasa berat saat dikendarai apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Motor yang terasa berat bisa disebabkan oleh tekanan ban yang kurang rem yang seret atau sistem transmisi yang tidak bekerja optimal. Hal ini menyebabkan mesin bekerja lebih keras dari biasanya.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_011
+JENIS: Motor
+TOPIK: rantai transmisi, oli pelumasan
+KATA_KUNCI: rantai transmisi, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Rantai motor berbunyi kasar saat jalan kenapa?
+PERTANYAAN_TERKAIT:
+- Rantai motor berbunyi kasar saat jalan kenapa?
+- Apa penyebab Rantai motor berbunyi kasar saat jalan kenapa?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Rantai yang berbunyi kasar biasanya karena kurang pelumasan atau setelan yang tidak tepat. Kondisi ini meningkatkan gesekan antar komponen dan dapat mempercepat keausan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_012
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor tidak stabil saat kecepatan tinggi apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor tidak stabil saat kecepatan tinggi apa penyebabnya?
+- Apa penyebab Motor tidak stabil saat kecepatan tinggi apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan saat kecepatan tinggi bisa disebabkan oleh kondisi ban yang tidak seimbang tekanan angin yang tidak sesuai atau suspensi yang mulai melemah.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_013
+JENIS: Motor
+TOPIK: bahan bakar, kelistrikan
+KATA_KUNCI: bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor brebet saat jalan pelan kenapa bisa begitu?
+PERTANYAAN_TERKAIT:
+- Motor brebet saat jalan pelan kenapa bisa begitu?
+- Apa penyebab Motor brebet saat jalan pelan kenapa bisa begitu?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Brebet pada kecepatan rendah biasanya disebabkan oleh suplai bahan bakar yang tidak stabil akibat karburator kotor atau injektor bermasalah.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_014
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor tiba tiba mati saat dikendarai apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor tiba tiba mati saat dikendarai apa penyebabnya?
+- Apa penyebab Motor tiba tiba mati saat dikendarai apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Mesin yang mati mendadak bisa disebabkan oleh gangguan pada sistem bahan bakar atau kelistrikan seperti pengapian yang tidak bekerja.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_015
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan
+KATA_KUNCI: mesin pengapian, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Starter elektrik tidak berfungsi kenapa?
+PERTANYAAN_TERKAIT:
+- Starter elektrik tidak berfungsi kenapa?
+- Apa penyebab Starter elektrik tidak berfungsi kenapa?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh aki lemah atau kerusakan pada dinamo starter sehingga tidak mampu memutar mesin.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_016
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, pendinginan
+KATA_KUNCI: mesin pengapian, bahan bakar, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor sulit dinyalakan saat kondisi panas apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor sulit dinyalakan saat kondisi panas apa penyebabnya?
+- Apa penyebab Motor sulit dinyalakan saat kondisi panas apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa terjadi karena sistem bahan bakar atau pengapian tidak bekerja optimal saat suhu mesin tinggi.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_017
+JENIS: Motor
+TOPIK: bahan bakar, kelistrikan
+KATA_KUNCI: bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Konsumsi bensin terasa lebih boros dari biasanya kenapa?
+PERTANYAAN_TERKAIT:
+- Konsumsi bensin terasa lebih boros dari biasanya kenapa?
+- Apa penyebab Konsumsi bensin terasa lebih boros dari biasanya kenapa?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Pemborosan bahan bakar biasanya disebabkan oleh pembakaran yang tidak efisien akibat filter udara kotor atau setelan bahan bakar tidak tepat.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_018
+JENIS: Motor
+TOPIK: bahan bakar
+KATA_KUNCI: bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Tercium bau bensin dari motor apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Tercium bau bensin dari motor apa penyebabnya?
+- Apa penyebab Tercium bau bensin dari motor apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Bau bensin bisa menandakan adanya kebocoran pada sistem bahan bakar seperti selang atau karburator.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_019
+JENIS: Motor
+TOPIK: rem
+KATA_KUNCI: rem, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Rem terasa kurang pakem saat digunakan kenapa?
+PERTANYAAN_TERKAIT:
+- Rem terasa kurang pakem saat digunakan kenapa?
+- Apa penyebab Rem terasa kurang pakem saat digunakan kenapa?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh kampas rem yang sudah aus atau minyak rem yang berkurang sehingga daya cengkeram menurun.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_020
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa limbung saat menikung apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa limbung saat menikung apa penyebabnya?
+- Apa penyebab Motor terasa limbung saat menikung apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa disebabkan oleh suspensi yang lemah atau tekanan ban yang tidak sesuai sehingga mengurangi kestabilan saat belok.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_021
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan, rantai transmisi
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, rantai transmisi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sulit berakselerasi saat menanjak?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sulit berakselerasi saat menanjak?
+- Apa penyebab Kenapa motor sulit berakselerasi saat menanjak?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh tenaga mesin yang menurun akibat pembakaran tidak optimal atau kopling yang mulai aus.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_022
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Apa penyebab suara ketukan ringan dari mesin?
+PERTANYAAN_TERKAIT:
+- Apa penyebab suara ketukan ringan dari mesin?
+- Apa penyebab Apa penyebab suara ketukan ringan dari mesin?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara ketukan ringan bisa disebabkan oleh pembakaran tidak sempurna atau penggunaan bahan bakar yang tidak sesuai spesifikasi.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_023
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan
+KATA_KUNCI: mesin pengapian, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin motor cepat panas saat macet?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin motor cepat panas saat macet?
+- Apa penyebab Kenapa mesin motor cepat panas saat macet?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Saat macet aliran udara ke mesin berkurang sehingga sistem pendinginan tidak bekerja maksimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_024
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tersendat saat rpm tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tersendat saat rpm tinggi?
+- Apa penyebab Kenapa motor terasa tersendat saat rpm tinggi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya terjadi karena suplai bahan bakar tidak mencukupi kebutuhan mesin pada putaran tinggi.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_025
+JENIS: Motor
+TOPIK: kelistrikan
+KATA_KUNCI: kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa lampu indikator injeksi menyala?
+PERTANYAAN_TERKAIT:
+- Kenapa lampu indikator injeksi menyala?
+- Apa penyebab Kenapa lampu indikator injeksi menyala?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Lampu indikator injeksi menyala menandakan adanya gangguan pada sistem injeksi sehingga perlu dilakukan pengecekan menggunakan alat scanner.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_026
+JENIS: Motor
+TOPIK: mesin pengapian
+KATA_KUNCI: mesin pengapian, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sulit dihidupkan setelah terkena hujan atau melewati genangan air?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sulit dihidupkan setelah terkena hujan atau melewati genangan air?
+- Apa penyebab Kenapa motor sulit dihidupkan setelah terkena hujan atau melewati genangan air?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini biasanya terjadi karena air masuk ke dalam sistem pengapian seperti busi atau kabel busi sehingga percikan api menjadi tidak stabil. Selain itu air juga bisa masuk ke filter udara sehingga menghambat aliran udara ke ruang bakar. Untuk mengatasinya perlu dilakukan pengeringan pada komponen pengapian serta memastikan tidak ada air yang tersisa di sistem intake.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_027
+JENIS: Motor
+TOPIK: knalpot
+KATA_KUNCI: knalpot, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara knalpot motor menjadi lebih keras dari biasanya?
+PERTANYAAN_TERKAIT:
+- Kenapa suara knalpot motor menjadi lebih keras dari biasanya?
+- Apa penyebab Kenapa suara knalpot motor menjadi lebih keras dari biasanya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Perubahan suara knalpot yang menjadi lebih keras umumnya disebabkan oleh kebocoran pada sambungan knalpot atau kerusakan pada bagian peredam di dalam knalpot. Selain itu baut pengikat yang kendor juga dapat menyebabkan suara menjadi lebih nyaring karena adanya celah udara.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_028
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa bergetar saat melaju pada kecepatan tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa bergetar saat melaju pada kecepatan tinggi?
+- Apa penyebab Kenapa motor terasa bergetar saat melaju pada kecepatan tinggi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Getaran pada kecepatan tinggi biasanya disebabkan oleh kondisi ban yang tidak seimbang atau velg yang sudah tidak lurus. Selain itu faktor suspensi yang mulai melemah juga dapat memperparah getaran karena tidak mampu meredam getaran secara optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_029
+JENIS: Motor
+TOPIK: rem, ban roda suspensi
+KATA_KUNCI: rem, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa rem depan terasa bergetar saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa rem depan terasa bergetar saat digunakan?
+- Apa penyebab Kenapa rem depan terasa bergetar saat digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Getaran saat pengereman umumnya disebabkan oleh piringan rem yang tidak rata atau mengalami keausan tidak merata. Hal ini menyebabkan kampas rem tidak menempel secara sempurna sehingga menimbulkan getaran saat pengereman.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_030
+JENIS: Motor
+TOPIK: bahan bakar
+KATA_KUNCI: bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor tidak responsif saat gas ditarik?
+PERTANYAAN_TERKAIT:
+- Kenapa motor tidak responsif saat gas ditarik?
+- Apa penyebab Kenapa motor tidak responsif saat gas ditarik?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Respons gas yang lambat biasanya disebabkan oleh throttle body atau karburator yang kotor sehingga aliran udara dan bahan bakar tidak optimal. Selain itu sensor throttle pada motor injeksi yang bermasalah juga dapat menyebabkan keterlambatan respons.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_031
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa oli mesin motor cepat berkurang padahal jarang digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa oli mesin motor cepat berkurang padahal jarang digunakan?
+- Apa penyebab Kenapa oli mesin motor cepat berkurang padahal jarang digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Oli yang cepat berkurang meskipun jarang digunakan bisa disebabkan oleh penguapan akibat suhu mesin atau adanya kebocoran kecil yang tidak terlihat. Selain itu keausan pada ring piston juga dapat menyebabkan oli ikut terbakar di ruang bakar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_032
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, ban roda suspensi, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, ban roda suspensi, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin berubah saat mesin sudah panas?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin berubah saat mesin sudah panas?
+- Apa penyebab Kenapa suara mesin berubah saat mesin sudah panas?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Perubahan suara mesin saat panas biasanya disebabkan oleh perubahan viskositas oli sehingga pelumasan menjadi berbeda dibanding saat mesin dingin. Hal ini dapat meningkatkan gesekan antar komponen dan memengaruhi suara mesin.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_033
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sulit dinyalakan menggunakan kick starter?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sulit dinyalakan menggunakan kick starter?
+- Apa penyebab Kenapa motor sulit dinyalakan menggunakan kick starter?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kesulitan menggunakan kick starter biasanya berkaitan dengan penurunan kompresi mesin akibat keausan pada ring piston atau klep. Hal ini membuat tekanan di ruang bakar tidak cukup untuk memulai pembakaran.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_034
+JENIS: Motor
+TOPIK: rem, mesin pengapian, ban roda suspensi
+KATA_KUNCI: rem, mesin pengapian, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa berat saat didorong dalam kondisi mesin mati?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa berat saat didorong dalam kondisi mesin mati?
+- Apa penyebab Kenapa motor terasa berat saat didorong dalam kondisi mesin mati?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh rem yang seret atau bearing roda yang mulai aus sehingga roda tidak berputar dengan bebas. Kondisi ini juga bisa mempercepat keausan komponen roda.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_035
+JENIS: Motor
+TOPIK: rem, ban roda suspensi
+KATA_KUNCI: rem, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa ada suara berdecit dari roda saat motor berjalan?
+PERTANYAAN_TERKAIT:
+- Kenapa ada suara berdecit dari roda saat motor berjalan?
+- Apa penyebab Kenapa ada suara berdecit dari roda saat motor berjalan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara berdecit dari roda bisa disebabkan oleh kampas rem yang kotor atau bearing roda yang mulai aus. Kotoran yang menempel dapat meningkatkan gesekan sehingga menghasilkan suara.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_036
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin motor mati saat idle terlalu lama?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin motor mati saat idle terlalu lama?
+- Apa penyebab Kenapa mesin motor mati saat idle terlalu lama?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Mesin yang mati saat idle biasanya disebabkan oleh setelan idle yang terlalu rendah atau suplai bahan bakar yang tidak stabil. Hal ini membuat mesin tidak mampu mempertahankan putaran rendah dalam waktu lama.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_037
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, rantai transmisi
+KATA_KUNCI: mesin pengapian, bahan bakar, rantai transmisi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa tarikan awal motor terasa lambat dan kurang responsif?
+PERTANYAAN_TERKAIT:
+- Kenapa tarikan awal motor terasa lambat dan kurang responsif?
+- Apa penyebab Kenapa tarikan awal motor terasa lambat dan kurang responsif?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Tarikan awal yang lambat biasanya disebabkan oleh kopling yang mulai aus atau suplai bahan bakar yang tidak cukup pada awal akselerasi. Selain itu filter udara yang kotor juga dapat memengaruhi performa awal mesin.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_038
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, oli pelumasan
+KATA_KUNCI: mesin pengapian, bahan bakar, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin terdengar kasar saat digas?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin terdengar kasar saat digas?
+- Apa penyebab Kenapa suara mesin terdengar kasar saat digas?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar saat digas biasanya disebabkan oleh pembakaran yang tidak sempurna atau pelumasan yang kurang sehingga gesekan antar komponen meningkat.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_039
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan
+KATA_KUNCI: mesin pengapian, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor tidak bisa hidup sama sekali meskipun starter ditekan?
+PERTANYAAN_TERKAIT:
+- Kenapa motor tidak bisa hidup sama sekali meskipun starter ditekan?
+- Apa penyebab Kenapa motor tidak bisa hidup sama sekali meskipun starter ditekan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini bisa disebabkan oleh aki yang habis atau sistem pengapian yang tidak berfungsi sehingga tidak ada percikan api di ruang bakar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_040
+JENIS: Motor
+TOPIK: bahan bakar, kelistrikan
+KATA_KUNCI: bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa cepat kehabisan bensin?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa cepat kehabisan bensin?
+- Apa penyebab Kenapa motor terasa cepat kehabisan bensin?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Konsumsi bahan bakar yang boros biasanya disebabkan oleh pembakaran yang tidak efisien akibat setelan bahan bakar yang tidak tepat atau komponen seperti injektor yang tidak bekerja optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_041
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, pendinginan
+KATA_KUNCI: mesin pengapian, kelistrikan, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa panas mesin terasa sampai ke kaki pengendara?
+PERTANYAAN_TERKAIT:
+- Kenapa panas mesin terasa sampai ke kaki pengendara?
+- Apa penyebab Kenapa panas mesin terasa sampai ke kaki pengendara?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Panas yang terasa di kaki biasanya berasal dari mesin yang bekerja dalam suhu tinggi sehingga panas merambat ke rangka motor. Hal ini normal namun bisa menjadi berlebih jika sistem pendinginan tidak optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_042
+JENIS: Motor
+TOPIK: mesin pengapian, oli pelumasan
+KATA_KUNCI: mesin pengapian, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin berubah setelah mengganti oli?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin berubah setelah mengganti oli?
+- Apa penyebab Kenapa suara mesin berubah setelah mengganti oli?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Perubahan suara mesin setelah ganti oli biasanya disebabkan oleh perbedaan viskositas oli yang memengaruhi tingkat pelumasan antar komponen mesin.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_043
+JENIS: Motor
+TOPIK: rem, mesin pengapian, ban roda suspensi
+KATA_KUNCI: rem, mesin pengapian, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tidak stabil saat melakukan pengereman mendadak?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tidak stabil saat melakukan pengereman mendadak?
+- Apa penyebab Kenapa motor terasa tidak stabil saat melakukan pengereman mendadak?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan saat pengereman bisa disebabkan oleh distribusi beban yang tidak seimbang atau kondisi ban yang tidak optimal sehingga daya cengkeram berkurang.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_044
+JENIS: Motor
+TOPIK: kelistrikan
+KATA_KUNCI: kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa lampu sein tidak menyala meskipun saklar sudah ditekan?
+PERTANYAAN_TERKAIT:
+- Kenapa lampu sein tidak menyala meskipun saklar sudah ditekan?
+- Apa penyebab Kenapa lampu sein tidak menyala meskipun saklar sudah ditekan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh kerusakan pada relay lampu sein atau bohlam yang sudah putus sehingga arus listrik tidak dapat mengalir dengan baik.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_045
+JENIS: Motor
+TOPIK: mesin pengapian, rantai transmisi, ban roda suspensi
+KATA_KUNCI: mesin pengapian, rantai transmisi, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor tidak bisa bergerak meskipun mesin sudah hidup?
+PERTANYAAN_TERKAIT:
+- Kenapa motor tidak bisa bergerak meskipun mesin sudah hidup?
+- Apa penyebab Kenapa motor tidak bisa bergerak meskipun mesin sudah hidup?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini biasanya disebabkan oleh masalah pada sistem transmisi atau kopling sehingga tenaga dari mesin tidak tersalurkan ke roda.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_046
+JENIS: Motor
+TOPIK: mesin pengapian, oli pelumasan
+KATA_KUNCI: mesin pengapian, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa terdengar suara kasar saat menekan tombol starter?
+PERTANYAAN_TERKAIT:
+- Kenapa terdengar suara kasar saat menekan tombol starter?
+- Apa penyebab Kenapa terdengar suara kasar saat menekan tombol starter?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar saat starter bisa disebabkan oleh dinamo starter yang mulai aus atau kurang pelumasan sehingga tidak bekerja dengan halus.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_047
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa tenaga mesin terasa lemah saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa tenaga mesin terasa lemah saat digunakan?
+- Apa penyebab Kenapa tenaga mesin terasa lemah saat digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Penurunan tenaga bisa disebabkan oleh pembakaran yang tidak maksimal akibat suplai bahan bakar yang terganggu atau kondisi busi yang sudah tidak optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_048
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sering tersendat saat digunakan di kondisi hujan?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sering tersendat saat digunakan di kondisi hujan?
+- Apa penyebab Kenapa motor sering tersendat saat digunakan di kondisi hujan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh air yang masuk ke sistem pengapian sehingga percikan api terganggu dan pembakaran tidak stabil.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_049
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa sulit dikendalikan saat dikendarai?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa sulit dikendalikan saat dikendarai?
+- Apa penyebab Kenapa motor terasa sulit dikendalikan saat dikendarai?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kesulitan dalam mengendalikan motor bisa disebabkan oleh kondisi suspensi yang tidak optimal atau tekanan ban yang tidak sesuai sehingga memengaruhi kestabilan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_050
+JENIS: Motor
+TOPIK: rantai transmisi, oli pelumasan
+KATA_KUNCI: rantai transmisi, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara kasar muncul dari rantai saat motor berjalan?
+PERTANYAAN_TERKAIT:
+- Kenapa suara kasar muncul dari rantai saat motor berjalan?
+- Apa penyebab Kenapa suara kasar muncul dari rantai saat motor berjalan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar dari rantai biasanya disebabkan oleh kurangnya pelumasan atau setelan rantai yang terlalu kencang atau terlalu kendur sehingga menimbulkan gesekan berlebih.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_051
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin motor terasa cepat panas padahal jarak tempuh tidak jauh?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin motor terasa cepat panas padahal jarak tempuh tidak jauh?
+- Apa penyebab Kenapa mesin motor terasa cepat panas padahal jarak tempuh tidak jauh?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Mesin yang cepat panas dalam jarak pendek biasanya disebabkan oleh pelumasan yang kurang optimal karena oli sudah menurun kualitasnya atau volumenya berkurang. Selain itu sistem pendinginan yang tidak bekerja maksimal seperti sirkulasi udara yang terhambat juga dapat mempercepat kenaikan suhu mesin sehingga perlu dilakukan pengecekan kondisi oli dan jalur pendinginan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_052
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa boros oli meskipun tidak terlihat ada kebocoran?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa boros oli meskipun tidak terlihat ada kebocoran?
+- Apa penyebab Kenapa motor terasa boros oli meskipun tidak terlihat ada kebocoran?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa terjadi karena oli ikut terbakar di ruang bakar akibat keausan pada ring piston atau seal klep. Akibatnya oli berkurang secara perlahan tanpa adanya tanda kebocoran eksternal. Jika dibiarkan dapat memengaruhi performa mesin dan mempercepat kerusakan komponen.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_053
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tidak stabil saat digunakan di jalan lurus?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tidak stabil saat digunakan di jalan lurus?
+- Apa penyebab Kenapa motor terasa tidak stabil saat digunakan di jalan lurus?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan saat berjalan lurus biasanya disebabkan oleh tekanan ban yang tidak seimbang atau kondisi ban yang sudah tidak rata. Selain itu masalah pada suspensi atau rangka yang tidak lurus juga dapat memengaruhi kestabilan kendaraan saat dikendarai.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_054
+JENIS: Motor
+TOPIK: mesin pengapian, oli pelumasan
+KATA_KUNCI: mesin pengapian, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin terdengar lebih keras dari biasanya saat digunakan harian?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin terdengar lebih keras dari biasanya saat digunakan harian?
+- Apa penyebab Kenapa suara mesin terdengar lebih keras dari biasanya saat digunakan harian?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya terjadi karena pelumasan yang mulai berkurang atau kualitas oli yang sudah menurun sehingga gesekan antar komponen mesin meningkat. Selain itu keausan pada komponen internal mesin juga dapat menyebabkan suara menjadi lebih kasar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_055
+JENIS: Motor
+TOPIK: rem
+KATA_KUNCI: rem, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa sulit berhenti meskipun rem sudah ditekan?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa sulit berhenti meskipun rem sudah ditekan?
+- Apa penyebab Kenapa motor terasa sulit berhenti meskipun rem sudah ditekan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini biasanya disebabkan oleh kampas rem yang sudah aus atau minyak rem yang berkurang sehingga daya cengkeram terhadap piringan rem tidak maksimal. Selain itu adanya udara dalam sistem rem juga dapat mengurangi efektivitas pengereman.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_056
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan, ban roda suspensi
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin motor sering brebet saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin motor sering brebet saat digunakan?
+- Apa penyebab Kenapa mesin motor sering brebet saat digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Brebet pada mesin biasanya disebabkan oleh suplai bahan bakar yang tidak stabil akibat karburator kotor atau injektor yang tersumbat. Selain itu filter udara yang kotor juga dapat mengganggu perbandingan udara dan bahan bakar sehingga pembakaran tidak optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_057
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa terdengar suara kasar dari roda saat motor berjalan?
+PERTANYAAN_TERKAIT:
+- Kenapa terdengar suara kasar dari roda saat motor berjalan?
+- Apa penyebab Kenapa terdengar suara kasar dari roda saat motor berjalan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar dari roda umumnya berasal dari bearing roda yang mulai aus atau kekurangan pelumas. Kondisi ini menyebabkan gesekan meningkat saat roda berputar sehingga menimbulkan suara yang tidak normal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_058
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa kurang nyaman saat digunakan dalam perjalanan jauh?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa kurang nyaman saat digunakan dalam perjalanan jauh?
+- Apa penyebab Kenapa motor terasa kurang nyaman saat digunakan dalam perjalanan jauh?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidaknyamanan saat perjalanan jauh biasanya disebabkan oleh suspensi yang sudah melemah sehingga tidak mampu meredam getaran dengan baik. Selain itu posisi duduk yang kurang ergonomis dan kondisi jalan juga dapat memengaruhi kenyamanan berkendara.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_059
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin motor sulit dihidupkan meskipun starter berfungsi?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin motor sulit dihidupkan meskipun starter berfungsi?
+- Apa penyebab Kenapa mesin motor sulit dihidupkan meskipun starter berfungsi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini bisa disebabkan oleh sistem pengapian yang tidak optimal seperti busi kotor atau suplai bahan bakar yang tidak masuk dengan baik ke ruang bakar sehingga proses pembakaran tidak terjadi.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_060
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan
+KATA_KUNCI: mesin pengapian, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor cepat panas saat digunakan dalam kondisi macet?
+PERTANYAAN_TERKAIT:
+- Kenapa motor cepat panas saat digunakan dalam kondisi macet?
+- Apa penyebab Kenapa motor cepat panas saat digunakan dalam kondisi macet?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Saat macet aliran udara ke mesin sangat minim sehingga sistem pendinginan tidak bekerja optimal. Ditambah mesin tetap hidup dalam kondisi diam membuat panas terakumulasi lebih cepat.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_061
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara kasar terdengar dari roda saat motor digunakan terutama di kecepatan rendah?
+PERTANYAAN_TERKAIT:
+- Kenapa suara kasar terdengar dari roda saat motor digunakan terutama di kecepatan rendah?
+- Apa penyebab Kenapa suara kasar terdengar dari roda saat motor digunakan terutama di kecepatan rendah?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar dari roda pada kecepatan rendah biasanya disebabkan oleh bearing roda yang mulai aus atau kotoran yang masuk ke dalam sistem roda. Hal ini menyebabkan putaran roda tidak halus dan menimbulkan suara yang mengganggu.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_062
+JENIS: Motor
+TOPIK: rem, mesin pengapian, rantai transmisi, ban roda suspensi
+KATA_KUNCI: rem, mesin pengapian, rantai transmisi, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa berat saat dijalankan meskipun jalan datar apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa berat saat dijalankan meskipun jalan datar apa penyebabnya?
+- Apa penyebab Motor terasa berat saat dijalankan meskipun jalan datar apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Motor yang terasa berat bisa disebabkan oleh rem yang sedikit menahan tekanan ban yang kurang atau rantai yang terlalu kencang. Kondisi ini membuat mesin harus bekerja lebih keras sehingga performa terasa menurun.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_063
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa putaran mesin tidak stabil saat langsam dan kadang naik turun sendiri?
+PERTANYAAN_TERKAIT:
+- Kenapa putaran mesin tidak stabil saat langsam dan kadang naik turun sendiri?
+- Apa penyebab Kenapa putaran mesin tidak stabil saat langsam dan kadang naik turun sendiri?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya terjadi karena sistem idle tidak bekerja dengan baik akibat karburator yang kotor atau throttle body yang kotor pada motor injeksi. Sensor idle yang bermasalah juga dapat menyebabkan putaran mesin tidak stabil.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_064
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, pendinginan
+KATA_KUNCI: mesin pengapian, bahan bakar, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa tidak bertenaga saat digunakan untuk perjalanan jauh apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa tidak bertenaga saat digunakan untuk perjalanan jauh apa penyebabnya?
+- Apa penyebab Motor terasa tidak bertenaga saat digunakan untuk perjalanan jauh apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Penurunan tenaga saat perjalanan jauh bisa disebabkan oleh mesin yang mulai panas filter udara kotor atau suplai bahan bakar yang tidak konsisten sehingga pembakaran tidak optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_065
+JENIS: Motor
+TOPIK: mesin pengapian, knalpot
+KATA_KUNCI: mesin pengapian, knalpot, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara knalpot berubah menjadi lebih keras dari biasanya?
+PERTANYAAN_TERKAIT:
+- Kenapa suara knalpot berubah menjadi lebih keras dari biasanya?
+- Apa penyebab Kenapa suara knalpot berubah menjadi lebih keras dari biasanya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Perubahan suara knalpot biasanya disebabkan oleh kebocoran pada sambungan knalpot atau kerusakan pada bagian peredam sehingga suara mesin lebih terdengar keluar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_066
+JENIS: Motor
+TOPIK: mesin pengapian, ban roda suspensi
+KATA_KUNCI: mesin pengapian, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor bergetar lebih terasa dari biasanya saat digunakan apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor bergetar lebih terasa dari biasanya saat digunakan apa penyebabnya?
+- Apa penyebab Motor bergetar lebih terasa dari biasanya saat digunakan apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Getaran berlebih bisa disebabkan oleh ketidakseimbangan pada mesin atau kondisi ban yang tidak rata. Selain itu mounting mesin yang mulai longgar juga dapat memperparah getaran.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_067
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin cepat panas meskipun digunakan dalam jarak dekat?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin cepat panas meskipun digunakan dalam jarak dekat?
+- Apa penyebab Kenapa mesin cepat panas meskipun digunakan dalam jarak dekat?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini bisa terjadi karena oli yang sudah tidak optimal atau sistem pendinginan yang tidak bekerja maksimal sehingga panas mesin tidak dapat dibuang dengan baik.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_068
+JENIS: Motor
+TOPIK: bahan bakar, kelistrikan
+KATA_KUNCI: bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor sering tersendat saat digunakan di kecepatan rendah kenapa bisa begitu?
+PERTANYAAN_TERKAIT:
+- Motor sering tersendat saat digunakan di kecepatan rendah kenapa bisa begitu?
+- Apa penyebab Motor sering tersendat saat digunakan di kecepatan rendah kenapa bisa begitu?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Biasanya karena suplai bahan bakar tidak stabil akibat karburator kotor atau injektor tersumbat sehingga pembakaran tidak konsisten.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_069
+JENIS: Motor
+TOPIK: mesin pengapian, rantai transmisi
+KATA_KUNCI: mesin pengapian, rantai transmisi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Ada suara berisik dari mesin saat akselerasi apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Ada suara berisik dari mesin saat akselerasi apa penyebabnya?
+- Apa penyebab Ada suara berisik dari mesin saat akselerasi apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara berisik saat akselerasi bisa berasal dari komponen internal seperti klep atau rantai keteng yang mulai aus sehingga menghasilkan bunyi saat mesin bekerja lebih keras.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_070
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tidak stabil saat dikendarai di jalan lurus?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tidak stabil saat dikendarai di jalan lurus?
+- Apa penyebab Kenapa motor terasa tidak stabil saat dikendarai di jalan lurus?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan ini biasanya disebabkan oleh kondisi ban yang tidak seimbang atau suspensi yang mulai melemah sehingga tidak mampu menjaga keseimbangan kendaraan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_071
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin terasa lebih kasar saat mesin sudah panas?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin terasa lebih kasar saat mesin sudah panas?
+- Apa penyebab Kenapa mesin terasa lebih kasar saat mesin sudah panas?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Saat mesin panas viskositas oli berubah sehingga pelumasan menjadi kurang optimal dan gesekan antar komponen meningkat yang menyebabkan suara mesin lebih kasar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_072
+JENIS: Motor
+TOPIK: mesin pengapian, rantai transmisi, ban roda suspensi
+KATA_KUNCI: mesin pengapian, rantai transmisi, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor sulit diajak jalan meskipun mesin sudah hidup normal apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor sulit diajak jalan meskipun mesin sudah hidup normal apa penyebabnya?
+- Apa penyebab Motor sulit diajak jalan meskipun mesin sudah hidup normal apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa disebabkan oleh masalah pada sistem transmisi seperti kopling yang tidak bekerja dengan baik sehingga tenaga mesin tidak tersalurkan ke roda.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_073
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, knalpot
+KATA_KUNCI: mesin pengapian, bahan bakar, knalpot, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin terdengar lebih keras saat digas dalam kondisi diam?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin terdengar lebih keras saat digas dalam kondisi diam?
+- Apa penyebab Kenapa suara mesin terdengar lebih keras saat digas dalam kondisi diam?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya terjadi karena pembakaran tidak stabil atau adanya masalah pada sistem knalpot yang membuat suara mesin lebih terdengar keluar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_074
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa kurang nyaman saat digunakan di jalan bergelombang apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa kurang nyaman saat digunakan di jalan bergelombang apa penyebabnya?
+- Apa penyebab Motor terasa kurang nyaman saat digunakan di jalan bergelombang apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Biasanya disebabkan oleh shockbreaker yang sudah lemah sehingga tidak mampu meredam getaran dengan baik dan membuat pengendara merasakan guncangan lebih besar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_075
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin tiba tiba mati saat berkendara dalam kondisi normal?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin tiba tiba mati saat berkendara dalam kondisi normal?
+- Apa penyebab Kenapa mesin tiba tiba mati saat berkendara dalam kondisi normal?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Mesin yang mati mendadak bisa disebabkan oleh gangguan pada sistem bahan bakar seperti aliran bensin terhambat atau masalah pada sistem pengapian seperti busi yang tidak bekerja.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_076
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara kasar muncul dari mesin saat putaran tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa suara kasar muncul dari mesin saat putaran tinggi?
+- Apa penyebab Kenapa suara kasar muncul dari mesin saat putaran tinggi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar pada putaran tinggi biasanya disebabkan oleh meningkatnya gesekan antar komponen mesin akibat pelumasan yang tidak optimal. Selain itu keausan pada komponen seperti piston ring atau klep juga dapat menyebabkan suara menjadi lebih terdengar saat mesin bekerja lebih keras.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_077
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor cepat terasa panas saat digunakan di siang hari?
+PERTANYAAN_TERKAIT:
+- Kenapa motor cepat terasa panas saat digunakan di siang hari?
+- Apa penyebab Kenapa motor cepat terasa panas saat digunakan di siang hari?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Selain pengaruh suhu lingkungan yang tinggi kondisi ini juga dipengaruhi oleh kualitas oli yang sudah menurun atau sistem pendinginan yang tidak bekerja optimal sehingga panas mesin tidak dapat dibuang dengan efisien.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_078
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin terasa tidak halus saat digunakan dalam perjalanan jauh?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin terasa tidak halus saat digunakan dalam perjalanan jauh?
+- Apa penyebab Kenapa mesin terasa tidak halus saat digunakan dalam perjalanan jauh?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh pembakaran yang tidak sempurna akibat injektor yang mulai kotor atau busi yang sudah melemah sehingga performa mesin menurun seiring waktu penggunaan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_079
+JENIS: Motor
+TOPIK: bahan bakar, rantai transmisi
+KATA_KUNCI: bahan bakar, rantai transmisi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa berat saat akselerasi awal apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa berat saat akselerasi awal apa penyebabnya?
+- Apa penyebab Motor terasa berat saat akselerasi awal apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa disebabkan oleh kopling yang mulai aus sehingga tidak mampu mentransfer tenaga secara maksimal atau suplai bahan bakar yang tidak cukup pada saat awal akselerasi.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_080
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, pendinginan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, pendinginan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin terdengar tidak normal setelah digunakan lama?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin terdengar tidak normal setelah digunakan lama?
+- Apa penyebab Kenapa suara mesin terdengar tidak normal setelah digunakan lama?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Perubahan suara mesin setelah digunakan lama biasanya disebabkan oleh peningkatan suhu yang memengaruhi pelumasan serta adanya keausan pada komponen mesin akibat penggunaan terus menerus.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_081
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa oleng saat kecepatan menengah apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa oleng saat kecepatan menengah apa penyebabnya?
+- Apa penyebab Motor terasa oleng saat kecepatan menengah apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh tekanan ban yang tidak seimbang atau velg yang tidak lurus sehingga memengaruhi kestabilan saat berkendara.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_082
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan
+KATA_KUNCI: mesin pengapian, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin cepat panas saat sering berhenti dan jalan di kemacetan?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin cepat panas saat sering berhenti dan jalan di kemacetan?
+- Apa penyebab Kenapa mesin cepat panas saat sering berhenti dan jalan di kemacetan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Saat kondisi stop and go aliran udara ke mesin sangat terbatas sehingga sistem pendinginan tidak bekerja maksimal dan panas mesin cepat meningkat.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_083
+JENIS: Motor
+TOPIK: mesin pengapian, knalpot, ban roda suspensi
+KATA_KUNCI: mesin pengapian, knalpot, ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara berisik muncul dari bagian bawah motor?
+PERTANYAAN_TERKAIT:
+- Kenapa suara berisik muncul dari bagian bawah motor?
+- Apa penyebab Kenapa suara berisik muncul dari bagian bawah motor?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara dari bagian bawah biasanya berasal dari knalpot yang longgar atau pelindung mesin yang tidak terpasang dengan baik sehingga menimbulkan getaran dan suara.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_084
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Motor terasa kurang responsif saat gas ditarik apa penyebabnya?
+PERTANYAAN_TERKAIT:
+- Motor terasa kurang responsif saat gas ditarik apa penyebabnya?
+- Apa penyebab Motor terasa kurang responsif saat gas ditarik apa penyebabnya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh throttle body yang kotor atau sistem bahan bakar yang tidak mampu merespons kebutuhan mesin secara cepat.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_085
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin tiba tiba kehilangan tenaga saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin tiba tiba kehilangan tenaga saat digunakan?
+- Apa penyebab Kenapa mesin tiba tiba kehilangan tenaga saat digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kehilangan tenaga secara tiba tiba bisa disebabkan oleh suplai bahan bakar yang terganggu atau pembakaran yang tidak berjalan dengan sempurna akibat gangguan pada sistem pengapian.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_086
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor sering brebet saat digunakan dalam kondisi hujan?
+PERTANYAAN_TERKAIT:
+- Kenapa motor sering brebet saat digunakan dalam kondisi hujan?
+- Apa penyebab Kenapa motor sering brebet saat digunakan dalam kondisi hujan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini disebabkan oleh air yang masuk ke sistem pengapian sehingga percikan api pada busi terganggu dan pembakaran menjadi tidak stabil.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_087
+JENIS: Motor
+TOPIK: mesin pengapian, oli pelumasan
+KATA_KUNCI: mesin pengapian, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara kasar muncul dari mesin saat dinyalakan?
+PERTANYAAN_TERKAIT:
+- Kenapa suara kasar muncul dari mesin saat dinyalakan?
+- Apa penyebab Kenapa suara kasar muncul dari mesin saat dinyalakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar saat awal dinyalakan biasanya disebabkan oleh pelumasan yang belum merata ke seluruh komponen mesin terutama jika motor lama tidak digunakan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_088
+JENIS: Motor
+TOPIK: mesin pengapian, pendinginan, ban roda suspensi, oli pelumasan
+KATA_KUNCI: mesin pengapian, pendinginan, ban roda suspensi, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa panas berlebih dibanding biasanya?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa panas berlebih dibanding biasanya?
+- Apa penyebab Kenapa motor terasa panas berlebih dibanding biasanya?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Kondisi ini bisa disebabkan oleh kualitas oli yang sudah menurun atau sistem pendinginan yang tidak mampu mengimbangi panas yang dihasilkan mesin.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_089
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar
+KATA_KUNCI: mesin pengapian, bahan bakar, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin terasa lebih kasar dari biasanya saat digunakan harian?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin terasa lebih kasar dari biasanya saat digunakan harian?
+- Apa penyebab Kenapa mesin terasa lebih kasar dari biasanya saat digunakan harian?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Penggunaan harian tanpa perawatan rutin dapat menyebabkan penumpukan kotoran pada sistem pembakaran sehingga performa mesin menurun dan suara menjadi kasar.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_090
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan, rantai transmisi
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, rantai transmisi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa berat saat digunakan di jalan menanjak?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa berat saat digunakan di jalan menanjak?
+- Apa penyebab Kenapa motor terasa berat saat digunakan di jalan menanjak?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh tenaga mesin yang menurun akibat pembakaran tidak optimal atau sistem transmisi yang tidak bekerja dengan baik.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_091
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, knalpot
+KATA_KUNCI: mesin pengapian, bahan bakar, knalpot, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara mesin terdengar lebih keras saat akselerasi?
+PERTANYAAN_TERKAIT:
+- Kenapa suara mesin terdengar lebih keras saat akselerasi?
+- Apa penyebab Kenapa suara mesin terdengar lebih keras saat akselerasi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara yang lebih keras saat akselerasi biasanya disebabkan oleh pembakaran yang tidak stabil atau adanya kebocoran pada sistem knalpot.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_092
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor tidak stabil saat digunakan di kecepatan tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa motor tidak stabil saat digunakan di kecepatan tinggi?
+- Apa penyebab Kenapa motor tidak stabil saat digunakan di kecepatan tinggi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan pada kecepatan tinggi biasanya disebabkan oleh kondisi ban yang tidak seimbang atau suspensi yang tidak mampu menjaga kestabilan kendaraan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_093
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, kelistrikan
+KATA_KUNCI: mesin pengapian, bahan bakar, kelistrikan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin tiba tiba mati saat berhenti di lampu merah?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin tiba tiba mati saat berhenti di lampu merah?
+- Apa penyebab Kenapa mesin tiba tiba mati saat berhenti di lampu merah?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh sistem idle yang tidak stabil atau suplai bahan bakar yang terganggu sehingga mesin tidak mampu mempertahankan putaran rendah.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_094
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, pendinginan
+KATA_KUNCI: mesin pengapian, bahan bakar, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tersendat saat digunakan dalam perjalanan jauh?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tersendat saat digunakan dalam perjalanan jauh?
+- Apa penyebab Kenapa motor terasa tersendat saat digunakan dalam perjalanan jauh?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Tersendat saat perjalanan jauh bisa disebabkan oleh mesin yang mulai panas atau suplai bahan bakar yang tidak konsisten sehingga pembakaran tidak stabil.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_095
+JENIS: Motor
+TOPIK: mesin pengapian, kelistrikan, oli pelumasan
+KATA_KUNCI: mesin pengapian, kelistrikan, oli pelumasan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara kasar terdengar dari mesin saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa suara kasar terdengar dari mesin saat digunakan?
+- Apa penyebab Kenapa suara kasar terdengar dari mesin saat digunakan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara kasar dari mesin biasanya disebabkan oleh pelumasan yang kurang atau komponen mesin yang mulai aus akibat penggunaan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_096
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa kurang nyaman saat dikendarai?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa kurang nyaman saat dikendarai?
+- Apa penyebab Kenapa motor terasa kurang nyaman saat dikendarai?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidaknyamanan saat berkendara biasanya disebabkan oleh sistem suspensi yang tidak bekerja optimal atau kondisi ban yang kurang baik.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_097
+JENIS: Motor
+TOPIK: mesin pengapian, bahan bakar, pendinginan
+KATA_KUNCI: mesin pengapian, bahan bakar, pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa mesin sulit dihidupkan saat kondisi dingin?
+PERTANYAAN_TERKAIT:
+- Kenapa mesin sulit dihidupkan saat kondisi dingin?
+- Apa penyebab Kenapa mesin sulit dihidupkan saat kondisi dingin?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Hal ini biasanya disebabkan oleh sistem pengapian yang tidak optimal atau bahan bakar yang sulit menguap pada suhu rendah.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_098
+JENIS: Motor
+TOPIK: pendinginan
+KATA_KUNCI: pendinginan, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor cepat panas saat digunakan terus menerus?
+PERTANYAAN_TERKAIT:
+- Kenapa motor cepat panas saat digunakan terus menerus?
+- Apa penyebab Kenapa motor cepat panas saat digunakan terus menerus?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Penggunaan terus menerus menyebabkan akumulasi panas yang tinggi terutama jika sistem pendinginan tidak bekerja dengan optimal.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_099
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa suara berisik muncul dari roda saat berjalan?
+PERTANYAAN_TERKAIT:
+- Kenapa suara berisik muncul dari roda saat berjalan?
+- Apa penyebab Kenapa suara berisik muncul dari roda saat berjalan?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Suara berisik dari roda biasanya disebabkan oleh bearing yang mulai aus atau kurang pelumas sehingga menghasilkan gesekan.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.
+
+---
+ID: motor_qa_100
+JENIS: Motor
+TOPIK: ban roda suspensi
+KATA_KUNCI: ban roda suspensi, motor, troubleshooting motor, gejala motor, penyebab masalah motor
+PERTANYAAN_UTAMA: Kenapa motor terasa tidak stabil saat kecepatan tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa motor terasa tidak stabil saat kecepatan tinggi?
+- Apa penyebab Kenapa motor terasa tidak stabil saat kecepatan tinggi?
+- Bagaimana cara mendiagnosis masalah ini pada motor?
+JAWABAN_UTAMA:
+Ketidakstabilan ini biasanya disebabkan oleh balancing roda yang tidak tepat tekanan ban yang tidak sesuai atau kondisi suspensi yang sudah melemah.
+CATATAN_RAG:
+Gunakan jawaban ini untuk menjelaskan penyebab utama, gejala yang mungkin muncul, dan pemeriksaan awal secara ringkas. Jika pertanyaan user mirip dengan pertanyaan utama atau pertanyaan terkait, prioritaskan blok ini sebagai konteks.

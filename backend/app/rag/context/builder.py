@@ -68,7 +68,7 @@ class ContextBuilder:
                 section = (
                     f"Sumber: {source_id}\n"
                     f"{header}\n"
-                    + "\n".join(bullets[:12])
+                    + "\n".join(bullets[:6])
                 )
                 sections.append(section)
 

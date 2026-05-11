@@ -28,6 +28,8 @@ Rules:
 7) DO NOT output short answers.
 8) DO NOT output raw data.
 9) ALWAYS use clean sentences.
+10) DO NOT use markdown, bullet points, or ** symbols.
+11) ALWAYS end with a complete sentence.
 
 Examples:
 Q: What is an EV?

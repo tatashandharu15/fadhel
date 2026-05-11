@@ -1,0 +1,243 @@
+DATABASE RAG OTOMOTIF - DATASET FOKUS PERTANYAAN UJI
+Format ini dibuat untuk memperkuat retrieval terhadap pertanyaan uji yang sering dipakai.
+Setiap blok berisi pertanyaan utama, variasi pertanyaan, jawaban utama, dan kata kunci.
+
+---
+ID: focused_qa_001
+JENIS: Mobil
+TOPIK: starter, aki, pengapian, bahan bakar
+KATA_KUNCI: mobil, sulit dihidupkan, pagi hari, aki, starter, busi, bahan bakar
+PERTANYAAN_UTAMA: Kenapa mobil sulit dihidupkan saat pagi hari?
+PERTANYAAN_TERKAIT:
+- Kenapa mobil sulit dihidupkan saat pagi hari?
+- Apa penyebab mobil susah hidup saat pagi?
+- Mengapa mobil sulit distarter saat mesin dingin?
+JAWABAN_UTAMA:
+Mobil sulit dihidupkan saat pagi hari biasanya disebabkan oleh aki yang mulai lemah, sistem pengapian yang kurang optimal, atau suplai bahan bakar yang tidak lancar. Suhu dingin juga dapat memengaruhi proses pembakaran sehingga mesin lebih sulit menyala. Pemeriksaan awal sebaiknya dilakukan pada aki, busi, relay starter, dan sistem bahan bakar.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang mobil susah hidup saat pagi atau saat mesin masih dingin.
+
+---
+ID: focused_qa_002
+JENIS: Mobil
+TOPIK: setir, power steering, ban, kemudi
+KATA_KUNCI: mobil, setir berat, power steering, kemudi, tekanan ban, steering rack
+PERTANYAAN_UTAMA: Kenapa setir mobil terasa berat saat diputar?
+PERTANYAAN_TERKAIT:
+- Kenapa setir mobil terasa berat saat diputar?
+- Apa penyebab setir mobil berat?
+- Mengapa kemudi mobil terasa tidak ringan?
+JAWABAN_UTAMA:
+Setir mobil yang terasa berat biasanya disebabkan oleh gangguan pada sistem power steering, tekanan ban yang rendah, atau komponen kemudi yang mulai aus. Pada sistem hidrolik, oli power steering yang berkurang juga dapat menjadi penyebab. Pemeriksaan awal sebaiknya dilakukan pada tekanan ban, volume oli power steering, dan komponen kemudi.
+CATATAN_RAG:
+Prioritaskan blok ini untuk pertanyaan tentang setir berat dan masalah power steering.
+
+---
+ID: focused_qa_003
+JENIS: Mobil
+TOPIK: rem, kampas rem, cakram
+KATA_KUNCI: mobil, rem bunyi, rem berdecit, kampas rem, cakram
+PERTANYAAN_UTAMA: Kenapa rem mobil berbunyi saat digunakan?
+PERTANYAAN_TERKAIT:
+- Kenapa rem mobil berbunyi saat digunakan?
+- Apa penyebab rem mobil berdecit?
+- Mengapa terdengar suara saat pengereman mobil?
+JAWABAN_UTAMA:
+Rem mobil yang berbunyi biasanya disebabkan oleh kampas rem yang mulai menipis, permukaan cakram yang kotor atau tidak rata, atau debu yang menempel pada sistem pengereman. Jika cakram sudah bergelombang, rem juga bisa terasa bergetar. Pemeriksaan kampas rem dan cakram sangat disarankan jika suara terus muncul.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang bunyi rem mobil saat pengereman.
+
+---
+ID: focused_qa_004
+JENIS: Mobil
+TOPIK: aki, alternator, kelistrikan
+KATA_KUNCI: mobil, aki soak, alternator, pengisian, kelistrikan
+PERTANYAAN_UTAMA: Apa penyebab aki mobil cepat soak?
+PERTANYAAN_TERKAIT:
+- Apa penyebab aki mobil cepat soak?
+- Kenapa aki mobil sering habis?
+- Mengapa aki mobil cepat tekor?
+JAWABAN_UTAMA:
+Aki mobil cepat soak biasanya disebabkan oleh sistem pengisian yang tidak normal, usia aki yang menurun, atau adanya arus bocor pada sistem kelistrikan. Alternator yang lemah dan terminal aki yang kotor juga dapat mempercepat aki habis. Pemeriksaan awal dapat dilakukan pada tegangan aki, alternator, dan kemungkinan arus bocor.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang aki mobil cepat habis atau cepat tekor.
+
+---
+ID: focused_qa_005
+JENIS: Mobil
+TOPIK: bahan bakar, pembakaran, filter udara
+KATA_KUNCI: mobil, bensin boros, bahan bakar, injektor, filter udara, pembakaran
+PERTANYAAN_UTAMA: Kenapa konsumsi bensin mobil terasa lebih boros dari biasanya?
+PERTANYAAN_TERKAIT:
+- Kenapa konsumsi bensin mobil terasa lebih boros dari biasanya?
+- Apa penyebab mobil jadi boros bensin?
+- Mengapa mobil cepat kehabisan bahan bakar?
+JAWABAN_UTAMA:
+Konsumsi bensin mobil yang boros biasanya disebabkan oleh pembakaran yang tidak efisien, filter udara kotor, injektor bermasalah, atau tekanan ban yang kurang. Gaya berkendara yang agresif juga dapat membuat bahan bakar lebih cepat habis. Pemeriksaan pada filter udara, sistem bahan bakar, dan kondisi ban dapat membantu mengurangi pemborosan.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang mobil boros bensin atau pemakaian bahan bakar meningkat.
+
+---
+ID: focused_qa_006
+JENIS: Mobil
+TOPIK: idle, pengapian, engine mounting
+KATA_KUNCI: mobil, getar idle, langsam, busi, injektor, engine mounting
+PERTANYAAN_UTAMA: Apa penyebab mobil bergetar saat idle?
+PERTANYAAN_TERKAIT:
+- Apa penyebab mobil bergetar saat idle?
+- Kenapa mobil bergetar saat langsam?
+- Mengapa mesin mobil bergetar saat berhenti?
+JAWABAN_UTAMA:
+Mobil yang bergetar saat idle biasanya disebabkan oleh pembakaran yang tidak stabil, busi yang kotor, injektor yang kurang optimal, atau engine mounting yang mulai melemah. Setelan idle yang tidak tepat juga dapat membuat getaran terasa lebih jelas. Pemeriksaan awal sebaiknya dilakukan pada sistem pengapian, sistem bahan bakar, dan dudukan mesin.
+CATATAN_RAG:
+Gunakan untuk gejala getar saat idle, langsam, atau saat kendaraan berhenti.
+
+---
+ID: focused_qa_007
+JENIS: Mobil
+TOPIK: check engine, sensor, ECU
+KATA_KUNCI: mobil, check engine, sensor, ECU, scanner
+PERTANYAAN_UTAMA: Apa arti lampu check engine yang menyala?
+PERTANYAAN_TERKAIT:
+- Apa arti lampu check engine yang menyala?
+- Kenapa lampu check engine mobil menyala?
+- Apa makna indikator check engine pada dashboard?
+JAWABAN_UTAMA:
+Lampu check engine menandakan ada gangguan yang terdeteksi pada sistem mesin, sensor, atau sistem emisi kendaraan. Penyebab pastinya perlu diperiksa menggunakan scanner karena indikator ini bisa dipicu oleh berbagai komponen yang terhubung ke ECU. Jika lampu terus menyala, kendaraan sebaiknya segera diperiksa.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang arti lampu check engine atau indikator mesin.
+
+---
+ID: focused_qa_008
+JENIS: Mobil
+TOPIK: catalytic converter, emisi
+KATA_KUNCI: mobil, catalytic converter, emisi, knalpot, gas buang
+PERTANYAAN_UTAMA: Apa fungsi catalytic converter pada mobil?
+PERTANYAAN_TERKAIT:
+- Apa fungsi catalytic converter pada mobil?
+- Untuk apa catalytic converter digunakan?
+- Mengapa catalytic converter penting pada mobil?
+JAWABAN_UTAMA:
+Catalytic converter berfungsi mengurangi kandungan gas berbahaya pada emisi kendaraan sebelum keluar melalui knalpot. Komponen ini membantu mengubah zat berbahaya menjadi gas yang lebih aman bagi lingkungan. Jika catalytic converter bermasalah, emisi kendaraan dapat meningkat dan performa mesin juga bisa terpengaruh.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang fungsi catalytic converter dan hubungannya dengan emisi.
+
+---
+ID: focused_qa_009
+JENIS: Mobil
+TOPIK: tenaga, tanjakan, transmisi
+KATA_KUNCI: mobil, menanjak, akselerasi, tenaga lemah, kopling, bahan bakar
+PERTANYAAN_UTAMA: Kenapa mobil sulit berakselerasi saat menanjak?
+PERTANYAAN_TERKAIT:
+- Kenapa mobil sulit berakselerasi saat menanjak?
+- Apa penyebab mobil lemah saat tanjakan?
+- Mengapa tenaga mobil terasa kurang saat menanjak?
+JAWABAN_UTAMA:
+Mobil yang sulit berakselerasi saat menanjak biasanya disebabkan oleh tenaga mesin yang menurun, pembakaran yang tidak optimal, atau sistem transmisi yang tidak bekerja maksimal. Pada mobil manual, kopling yang mulai aus juga dapat membuat tenaga tidak tersalurkan dengan baik. Pemeriksaan awal sebaiknya dilakukan pada sistem bahan bakar, pengapian, dan komponen transmisi.
+CATATAN_RAG:
+Prioritaskan untuk pertanyaan tentang tenaga mobil lemah saat tanjakan.
+
+---
+ID: focused_qa_010
+JENIS: Motor
+TOPIK: akselerasi, bahan bakar, injektor
+KATA_KUNCI: motor, tersendat, digas, injektor, karburator, throttle
+PERTANYAAN_UTAMA: Motor tersendat saat digas kenapa hal ini bisa terjadi?
+PERTANYAAN_TERKAIT:
+- Motor tersendat saat digas kenapa hal ini bisa terjadi?
+- Kenapa motor tersendat saat akselerasi?
+- Mengapa motor brebet saat gas dibuka?
+JAWABAN_UTAMA:
+Motor yang tersendat saat digas biasanya disebabkan oleh suplai bahan bakar yang tidak lancar, karburator kotor, injektor bermasalah, atau sensor throttle yang tidak bekerja optimal. Busi yang lemah juga dapat membuat pembakaran tidak stabil. Pemeriksaan awal sebaiknya dilakukan pada sistem bahan bakar, injektor atau karburator, dan busi.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang motor tersendat, brebet, atau akselerasi yang tidak mulus.
+
+---
+ID: focused_qa_011
+JENIS: Motor
+TOPIK: lampu, aki, regulator, spul
+KATA_KUNCI: motor, lampu redup, aki, regulator, spul, kelistrikan
+PERTANYAAN_UTAMA: Kenapa lampu motor terlihat redup saat dinyalakan?
+PERTANYAAN_TERKAIT:
+- Kenapa lampu motor terlihat redup saat dinyalakan?
+- Apa penyebab lampu motor redup?
+- Mengapa cahaya lampu motor tidak terang?
+JAWABAN_UTAMA:
+Lampu motor yang redup biasanya menunjukkan adanya masalah pada sistem kelistrikan, seperti aki yang mulai lemah atau sistem pengisian yang tidak bekerja dengan baik. Komponen seperti spul dan regulator juga perlu diperiksa karena berpengaruh pada kestabilan arus listrik. Jika lampu terus redup, sistem pengisian motor sebaiknya segera dicek.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang lampu motor redup dan gangguan kelistrikan.
+
+---
+ID: focused_qa_012
+JENIS: Umum
+TOPIK: injeksi, bahan bakar, ECU
+KATA_KUNCI: injeksi, bahan bakar, injektor, sensor, ECU, kendaraan
+PERTANYAAN_UTAMA: Bagaimana cara kerja sistem injeksi bahan bakar?
+PERTANYAAN_TERKAIT:
+- Bagaimana cara kerja sistem injeksi bahan bakar?
+- Apa itu sistem injeksi pada kendaraan?
+- Bagaimana injektor menyalurkan bahan bakar?
+JAWABAN_UTAMA:
+Sistem injeksi bahan bakar bekerja dengan mengatur jumlah dan waktu penyemprotan bahan bakar ke mesin secara presisi. Proses ini dikendalikan oleh ECU berdasarkan data dari sensor agar campuran udara dan bahan bakar sesuai kebutuhan mesin. Dengan sistem injeksi, pembakaran menjadi lebih efisien dan respons mesin biasanya lebih stabil.
+CATATAN_RAG:
+Gunakan untuk pertanyaan definisi dan cara kerja injeksi bahan bakar.
+
+---
+ID: focused_qa_013
+JENIS: Umum
+TOPIK: suspensi, kenyamanan, stabilitas
+KATA_KUNCI: suspensi, mobil, motor, kenyamanan, stabilitas, shockbreaker
+PERTANYAAN_UTAMA: Apa fungsi suspensi pada mobil dan motor?
+PERTANYAAN_TERKAIT:
+- Apa fungsi suspensi pada mobil dan motor?
+- Untuk apa suspensi digunakan pada kendaraan?
+- Mengapa suspensi penting pada mobil dan motor?
+JAWABAN_UTAMA:
+Suspensi berfungsi meredam guncangan dari permukaan jalan agar kendaraan tetap nyaman dan stabil saat digunakan. Pada mobil dan motor, suspensi juga membantu menjaga kontak ban dengan jalan sehingga pengendalian menjadi lebih baik. Jika suspensi lemah, kenyamanan dan kestabilan kendaraan akan menurun.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang fungsi suspensi dan pengaruhnya terhadap kenyamanan kendaraan.
+
+---
+ID: focused_qa_014
+JENIS: Umum
+TOPIK: respons gas, bahan bakar, pengapian
+KATA_KUNCI: kendaraan, kurang responsif, gas, throttle, bahan bakar, busi
+PERTANYAAN_UTAMA: Kenapa kendaraan terasa kurang responsif saat gas ditarik?
+PERTANYAAN_TERKAIT:
+- Kenapa kendaraan terasa kurang responsif saat gas ditarik?
+- Apa penyebab respons gas lambat?
+- Mengapa kendaraan telat merespons saat akselerasi?
+JAWABAN_UTAMA:
+Kendaraan yang terasa kurang responsif saat gas ditarik biasanya disebabkan oleh suplai bahan bakar yang kurang lancar, throttle body kotor, injektor bermasalah, atau sistem pengapian yang tidak optimal. Filter udara yang kotor juga dapat mengurangi aliran udara ke mesin. Pemeriksaan awal sebaiknya dilakukan pada throttle, injektor, filter udara, dan busi.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang respons gas lambat atau akselerasi terlambat.
+
+---
+ID: focused_qa_015
+JENIS: Umum
+TOPIK: bahan bakar, pembakaran
+KATA_KUNCI: kendaraan, cepat kehabisan bahan bakar, boros, injektor, filter udara
+PERTANYAAN_UTAMA: Apa penyebab kendaraan cepat kehabisan bahan bakar?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kendaraan cepat kehabisan bahan bakar?
+- Kenapa kendaraan boros bahan bakar?
+- Mengapa bensin kendaraan cepat habis?
+JAWABAN_UTAMA:
+Kendaraan yang cepat kehabisan bahan bakar biasanya disebabkan oleh pembakaran yang tidak efisien, masalah pada sistem bahan bakar, tekanan ban yang tidak sesuai, atau gaya berkendara yang agresif. Komponen seperti injektor, filter udara, dan sensor juga dapat memengaruhi efisiensi bahan bakar. Pemeriksaan berkala pada sistem mesin dan kebiasaan berkendara dapat membantu mengurangi pemborosan.
+CATATAN_RAG:
+Gunakan untuk pertanyaan umum tentang kendaraan boros bahan bakar.
+
+---
+ID: focused_qa_016
+JENIS: Umum
+TOPIK: getaran, ban, velg, suspensi
+KATA_KUNCI: kendaraan, getar kecepatan tinggi, ban, velg, balancing, suspensi
+PERTANYAAN_UTAMA: Kenapa kendaraan terasa bergetar saat kecepatan tinggi?
+PERTANYAAN_TERKAIT:
+- Kenapa kendaraan terasa bergetar saat kecepatan tinggi?
+- Apa penyebab getaran pada kendaraan saat ngebut?
+- Mengapa kendaraan bergetar saat melaju cepat?
+JAWABAN_UTAMA:
+Kendaraan yang bergetar saat kecepatan tinggi biasanya disebabkan oleh ban yang tidak seimbang, velg yang kurang lurus, atau suspensi yang mulai melemah. Pada beberapa kasus, bearing roda atau komponen kaki-kaki juga dapat menjadi penyebab. Pemeriksaan pada ban, velg, balancing, dan suspensi sangat disarankan jika getaran terus muncul.
+CATATAN_RAG:
+Gunakan untuk pertanyaan tentang getaran kendaraan saat kecepatan tinggi.

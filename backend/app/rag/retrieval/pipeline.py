@@ -3,6 +3,7 @@ from backend.app.rag.retrieval.config import RetrievalConfig
 from backend.app.rag.retrieval.embedder import BaseEmbedder, DummyEmbedder
 from backend.app.rag.retrieval.retriever import BaseRetriever, InMemoryRetriever
 from backend.app.rag.retrieval.chunker import TextChunker
+from backend.app.rag.retrieval.reranker import DebertaV3Reranker
 
 class RetrievalPipeline:
     """
@@ -17,6 +18,7 @@ class RetrievalPipeline:
         self.embedder: BaseEmbedder = DummyEmbedder()
         self.retriever: BaseRetriever = InMemoryRetriever()
         self.chunker = TextChunker()
+        self.reranker = DebertaV3Reranker(self.config.reranker_model_id)
         
     async def ingest(self, text: str, metadata: Dict[str, Any]) -> int:
         """
@@ -64,8 +66,9 @@ class RetrievalPipeline:
             config=self.config,
             filters=filters
         )
-        
-        # 3. Post-Retrieval Processing (Optional Reranking here)
-        # candidates = self.reranker.rank(query, raw_results)
-        
+
+        # 3. Post-Retrieval Processing
+        if self.config.enable_reranking and raw_results:
+            raw_results = await self.reranker.rerank(query, raw_results)
+
         return raw_results

@@ -99,6 +99,8 @@ class InMemoryRetriever(BaseRetriever):
             {
                 "id": doc.get("id"),
                 "content": doc.get("content", doc.get("payload", {}).get("content", "")),
+                "payload": doc.get("payload", {}),
+                "metadata": doc.get("metadata", {}),
                 "score": float(doc.get("score", 0.0) or 0.0),
             }
             for doc in filtered

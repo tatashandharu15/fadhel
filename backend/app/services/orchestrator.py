@@ -70,12 +70,12 @@ class ChatOrchestrator:
     Service utama yang mengatur alur data berdasarkan keputusan dari DecisionEngine.
     Full implementation: Decision -> RAG -> LLM.
     """
-    
+
     def __init__(self):
         self.decision_engine = DecisionEngine()
         self.retrieval_pipeline = RetrievalPipeline()
         self.context_builder = ContextBuilder()
-    
+
     def _get_llm_strategy(self, strategy_enum: StrategyEnum):
         if strategy_enum == StrategyEnum.DIRECT_ANSWER:
             return DirectAnswerStrategy()
@@ -90,11 +90,35 @@ class ChatOrchestrator:
         q = query.lower()
         automotive_keywords = [
             "mobil",
+            "motor",
+            "motorcycle",
+            "sepeda motor",
             "otomotif",
             "baterai",
+            "aki",
             "mesin",
+            "starter",
+            "pengapian",
+            "karburator",
+            "injektor",
+            "throttle",
+            "kopling",
+            "transmisi",
+            "rantai",
+            "knalpot",
+            "ban",
+            "velg",
+            "bearing",
+            "suspensi",
+            "shockbreaker",
+            "rem",
+            "kampas",
+            "cakram",
             "honda",
             "toyota",
+            "yamaha",
+            "suzuki",
+            "kawasaki",
             "wuling",
             "suv",
             "ev",
@@ -114,24 +138,20 @@ class ChatOrchestrator:
         3. LLM Generation
         """
         start_time = time.time()
-        
-        # Step 1: Decision Making
+
         decision: DecisionResult = await self.decision_engine.analyze_request(request.query)
-        
+
         raw_docs = []
         context_str = None
-        
-        # Step 2: RAG Flow (if needed)
+
         if decision.use_rag:
-            # Retrieve
             retrieved_docs = await self.retrieval_pipeline.run(request.query)
-            raw_docs = [d for d in retrieved_docs if float(d.get("score", 0.0) or 0.0) >= 0.7]
+            raw_docs = retrieved_docs[:5]
             context_str = self.context_builder.format_for_prompt(raw_docs)
-        
-        # Step 3: LLM Generation
+
         llm_provider = LLMFactory.get_provider(request.model_id)
         strategy_impl = self._get_llm_strategy(decision.llm_strategy)
-        
+
         response_text = await llm_provider.generate(
             query=request.query,
             strategy=strategy_impl,
@@ -143,11 +163,9 @@ class ChatOrchestrator:
 
         id_answer = clean_output(response_text)
         en_answer = translate_to_english(id_answer)
-        
-        # Calculate latency
+
         latency = (time.time() - start_time) * 1000
-        
-        # Build Trace Info
+
         trace_data = {
             "query_type": decision.query_type.value,
             "use_rag": decision.use_rag,
@@ -158,7 +176,7 @@ class ChatOrchestrator:
             "context_length": len(context_str) if context_str else 0,
             "latency_ms": latency,
         }
-        
+
         return ChatResponse(
             answer={"id": id_answer, "en": en_answer},
             sources=raw_docs,

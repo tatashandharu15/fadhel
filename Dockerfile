@@ -7,7 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     USE_TF=0 \
     USE_TORCH=1 \
     # Default generative model (CPU friendly, bilingual)
-    DEFAULT_MODEL_ID="Qwen/Qwen2.5-0.5B-Instruct"
+    DEFAULT_MODEL_ID="Qwen/Qwen2.5-0.5B-Instruct" \
+    # Default reranker model (DeBERTa v3 cross-encoder)
+    RERANKER_MODEL_ID="cross-encoder/ms-marco-deberta-v3-base"
 
 # Set working directory
 WORKDIR /app
@@ -24,8 +26,9 @@ RUN apt-get update && apt-get install -y \
 # Ensure `python` points to Python 3
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
-# Install PyTorch with CUDA support
-RUN pip install --no-cache-dir torch torchvision torchaudio
+# Install PyTorch with CUDA support using wheels compatible with the host driver
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cu121 \
+    torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1+cu121
 
 # Copy requirements
 COPY requirements.txt .

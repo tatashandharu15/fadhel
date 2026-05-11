@@ -7,8 +7,9 @@ httpx
 numpy==1.26.4
 sentence-transformers
 faiss-cpu
-transformers
-accelerate
+transformers==4.48.3
+sentence-transformers==3.3.1
+accelerate==0.34.2
 pypdf
 tiktoken
 nltk

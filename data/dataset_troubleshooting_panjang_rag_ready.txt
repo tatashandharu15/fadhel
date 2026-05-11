@@ -1,0 +1,818 @@
+DATABASE RAG OTOMOTIF - DATASET PANJANG DAN DETAIL
+Format ini berisi penjelasan yang lebih lengkap agar model memiliki konteks teknis yang lebih kaya.
+Setiap blok memuat gejala, jawaban utama, pemeriksaan awal, dan catatan retrieval.
+
+
+---
+ID: troubleshooting_detail_001
+JENIS: Umum
+TOPIK: kelistrikan, bahan bakar, pengapian
+PERTANYAAN_UTAMA: Kenapa masalah mesin susah dihidupkan bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab mesin susah dihidupkan?
+- Kenapa mesin susah dihidupkan?
+- Mengapa mesin susah dihidupkan terjadi?
+GEJALA_UTAMA:
+- dapat berupa starter terasa berat
+- mesin hanya berbunyi “cekikikan
+- atau mesin sama sekali tidak menyala
+JAWABAN_UTAMA:
+Masalah mesin susah dihidupkan biasanya disebabkan oleh gangguan pada sistem kelistrikan, bahan bakar, pengapian, atau kompresi mesin. Gejalanya dapat berupa starter terasa berat, mesin hanya berbunyi “cekikikan”, atau mesin sama sekali tidak menyala. Pemeriksaan pertama biasanya dilakukan pada aki menggunakan multitester untuk memastikan tegangan masih berada di kisaran normal sekitar 12,4–12,8 volt. Setelah itu teknisi akan memeriksa busi, relay starter, fuel pump, hingga kompresi mesin. Jika busi tidak menghasilkan percikan api yang baik atau fuel pump tidak mampu memberikan tekanan bensin yang cukup, maka mesin akan sulit hidup.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan pertama biasanya dilakukan pada aki menggunakan multitester untuk memastikan tegangan masih berada di kisaran normal sekitar 12,4–12,8 volt.
+- Setelah itu teknisi akan memeriksa busi, relay starter, fuel pump, hingga kompresi mesin.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_002
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah aki cepat soak bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab aki cepat soak?
+- Kenapa aki cepat soak?
+- Mengapa aki cepat soak terjadi?
+GEJALA_UTAMA:
+- starter menjadi lemah
+- lampu redup
+- klakson terdengar kecil
+JAWABAN_UTAMA:
+Aki yang cepat soak menandakan adanya masalah pada sistem pengisian atau konsumsi arus listrik kendaraan. Gejalanya biasanya starter menjadi lemah, lampu redup, dan klakson terdengar kecil. Pemeriksaan dilakukan dengan mengukur tegangan aki saat mesin mati dan saat mesin hidup. Jika saat mesin hidup tegangan tidak naik ke kisaran 13,5–14,5 volt, maka kemungkinan alternator atau kiprok mengalami kerusakan. Teknisi juga memeriksa kemungkinan adanya arus bocor dari alarm, audio, atau kabel kelistrikan.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan mengukur tegangan aki saat mesin mati dan saat mesin hidup.
+- Teknisi juga memeriksa kemungkinan adanya arus bocor dari alarm, audio, atau kabel kelistrikan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_003
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah starter tidak berfungsi bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab starter tidak berfungsi?
+- Kenapa starter tidak berfungsi?
+- Mengapa starter tidak berfungsi terjadi?
+GEJALA_UTAMA:
+- ketika tombol starter ditekan tidak ada reaksi sama sekali atau hanya terdengar bunyi “tek
+JAWABAN_UTAMA:
+Starter yang tidak berfungsi dapat disebabkan relay starter rusak, dinamo starter bermasalah, sekring putus, atau kabel massa yang buruk. Gejalanya ketika tombol starter ditekan tidak ada reaksi sama sekali atau hanya terdengar bunyi “tek”. Pemeriksaan biasanya dimulai dari sekring dan relay starter sebelum mengecek kondisi dinamo starter secara langsung.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan biasanya dimulai dari sekring dan relay starter sebelum mengecek kondisi dinamo starter secara langsung.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_004
+JENIS: Umum
+TOPIK: bahan bakar, pengapian, pendinginan, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah mesin mati mendadak bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab mesin mati mendadak?
+- Kenapa mesin mati mendadak?
+- Mengapa mesin mati mendadak terjadi?
+JAWABAN_UTAMA:
+Mesin yang tiba-tiba mati saat kendaraan digunakan dapat disebabkan fuel pump lemah, overheat, sensor CKP rusak, atau suplai listrik ECU terganggu. Teknisi biasanya memeriksa tekanan bahan bakar, sistem pengapian, dan membaca kode error menggunakan scanner OBD2. Jika masalah berasal dari sensor crankshaft, mesin biasanya bisa mati mendadak tanpa gejala sebelumnya.
+PEMERIKSAAN_AWAL:
+- Teknisi biasanya memeriksa tekanan bahan bakar, sistem pengapian, dan membaca kode error menggunakan scanner OBD2.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_005
+JENIS: Umum
+TOPIK: kelistrikan, pendinginan
+PERTANYAAN_UTAMA: Kenapa masalah overheat atau mesin terlalu panas bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab overheat atau mesin terlalu panas?
+- Kenapa overheat atau mesin terlalu panas?
+- Mengapa overheat atau mesin terlalu panas terjadi?
+GEJALA_UTAMA:
+- meliputi indikator suhu naik
+- tenaga mesin turun
+- keluar uap dari radiator
+JAWABAN_UTAMA:
+Overheat terjadi ketika suhu mesin melebihi batas normal akibat sistem pendingin tidak bekerja dengan baik. Penyebabnya bisa berupa coolant habis, kipas radiator mati, thermostat macet, radiator tersumbat, atau water pump rusak. Gejalanya meliputi indikator suhu naik, tenaga mesin turun, dan keluar uap dari radiator. Jika dibiarkan, head silinder dapat melengkung dan menyebabkan kerusakan mesin yang lebih berat.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_006
+JENIS: Umum
+TOPIK: kelistrikan, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah oli mesin bocor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab oli mesin bocor?
+- Kenapa oli mesin bocor?
+- Mengapa oli mesin bocor terjadi?
+GEJALA_UTAMA:
+- berupa tetesan oli di bawah kendaraan
+- volume oli cepat berkurang
+JAWABAN_UTAMA:
+Kebocoran oli biasanya terjadi akibat seal mesin aus, gasket rusak, atau baut karter longgar. Gejalanya berupa tetesan oli di bawah kendaraan dan volume oli cepat berkurang. Pemeriksaan dilakukan dengan membersihkan area mesin untuk menemukan titik kebocoran secara jelas. Jika terus dibiarkan, mesin dapat mengalami kekurangan pelumasan dan mempercepat keausan komponen internal.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan membersihkan area mesin untuk menemukan titik kebocoran secara jelas.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_007
+JENIS: Umum
+TOPIK: kelistrikan, bahan bakar, pengapian, ban roda
+PERTANYAAN_UTAMA: Kenapa masalah konsumsi bahan bakar boros bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab konsumsi bahan bakar boros?
+- Kenapa konsumsi bahan bakar boros?
+- Mengapa konsumsi bahan bakar boros terjadi?
+JAWABAN_UTAMA:
+BBM yang cepat habis biasanya disebabkan pembakaran tidak sempurna akibat injektor kotor, filter udara tersumbat, sensor oksigen rusak, atau tekanan ban kurang. Pemeriksaan dilakukan dengan melihat kondisi filter udara, warna busi, dan scanning sensor ECU. Kendaraan dengan campuran bensin terlalu kaya biasanya menghasilkan asap hitam dari knalpot.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan melihat kondisi filter udara, warna busi, dan scanning sensor ECU.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_008
+JENIS: Umum
+TOPIK: rem, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah rem blong bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab rem blong?
+- Kenapa rem blong?
+- Mengapa rem blong terjadi?
+GEJALA_UTAMA:
+- pedal rem terasa kosong atau kendaraan sulit berhenti
+JAWABAN_UTAMA:
+Rem blong merupakan kerusakan berbahaya yang biasanya disebabkan kebocoran minyak rem, kampas rem habis, udara masuk ke sistem hidrolik, atau master rem rusak. Gejalanya pedal rem terasa kosong atau kendaraan sulit berhenti. Teknisi biasanya memeriksa volume minyak rem, ketebalan kampas, serta melakukan bleeding untuk mengeluarkan udara dari sistem rem.
+PEMERIKSAAN_AWAL:
+- Teknisi biasanya memeriksa volume minyak rem, ketebalan kampas, serta melakukan bleeding untuk mengeluarkan udara dari sistem rem.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_009
+JENIS: Umum
+TOPIK: rem, ban roda
+PERTANYAAN_UTAMA: Kenapa masalah rem berbunyi bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab rem berbunyi?
+- Kenapa rem berbunyi?
+- Mengapa rem berbunyi terjadi?
+JAWABAN_UTAMA:
+Bunyi decitan saat pengereman biasanya berasal dari kampas rem tipis, cakram kotor, atau permukaan kampas mengeras. Pemeriksaan dilakukan dengan membongkar roda dan melihat kondisi kampas serta cakram rem. Jika cakram bergelombang, pengereman biasanya terasa bergetar.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan membongkar roda dan melihat kondisi kampas serta cakram rem.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_010
+JENIS: Umum
+TOPIK: ban roda
+PERTANYAAN_UTAMA: Kenapa masalah ban bocor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab ban bocor?
+- Kenapa ban bocor?
+- Mengapa ban bocor terjadi?
+GEJALA_UTAMA:
+- kendaraan terasa tidak stabil
+- tekanan ban cepat berkurang
+JAWABAN_UTAMA:
+Ban bocor dapat disebabkan paku, sobekan, atau kerusakan pentil ban. Gejalanya kendaraan terasa tidak stabil dan tekanan ban cepat berkurang. Pemeriksaan dilakukan dengan merendam ban ke air untuk menemukan titik kebocoran. Jika kerusakan terlalu besar atau berada di sisi ban, ban biasanya harus diganti.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan merendam ban ke air untuk menemukan titik kebocoran.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_011
+JENIS: Umum
+TOPIK: bahan bakar, ban roda
+PERTANYAAN_UTAMA: Kenapa masalah tekanan ban kurang bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab tekanan ban kurang?
+- Kenapa tekanan ban kurang?
+- Mengapa tekanan ban kurang terjadi?
+JAWABAN_UTAMA:
+Tekanan ban yang kurang menyebabkan kendaraan terasa berat, konsumsi BBM meningkat, dan ban cepat aus. Teknisi akan menggunakan tire pressure gauge untuk memastikan tekanan sesuai standar pabrikan. Ban yang terlalu kempes juga meningkatkan risiko pecah ban saat kecepatan tinggi.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_012
+JENIS: Umum
+TOPIK: ban roda, pelumasan, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah setir terasa berat bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab setir terasa berat?
+- Kenapa setir terasa berat?
+- Mengapa setir terasa berat terjadi?
+JAWABAN_UTAMA:
+Setir yang berat biasanya berkaitan dengan masalah power steering, tekanan ban rendah, atau kerusakan rack steer. Pada hydraulic power steering, teknisi memeriksa volume oli dan kemungkinan kebocoran. Pada electric power steering, scanner digunakan untuk mendeteksi kerusakan sensor atau motor EPS.
+PEMERIKSAAN_AWAL:
+- Pada hydraulic power steering, teknisi memeriksa volume oli dan kemungkinan kebocoran.
+- Pada electric power steering, scanner digunakan untuk mendeteksi kerusakan sensor atau motor EPS.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_013
+JENIS: Umum
+TOPIK: kelistrikan, ban roda
+PERTANYAAN_UTAMA: Kenapa masalah getaran berlebih saat berkendara bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab getaran berlebih saat berkendara?
+- Kenapa getaran berlebih saat berkendara?
+- Mengapa getaran berlebih saat berkendara terjadi?
+JAWABAN_UTAMA:
+Getaran biasanya berasal dari ban yang tidak balance, velg peyang, engine mounting rusak, atau komponen kaki-kaki aus. Teknisi akan melakukan balancing roda dan memeriksa kondisi mounting mesin. Jika getaran muncul saat idle, biasanya masalah berasal dari mesin atau sistem pembakaran.
+PEMERIKSAAN_AWAL:
+- Teknisi akan melakukan balancing roda dan memeriksa kondisi mounting mesin.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_014
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah lampu depan mati bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab lampu depan mati?
+- Kenapa lampu depan mati?
+- Mengapa lampu depan mati terjadi?
+JAWABAN_UTAMA:
+Lampu depan yang mati dapat disebabkan bohlam putus, relay rusak, sekring putus, atau kabel kelistrikan bermasalah. Pemeriksaan dilakukan menggunakan multitester untuk memastikan arus listrik sampai ke soket lampu. Jika tegangan normal tetapi lampu mati, maka bohlam harus diganti.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan multitester untuk memastikan arus listrik sampai ke soket lampu.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_015
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah lampu sein tidak menyala bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab lampu sein tidak menyala?
+- Kenapa lampu sein tidak menyala?
+- Mengapa lampu sein tidak menyala terjadi?
+JAWABAN_UTAMA:
+Lampu sein yang mati biasanya disebabkan flasher rusak, bohlam putus, atau saklar sein bermasalah. Teknisi akan memeriksa relay flasher dan kondisi kabel kelistrikan. Jika lampu sein berkedip terlalu cepat, biasanya salah satu lampu sudah putus.
+PEMERIKSAAN_AWAL:
+- Teknisi akan memeriksa relay flasher dan kondisi kabel kelistrikan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_016
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah klakson tidak berfungsi bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab klakson tidak berfungsi?
+- Kenapa klakson tidak berfungsi?
+- Mengapa klakson tidak berfungsi terjadi?
+JAWABAN_UTAMA:
+Klakson yang mati dapat disebabkan relay rusak, sekring putus, tombol klakson aus, atau klakson itu sendiri rusak. Pemeriksaan dilakukan dengan mengecek arus listrik menuju klakson dan mencoba memberikan arus langsung dari aki.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan mengecek arus listrik menuju klakson dan mencoba memberikan arus langsung dari aki.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_017
+JENIS: Mobil
+TOPIK: troubleshooting umum
+PERTANYAAN_UTAMA: Kenapa masalah ac mobil tidak dingin bisa terjadi pada mobil?
+PERTANYAAN_TERKAIT:
+- Apa penyebab ac mobil tidak dingin pada mobil?
+- Kenapa ac mobil tidak dingin pada mobil?
+- Mengapa ac mobil tidak dingin saat digunakan?
+JAWABAN_UTAMA:
+AC yang tidak dingin biasanya disebabkan freon habis, kompresor lemah, evaporator kotor, atau kipas kondensor mati. Teknisi akan mengukur tekanan freon menggunakan manifold gauge dan memeriksa apakah kompresor bekerja normal.
+PEMERIKSAAN_AWAL:
+- Teknisi akan mengukur tekanan freon menggunakan manifold gauge dan memeriksa apakah kompresor bekerja normal.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_018
+JENIS: Umum
+TOPIK: kelistrikan, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah suara mesin kasar bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab suara mesin kasar?
+- Kenapa suara mesin kasar?
+- Mengapa suara mesin kasar terjadi?
+JAWABAN_UTAMA:
+Suara mesin kasar dapat muncul akibat oli terlambat diganti, celah klep tidak sesuai, atau komponen internal mesin aus. Teknisi biasanya memeriksa kualitas oli dan mendengarkan sumber suara menggunakan stetoskop mekanik.
+PEMERIKSAAN_AWAL:
+- Teknisi biasanya memeriksa kualitas oli dan mendengarkan sumber suara menggunakan stetoskop mekanik.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_019
+JENIS: Umum
+TOPIK: kelistrikan, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah knalpot mengeluarkan asap putih bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab knalpot mengeluarkan asap putih?
+- Kenapa knalpot mengeluarkan asap putih?
+- Mengapa knalpot mengeluarkan asap putih terjadi?
+JAWABAN_UTAMA:
+Asap putih biasanya menandakan oli masuk ke ruang bakar akibat ring piston atau seal klep aus. Pemeriksaan dilakukan menggunakan tes kompresi dan pengecekan konsumsi oli mesin. Jika parah, mesin perlu overhaul.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan tes kompresi dan pengecekan konsumsi oli mesin.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_020
+JENIS: Umum
+TOPIK: bahan bakar, pengapian, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah knalpot mengeluarkan asap hitam bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab knalpot mengeluarkan asap hitam?
+- Kenapa knalpot mengeluarkan asap hitam?
+- Mengapa knalpot mengeluarkan asap hitam terjadi?
+JAWABAN_UTAMA:
+Asap hitam menunjukkan pembakaran terlalu kaya atau kelebihan bahan bakar. Penyebabnya bisa berasal dari injektor bocor, filter udara kotor, atau sensor oksigen rusak. Pemeriksaan dilakukan dengan scanning ECU dan melihat kondisi busi.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan scanning ECU dan melihat kondisi busi.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_021
+JENIS: Motor
+TOPIK: troubleshooting umum
+PERTANYAAN_UTAMA: Kenapa masalah rantai motor kendor bisa terjadi pada motor?
+PERTANYAAN_TERKAIT:
+- Apa penyebab rantai motor kendor pada motor?
+- Kenapa rantai motor kendor pada motor?
+- Mengapa rantai motor kendor saat digunakan?
+JAWABAN_UTAMA:
+Rantai yang kendor menyebabkan suara berisik dan risiko rantai lepas saat berkendara. Teknisi akan mengukur kelonggaran rantai sesuai standar pabrikan dan melakukan penyetelan pada roda belakang.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_022
+JENIS: Motor
+TOPIK: transmisi
+PERTANYAAN_UTAMA: Kenapa masalah gear motor cepat aus bisa terjadi pada motor?
+PERTANYAAN_TERKAIT:
+- Apa penyebab gear motor cepat aus pada motor?
+- Kenapa gear motor cepat aus pada motor?
+- Mengapa gear motor cepat aus saat digunakan?
+JAWABAN_UTAMA:
+Gear cepat aus biasanya disebabkan rantai kering, posisi gear tidak sejajar, atau kualitas gear buruk. Pemeriksaan dilakukan dengan melihat bentuk gigi gear. Jika ujung gear sudah tajam seperti kait, gear harus diganti.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan melihat bentuk gigi gear.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_023
+JENIS: Umum
+TOPIK: rem, transmisi
+PERTANYAAN_UTAMA: Kenapa masalah kopling selip bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kopling selip?
+- Kenapa kopling selip?
+- Mengapa kopling selip terjadi?
+GEJALA_UTAMA:
+- RPM naik tetapi tenaga kendaraan tidak bertambah
+JAWABAN_UTAMA:
+Kopling selip ditandai RPM naik tetapi tenaga kendaraan tidak bertambah. Penyebab utamanya adalah kampas kopling aus atau pegas kopling lemah. Pemeriksaan dilakukan dengan membongkar rumah kopling dan mengukur ketebalan kampas.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan membongkar rumah kopling dan mengukur ketebalan kampas.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_024
+JENIS: Umum
+TOPIK: kelistrikan, transmisi, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah transmisi susah pindah gigi bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab transmisi susah pindah gigi?
+- Kenapa transmisi susah pindah gigi?
+- Mengapa transmisi susah pindah gigi terjadi?
+JAWABAN_UTAMA:
+Masalah ini dapat berasal dari oli transmisi buruk, sinkromesh aus, atau kabel kopling tidak sesuai. Teknisi biasanya memeriksa kualitas oli transmisi dan sistem kopling sebelum membongkar gearbox.
+PEMERIKSAAN_AWAL:
+- Teknisi biasanya memeriksa kualitas oli transmisi dan sistem kopling sebelum membongkar gearbox.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_025
+JENIS: Umum
+TOPIK: ban roda, pelumasan, suspensi
+PERTANYAAN_UTAMA: Kenapa masalah suspensi keras bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab suspensi keras?
+- Kenapa suspensi keras?
+- Mengapa suspensi keras terjadi?
+JAWABAN_UTAMA:
+Suspensi yang terlalu keras biasanya disebabkan shockbreaker rusak atau tekanan ban terlalu tinggi. Pemeriksaan dilakukan dengan menekan bodi kendaraan dan melihat respons suspensi serta kebocoran oli shockbreaker.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan menekan bodi kendaraan dan melihat respons suspensi serta kebocoran oli shockbreaker.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_026
+JENIS: Umum
+TOPIK: kelistrikan, pelumasan, suspensi
+PERTANYAAN_UTAMA: Kenapa masalah shockbreaker bocor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab shockbreaker bocor?
+- Kenapa shockbreaker bocor?
+- Mengapa shockbreaker bocor terjadi?
+GEJALA_UTAMA:
+- adanya oli pada tabung shock
+- suspensi terasa memantul berlebihan
+JAWABAN_UTAMA:
+Shockbreaker bocor ditandai adanya oli pada tabung shock dan suspensi terasa memantul berlebihan. Kerusakan biasanya terjadi akibat seal shock aus. Jika dibiarkan, kenyamanan dan kestabilan kendaraan akan menurun.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_027
+JENIS: Umum
+TOPIK: bahan bakar, pengapian
+PERTANYAAN_UTAMA: Kenapa masalah mesin ngempos saat akselerasi bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab mesin ngempos saat akselerasi?
+- Kenapa mesin ngempos saat akselerasi?
+- Mengapa mesin ngempos saat akselerasi terjadi?
+GEJALA_UTAMA:
+- kendaraan terasa tertahan saat gas ditekan
+JAWABAN_UTAMA:
+Mesin ngempos biasanya terjadi karena suplai bensin tidak stabil, busi lemah, atau filter udara kotor. Gejalanya kendaraan terasa tertahan saat gas ditekan. Teknisi biasanya memeriksa fuel pump, injektor, dan sistem pengapian.
+PEMERIKSAAN_AWAL:
+- Teknisi biasanya memeriksa fuel pump, injektor, dan sistem pengapian.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_028
+JENIS: Umum
+TOPIK: kelistrikan, rem, transmisi
+PERTANYAAN_UTAMA: Kenapa masalah tarikan kendaraan berat bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab tarikan kendaraan berat?
+- Kenapa tarikan kendaraan berat?
+- Mengapa tarikan kendaraan berat terjadi?
+JAWABAN_UTAMA:
+Tarikan berat dapat disebabkan filter udara tersumbat, rem seret, kopling selip, atau tekanan kompresi lemah. Pemeriksaan dilakukan pada sistem pembakaran dan kaki-kaki kendaraan.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan pada sistem pembakaran dan kaki-kaki kendaraan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_029
+JENIS: Umum
+TOPIK: bahan bakar
+PERTANYAAN_UTAMA: Kenapa masalah fuel pump rusak bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab fuel pump rusak?
+- Kenapa fuel pump rusak?
+- Mengapa fuel pump rusak terjadi?
+JAWABAN_UTAMA:
+Fuel pump yang rusak menyebabkan tekanan bensin tidak stabil sehingga mesin sulit hidup atau mati mendadak. Pemeriksaan dilakukan menggunakan fuel pressure gauge untuk memastikan tekanan bensin sesuai standar.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan fuel pressure gauge untuk memastikan tekanan bensin sesuai standar.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_030
+JENIS: Umum
+TOPIK: pengapian, pelumasan
+PERTANYAAN_UTAMA: Kenapa masalah busi cepat mati bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab busi cepat mati?
+- Kenapa busi cepat mati?
+- Mengapa busi cepat mati terjadi?
+GEJALA_UTAMA:
+- mesin brebet
+- sulit hidup
+JAWABAN_UTAMA:
+Busi yang cepat mati biasanya disebabkan pembakaran tidak normal, oli masuk ruang bakar, atau penggunaan busi yang tidak sesuai spesifikasi. Gejalanya mesin brebet dan sulit hidup.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_031
+JENIS: Umum
+TOPIK: bahan bakar
+PERTANYAAN_UTAMA: Kenapa masalah injektor kotor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab injektor kotor?
+- Kenapa injektor kotor?
+- Mengapa injektor kotor terjadi?
+JAWABAN_UTAMA:
+Injektor kotor menyebabkan semprotan bensin tidak merata sehingga mesin terasa brebet, idle kasar, dan konsumsi BBM meningkat. Teknisi biasanya membersihkan injektor menggunakan ultrasonic cleaner.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_032
+JENIS: Umum
+TOPIK: bahan bakar
+PERTANYAAN_UTAMA: Kenapa masalah filter udara kotor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab filter udara kotor?
+- Kenapa filter udara kotor?
+- Mengapa filter udara kotor terjadi?
+GEJALA_UTAMA:
+- tenaga berkurang
+- BBM lebih boros
+JAWABAN_UTAMA:
+Filter udara yang kotor menghambat aliran udara ke mesin sehingga pembakaran menjadi tidak sempurna. Gejalanya tenaga berkurang dan BBM lebih boros.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_033
+JENIS: Umum
+TOPIK: pendinginan
+PERTANYAAN_UTAMA: Kenapa masalah radiator bocor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab radiator bocor?
+- Kenapa radiator bocor?
+- Mengapa radiator bocor terjadi?
+JAWABAN_UTAMA:
+Radiator bocor menyebabkan coolant berkurang dan mesin mudah overheat. Pemeriksaan dilakukan dengan radiator pressure tester untuk menemukan titik kebocoran.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan radiator pressure tester untuk menemukan titik kebocoran.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_034
+JENIS: Umum
+TOPIK: kelistrikan, pendinginan, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah kipas radiator tidak menyala bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kipas radiator tidak menyala?
+- Kenapa kipas radiator tidak menyala?
+- Mengapa kipas radiator tidak menyala terjadi?
+JAWABAN_UTAMA:
+Kipas radiator yang mati menyebabkan suhu mesin cepat naik terutama saat macet. Penyebabnya bisa berasal dari motor fan rusak, relay mati, atau sensor suhu bermasalah.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_035
+JENIS: Mobil
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah wiper tidak berfungsi bisa terjadi pada mobil?
+PERTANYAAN_TERKAIT:
+- Apa penyebab wiper tidak berfungsi pada mobil?
+- Kenapa wiper tidak berfungsi pada mobil?
+- Mengapa wiper tidak berfungsi saat digunakan?
+JAWABAN_UTAMA:
+Wiper yang mati biasanya disebabkan motor wiper rusak, sekring putus, atau linkage macet. Pemeriksaan dilakukan dengan mengecek arus listrik menuju motor wiper.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan mengecek arus listrik menuju motor wiper.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_036
+JENIS: Mobil
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah power window macet bisa terjadi pada mobil?
+PERTANYAAN_TERKAIT:
+- Apa penyebab power window macet pada mobil?
+- Kenapa power window macet pada mobil?
+- Mengapa power window macet saat digunakan?
+GEJALA_UTAMA:
+- kaca bergerak lambat atau berhenti total
+JAWABAN_UTAMA:
+Power window macet biasanya terjadi akibat motor power window lemah, regulator rusak, atau rel kaca kotor. Gejalanya kaca bergerak lambat atau berhenti total.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_037
+JENIS: Umum
+TOPIK: kelistrikan, rem
+PERTANYAAN_UTAMA: Kenapa masalah alarm kendaraan error bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab alarm kendaraan error?
+- Kenapa alarm kendaraan error?
+- Mengapa alarm kendaraan error terjadi?
+JAWABAN_UTAMA:
+Alarm error dapat menyebabkan kendaraan sulit distarter atau alarm berbunyi sendiri. Penyebabnya biasanya modul alarm rusak atau remote bermasalah.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_038
+JENIS: Umum
+TOPIK: kelistrikan, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah sensor kendaraan bermasalah bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab sensor kendaraan bermasalah?
+- Kenapa sensor kendaraan bermasalah?
+- Mengapa sensor kendaraan bermasalah terjadi?
+JAWABAN_UTAMA:
+Sensor yang rusak dapat membuat ECU menerima data yang salah sehingga mesin brebet, boros, atau check engine menyala. Pemeriksaan dilakukan menggunakan scanner OBD2.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan scanner OBD2.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_039
+JENIS: Motor
+TOPIK: transmisi
+PERTANYAAN_UTAMA: Kenapa masalah cvt motor berisik bisa terjadi pada motor?
+PERTANYAAN_TERKAIT:
+- Apa penyebab cvt motor berisik pada motor?
+- Kenapa cvt motor berisik pada motor?
+- Mengapa cvt motor berisik saat digunakan?
+GEJALA_UTAMA:
+- muncul suara kasar saat akselerasi
+JAWABAN_UTAMA:
+CVT berisik biasanya disebabkan roller aus, V-belt retak, atau rumah CVT kotor. Gejalanya muncul suara kasar saat akselerasi.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_040
+JENIS: Umum
+TOPIK: rem
+PERTANYAAN_UTAMA: Kenapa masalah kampas rem cepat habis bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kampas rem cepat habis?
+- Kenapa kampas rem cepat habis?
+- Mengapa kampas rem cepat habis terjadi?
+JAWABAN_UTAMA:
+Kampas rem cepat habis dapat disebabkan gaya berkendara agresif, kualitas kampas buruk, atau cakram tidak rata. Pemeriksaan dilakukan dengan melihat ketebalan kampas rem.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan melihat ketebalan kampas rem.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_041
+JENIS: Umum
+TOPIK: ban roda
+PERTANYAAN_UTAMA: Kenapa masalah bearing roda rusak bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab bearing roda rusak?
+- Kenapa bearing roda rusak?
+- Mengapa bearing roda rusak terjadi?
+JAWABAN_UTAMA:
+Bearing roda rusak biasanya menghasilkan suara dengung saat kendaraan berjalan. Jika dibiarkan, roda dapat oblak dan membahayakan keselamatan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_042
+JENIS: Umum
+TOPIK: kelistrikan, ban roda
+PERTANYAAN_UTAMA: Kenapa masalah stir tidak lurus bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab stir tidak lurus?
+- Kenapa stir tidak lurus?
+- Mengapa stir tidak lurus terjadi?
+JAWABAN_UTAMA:
+Stir yang tidak lurus biasanya disebabkan spooring berubah, benturan keras, atau komponen kaki-kaki aus. Pemeriksaan dilakukan dengan spooring dan pengecekan tie rod.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan dengan spooring dan pengecekan tie rod.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_043
+JENIS: Umum
+TOPIK: pendinginan
+PERTANYAAN_UTAMA: Kenapa masalah kebocoran air radiator bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kebocoran air radiator?
+- Kenapa kebocoran air radiator?
+- Mengapa kebocoran air radiator terjadi?
+GEJALA_UTAMA:
+- coolant cepat habis
+- mesin mudah panas
+JAWABAN_UTAMA:
+Kebocoran air radiator biasanya terjadi pada selang, radiator, atau water pump. Gejalanya coolant cepat habis dan mesin mudah panas.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_044
+JENIS: Umum
+TOPIK: bahan bakar
+PERTANYAAN_UTAMA: Kenapa masalah tangki bahan bakar kotor bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab tangki bahan bakar kotor?
+- Kenapa tangki bahan bakar kotor?
+- Mengapa tangki bahan bakar kotor terjadi?
+GEJALA_UTAMA:
+- mesin brebet
+- fuel pump cepat rusak
+JAWABAN_UTAMA:
+Tangki yang kotor menyebabkan endapan masuk ke fuel pump dan injektor. Gejalanya mesin brebet dan fuel pump cepat rusak.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_045
+JENIS: Umum
+TOPIK: sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah rpm mesin tidak stabil bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab rpm mesin tidak stabil?
+- Kenapa rpm mesin tidak stabil?
+- Mengapa rpm mesin tidak stabil terjadi?
+JAWABAN_UTAMA:
+RPM yang naik turun sendiri biasanya disebabkan throttle body kotor, sensor idle bermasalah, atau kebocoran vakum.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_046
+JENIS: Umum
+TOPIK: kelistrikan, bahan bakar, pengapian
+PERTANYAAN_UTAMA: Kenapa masalah mesin brebet bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab mesin brebet?
+- Kenapa mesin brebet?
+- Mengapa mesin brebet terjadi?
+GEJALA_UTAMA:
+- akselerasi tersendat-sendat
+JAWABAN_UTAMA:
+Mesin brebet biasanya terjadi akibat busi lemah, injektor kotor, koil rusak, atau suplai bensin tidak stabil. Gejalanya akselerasi tersendat-sendat.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_047
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah kendaraan sulit langsam bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kendaraan sulit langsam?
+- Kenapa kendaraan sulit langsam?
+- Mengapa kendaraan sulit langsam terjadi?
+JAWABAN_UTAMA:
+Mesin yang sulit langsam biasanya mati saat idle akibat throttle body kotor, ISC rusak, atau setting idle tidak sesuai.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_048
+JENIS: Umum
+TOPIK: troubleshooting umum
+PERTANYAAN_UTAMA: Kenapa masalah baut atau mur kendur bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab baut atau mur kendur?
+- Kenapa baut atau mur kendur?
+- Mengapa baut atau mur kendur terjadi?
+JAWABAN_UTAMA:
+Baut dan mur yang kendur biasanya disebabkan getaran kendaraan atau pemasangan yang kurang kuat. Jika dibiarkan, komponen kendaraan dapat lepas saat digunakan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_049
+JENIS: Umum
+TOPIK: kelistrikan
+PERTANYAAN_UTAMA: Kenapa masalah kabel kelistrikan putus atau korslet bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab kabel kelistrikan putus atau korslet?
+- Kenapa kabel kelistrikan putus atau korslet?
+- Mengapa kabel kelistrikan putus atau korslet terjadi?
+JAWABAN_UTAMA:
+Kabel putus atau korslet dapat menyebabkan lampu mati, starter gagal, hingga kendaraan terbakar. Pemeriksaan dilakukan menggunakan multitester untuk melacak jalur arus.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan multitester untuk melacak jalur arus.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
+
+---
+ID: troubleshooting_detail_050
+JENIS: Umum
+TOPIK: kelistrikan, sensor ecu
+PERTANYAAN_UTAMA: Kenapa masalah indikator check engine menyala bisa terjadi pada kendaraan?
+PERTANYAAN_TERKAIT:
+- Apa penyebab indikator check engine menyala?
+- Kenapa indikator check engine menyala?
+- Mengapa indikator check engine menyala terjadi?
+JAWABAN_UTAMA:
+Lampu check engine menandakan ECU mendeteksi masalah pada sensor atau sistem mesin. Pemeriksaan dilakukan menggunakan scanner OBD2 untuk membaca kode error dan menentukan sumber kerusakan.
+PEMERIKSAAN_AWAL:
+- Pemeriksaan dilakukan menggunakan scanner OBD2 untuk membaca kode error dan menentukan sumber kerusakan.
+CATATAN_RAG:
+Gunakan blok ini untuk menjelaskan penyebab, gejala, dan arah pemeriksaan awal secara lebih rinci.
