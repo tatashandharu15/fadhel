@@ -1,12 +1,14 @@
 import csv
 import json
 import re
+from functools import lru_cache
 from pathlib import Path
 from statistics import mean
 
 import requests
 from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
 from rouge_score import rouge_scorer
+from sentence_transformers import SentenceTransformer, util
 
 
 API_URL = "http://localhost:8000/v1/chat/completions"
@@ -104,6 +106,11 @@ def _extract_latency_ms(data: dict) -> float:
     return float(data.get("latency_ms", 0.0) or 0.0)
 
 
+@lru_cache(maxsize=1)
+def _get_semantic_similarity_model() -> SentenceTransformer:
+    return SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+
+
 def _tokenize(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+(?:[.,][0-9]+)?", text.lower())
 
@@ -151,7 +158,17 @@ def _contains_expected_key_facts(expected_keywords: set[str], generated_keywords
     return coverage >= KEY_FACT_COVERAGE_THRESHOLD
 
 
-def _calculate_semantic_metrics(case: dict, answer: str, rouge_l: float) -> dict:
+def _calculate_semantic_similarity(reference: str, answer: str) -> float:
+    if not reference.strip() or not answer.strip():
+        return 0.0
+
+    model = _get_semantic_similarity_model()
+    embeddings = model.encode([reference, answer], convert_to_tensor=True)
+    similarity = util.cos_sim(embeddings[0], embeddings[1]).item()
+    return _clamp(similarity)
+
+
+def _calculate_semantic_metrics(case: dict, answer: str, rouge_l: float, semantic_similarity: float) -> dict:
     expected_keywords = _get_expected_keywords(case)
     generated_keywords = _extract_keywords(answer)
 
@@ -160,7 +177,7 @@ def _calculate_semantic_metrics(case: dict, answer: str, rouge_l: float) -> dict
     recall = _safe_ratio(tp, tp + fn)
     f1_score = _safe_ratio(2 * precision * recall, precision + recall) if (precision + recall) > 0 else 0.0
 
-    similarity = max(rouge_l, recall)
+    similarity = max(semantic_similarity, rouge_l, recall)
     is_correct = similarity >= SIMILARITY_THRESHOLD or _contains_expected_key_facts(expected_keywords, generated_keywords)
     accuracy = 1.0 if is_correct else 0.0
 
@@ -188,6 +205,7 @@ def _write_csv(rows: list[dict]) -> None:
         "query",
         "bleu",
         "rougeL",
+        "semantic_similarity",
         "accuracy",
         "precision",
         "recall",
@@ -220,6 +238,7 @@ def evaluate() -> dict:
             "response": "",
             "bleu": 0.0,
             "rougeL": 0.0,
+            "semantic_similarity": 0.0,
             "accuracy": 0.0,
             "precision": 0.0,
             "recall": 0.0,
@@ -244,12 +263,14 @@ def evaluate() -> dict:
             ans_tokens = answer.split() if answer else []
             bleu = sentence_bleu([ref_tokens], ans_tokens, smoothing_function=smoothie) if ans_tokens else 0.0
             rouge_l = rouge.score(case["reference"], answer)["rougeL"].fmeasure if answer else 0.0
-            semantic_metrics = _calculate_semantic_metrics(case, answer, rouge_l)
+            semantic_similarity = _calculate_semantic_similarity(case["reference"], answer)
+            semantic_metrics = _calculate_semantic_metrics(case, answer, rouge_l, semantic_similarity)
             confidence_score = _calculate_confidence_score(retrieval_score, rouge_l, bleu)
 
             row["response"] = answer
             row["bleu"] = float(bleu)
             row["rougeL"] = float(rouge_l)
+            row["semantic_similarity"] = float(semantic_similarity)
             row["accuracy"] = semantic_metrics["accuracy"]
             row["precision"] = semantic_metrics["precision"]
             row["recall"] = semantic_metrics["recall"]
@@ -270,6 +291,7 @@ def evaluate() -> dict:
     summary = {
         "avg_bleu": float(mean([r["bleu"] for r in success])) if success else 0.0,
         "avg_rougeL": float(mean([r["rougeL"] for r in success])) if success else 0.0,
+        "avg_semantic_similarity": float(mean([r["semantic_similarity"] for r in success])) if success else 0.0,
         "avg_accuracy": float(mean([r["accuracy"] for r in success])) if success else 0.0,
         "avg_precision": float(mean([r["precision"] for r in success])) if success else 0.0,
         "avg_recall": float(mean([r["recall"] for r in success])) if success else 0.0,
