@@ -258,6 +258,42 @@ def _calculate_semantic_similarity(reference: str, answer: str) -> float:
         return _clamp(_fallback_semantic_similarity(reference, answer))
 
 
+def _join_source_contents(sources: list[dict]) -> str:
+    parts = []
+    for source in sources or []:
+        if isinstance(source, dict):
+            content = str(source.get("content", "")).strip()
+            if content:
+                parts.append(content)
+    return "\n".join(parts)
+
+
+def _calculate_answer_relevancy(query: str, answer: str) -> float:
+    return _calculate_semantic_similarity(query, answer)
+
+
+def _calculate_faithfulness(answer: str, sources: list[dict]) -> float:
+    source_text = _join_source_contents(sources)
+    if not answer.strip() or not source_text.strip():
+        return 0.0
+
+    source_similarity = _calculate_semantic_similarity(source_text, answer)
+    answer_keywords = _extract_keywords(answer)
+    source_keywords = _extract_keywords(source_text)
+    support_ratio = _safe_ratio(len(answer_keywords & source_keywords), len(answer_keywords)) if answer_keywords else 0.0
+    return _clamp((0.6 * source_similarity) + (0.4 * support_ratio))
+
+
+def _calculate_answer_correctness(semantic_similarity: float, precision: float, recall: float, f1_score: float) -> float:
+    correctness = (
+        (0.5 * semantic_similarity)
+        + (0.2 * precision)
+        + (0.1 * recall)
+        + (0.2 * f1_score)
+    )
+    return _clamp(correctness)
+
+
 def _calculate_semantic_metrics(case: dict, answer: str, rouge_l: float, semantic_similarity: float) -> dict:
     expected_keywords = _get_expected_keywords(case)
     generated_keywords = _extract_keywords(answer)
@@ -293,9 +329,13 @@ def _write_csv(rows: list[dict]) -> None:
     CSV_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "query",
+        "response",
         "bleu",
         "rougeL",
         "semantic_similarity",
+        "faithfulness",
+        "answer_relevancy",
+        "answer_correctness",
         "accuracy",
         "precision",
         "recall",
@@ -309,6 +349,51 @@ def _write_csv(rows: list[dict]) -> None:
         writer.writeheader()
         for row in rows:
             writer.writerow({name: row.get(name, "") for name in fieldnames})
+
+
+def _order_detail_row(row: dict) -> dict:
+    return {
+        "query": row.get("query", ""),
+        "reference": row.get("reference", ""),
+        "response": row.get("response", ""),
+        "bleu": row.get("bleu", 0.0),
+        "rougeL": row.get("rougeL", 0.0),
+        "semantic_similarity": row.get("semantic_similarity", 0.0),
+        "faithfulness": row.get("faithfulness", 0.0),
+        "answer_relevancy": row.get("answer_relevancy", 0.0),
+        "answer_correctness": row.get("answer_correctness", 0.0),
+        "accuracy": row.get("accuracy", 0.0),
+        "precision": row.get("precision", 0.0),
+        "recall": row.get("recall", 0.0),
+        "f1_score": row.get("f1_score", 0.0),
+        "confidence_score": row.get("confidence_score", 0.0),
+        "latency_ms": row.get("latency_ms", 0.0),
+        "retrieval_score": row.get("retrieval_score", 0.0),
+        "expected_keywords": row.get("expected_keywords", []),
+        "generated_keywords": row.get("generated_keywords", []),
+        "tp": row.get("tp", 0),
+        "fp": row.get("fp", 0),
+        "fn": row.get("fn", 0),
+        "error": row.get("error"),
+    }
+
+
+def _order_summary(summary: dict) -> dict:
+    return {
+        "avg_bleu": summary.get("avg_bleu", 0.0),
+        "avg_rougeL": summary.get("avg_rougeL", 0.0),
+        "avg_semantic_similarity": summary.get("avg_semantic_similarity", 0.0),
+        "avg_faithfulness": summary.get("avg_faithfulness", 0.0),
+        "avg_answer_relevancy": summary.get("avg_answer_relevancy", 0.0),
+        "avg_answer_correctness": summary.get("avg_answer_correctness", 0.0),
+        "avg_accuracy": summary.get("avg_accuracy", 0.0),
+        "avg_precision": summary.get("avg_precision", 0.0),
+        "avg_recall": summary.get("avg_recall", 0.0),
+        "avg_f1_score": summary.get("avg_f1_score", 0.0),
+        "avg_confidence_score": summary.get("avg_confidence_score", 0.0),
+        "avg_latency_ms": summary.get("avg_latency_ms", 0.0),
+        "avg_retrieval_score": summary.get("avg_retrieval_score", 0.0),
+    }
 
 
 def evaluate() -> dict:
@@ -329,6 +414,9 @@ def evaluate() -> dict:
             "bleu": 0.0,
             "rougeL": 0.0,
             "semantic_similarity": 0.0,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.0,
+            "answer_correctness": 0.0,
             "accuracy": 0.0,
             "precision": 0.0,
             "recall": 0.0,
@@ -355,12 +443,23 @@ def evaluate() -> dict:
             rouge_l = rouge.score(case["reference"], answer)["rougeL"].fmeasure if answer else 0.0
             semantic_similarity = _calculate_semantic_similarity(case["reference"], answer)
             semantic_metrics = _calculate_semantic_metrics(case, answer, rouge_l, semantic_similarity)
+            faithfulness = _calculate_faithfulness(answer, sources)
+            answer_relevancy = _calculate_answer_relevancy(case["query"], answer)
+            answer_correctness = _calculate_answer_correctness(
+                semantic_similarity,
+                semantic_metrics["precision"],
+                semantic_metrics["recall"],
+                semantic_metrics["f1_score"],
+            )
             confidence_score = _calculate_confidence_score(retrieval_score, rouge_l, bleu)
 
             row["response"] = answer
             row["bleu"] = float(bleu)
             row["rougeL"] = float(rouge_l)
             row["semantic_similarity"] = float(semantic_similarity)
+            row["faithfulness"] = float(faithfulness)
+            row["answer_relevancy"] = float(answer_relevancy)
+            row["answer_correctness"] = float(answer_correctness)
             row["accuracy"] = semantic_metrics["accuracy"]
             row["precision"] = semantic_metrics["precision"]
             row["recall"] = semantic_metrics["recall"]
@@ -382,6 +481,9 @@ def evaluate() -> dict:
         "avg_bleu": float(mean([r["bleu"] for r in success])) if success else 0.0,
         "avg_rougeL": float(mean([r["rougeL"] for r in success])) if success else 0.0,
         "avg_semantic_similarity": float(mean([r["semantic_similarity"] for r in success])) if success else 0.0,
+        "avg_faithfulness": float(mean([r["faithfulness"] for r in success])) if success else 0.0,
+        "avg_answer_relevancy": float(mean([r["answer_relevancy"] for r in success])) if success else 0.0,
+        "avg_answer_correctness": float(mean([r["answer_correctness"] for r in success])) if success else 0.0,
         "avg_accuracy": float(mean([r["accuracy"] for r in success])) if success else 0.0,
         "avg_precision": float(mean([r["precision"] for r in success])) if success else 0.0,
         "avg_recall": float(mean([r["recall"] for r in success])) if success else 0.0,
@@ -390,18 +492,20 @@ def evaluate() -> dict:
         "avg_latency_ms": float(mean([r["latency_ms"] for r in success])) if success else 0.0,
         "avg_retrieval_score": float(mean([r["retrieval_score"] for r in success])) if success else 0.0,
     }
-    result = {
-        **summary,
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ordered_rows = [_order_detail_row(row) for row in rows]
+    ordered_summary = _order_summary(summary)
+    ordered_result = {
+        **ordered_summary,
         "total_queries": len(rows),
         "successful_queries": len(success),
         "failed_queries": len(rows) - len(success),
-        "summary": summary,
-        "details": rows,
+        "summary": ordered_summary,
+        "details": ordered_rows,
     }
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(json.dumps(result, indent=2, ensure_ascii=False))
-    _write_csv(rows)
-    return result
+    OUTPUT_PATH.write_text(json.dumps(ordered_result, indent=2, ensure_ascii=False))
+    _write_csv(ordered_rows)
+    return ordered_result
 
 
 if __name__ == "__main__":
