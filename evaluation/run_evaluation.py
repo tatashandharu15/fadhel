@@ -7,8 +7,57 @@ from statistics import mean
 
 import requests
 from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
-from rouge_score import rouge_scorer
 from sentence_transformers import SentenceTransformer, util
+
+try:
+    from rouge_score import rouge_scorer
+except ImportError:
+    class _SimpleRougeScore:
+        def __init__(self, fmeasure: float):
+            self.fmeasure = fmeasure
+
+
+    class _FallbackRougeScorer:
+        def __init__(self, metrics: list[str], use_stemmer: bool = True):
+            self.metrics = metrics
+            self.use_stemmer = use_stemmer
+
+        @staticmethod
+        def _tokenize(text: str) -> list[str]:
+            return re.findall(r"\w+(?:[.,]\w+)?", text.lower())
+
+        @staticmethod
+        def _lcs_length(a: list[str], b: list[str]) -> int:
+            if not a or not b:
+                return 0
+            dp = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
+            for i in range(1, len(a) + 1):
+                for j in range(1, len(b) + 1):
+                    if a[i - 1] == b[j - 1]:
+                        dp[i][j] = dp[i - 1][j - 1] + 1
+                    else:
+                        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+            return dp[-1][-1]
+
+        def score(self, target: str, prediction: str) -> dict:
+            target_tokens = self._tokenize(target)
+            prediction_tokens = self._tokenize(prediction)
+            lcs = self._lcs_length(target_tokens, prediction_tokens)
+            precision = lcs / len(prediction_tokens) if prediction_tokens else 0.0
+            recall = lcs / len(target_tokens) if target_tokens else 0.0
+            fmeasure = (
+                (2 * precision * recall) / (precision + recall)
+                if (precision + recall) > 0
+                else 0.0
+            )
+            return {"rougeL": _SimpleRougeScore(fmeasure)}
+
+
+    class _FallbackRougeModule:
+        RougeScorer = _FallbackRougeScorer
+
+
+    rouge_scorer = _FallbackRougeModule()
 
 
 API_URL = "http://localhost:8000/v1/chat/completions"
