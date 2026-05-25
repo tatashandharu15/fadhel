@@ -1,13 +1,35 @@
 import csv
 import json
+import os
 import re
 from functools import lru_cache
 from pathlib import Path
 from statistics import mean
 
 import requests
-from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
-from sentence_transformers import SentenceTransformer, util
+try:
+    from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
+except ImportError:
+    class SmoothingFunction:  # type: ignore[override]
+        def __init__(self):
+            self.method1 = None
+
+
+    def sentence_bleu(references, hypothesis, smoothing_function=None):  # type: ignore[override]
+        _ = smoothing_function
+        ref_tokens = set(references[0]) if references else set()
+        hyp_tokens = set(hypothesis or [])
+        if not ref_tokens or not hyp_tokens:
+            return 0.0
+        overlap = len(ref_tokens & hyp_tokens)
+        return overlap / max(len(hyp_tokens), 1)
+
+
+try:
+    from sentence_transformers import SentenceTransformer, util
+except ImportError:
+    SentenceTransformer = None  # type: ignore[assignment]
+    util = None  # type: ignore[assignment]
 
 try:
     from rouge_score import rouge_scorer
@@ -60,9 +82,10 @@ except ImportError:
     rouge_scorer = _FallbackRougeModule()
 
 
-API_URL = "http://localhost:8000/v1/chat/completions"
-OUTPUT_PATH = Path("evaluation/results.json")
-CSV_OUTPUT_PATH = Path("evaluation/results.csv")
+BASE_DIR = Path(__file__).resolve().parent
+API_URL = os.getenv("EVALUATION_API_URL", "http://localhost:8000/v1/chat/completions")
+OUTPUT_PATH = BASE_DIR / "results.json"
+CSV_OUTPUT_PATH = BASE_DIR / "results.csv"
 SIMILARITY_THRESHOLD = 0.35
 KEY_FACT_COVERAGE_THRESHOLD = 0.6
 
@@ -156,7 +179,9 @@ def _extract_latency_ms(data: dict) -> float:
 
 
 @lru_cache(maxsize=1)
-def _get_semantic_similarity_model() -> SentenceTransformer:
+def _get_semantic_similarity_model():
+    if SentenceTransformer is None:
+        return None
     return SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
 
@@ -207,14 +232,30 @@ def _contains_expected_key_facts(expected_keywords: set[str], generated_keywords
     return coverage >= KEY_FACT_COVERAGE_THRESHOLD
 
 
+def _fallback_semantic_similarity(reference: str, answer: str) -> float:
+    reference_keywords = _extract_keywords(reference)
+    answer_keywords = _extract_keywords(answer)
+    if not reference_keywords or not answer_keywords:
+        return 0.0
+    overlap = len(reference_keywords & answer_keywords)
+    union = len(reference_keywords | answer_keywords)
+    return _safe_ratio(overlap, union)
+
+
 def _calculate_semantic_similarity(reference: str, answer: str) -> float:
     if not reference.strip() or not answer.strip():
         return 0.0
 
     model = _get_semantic_similarity_model()
-    embeddings = model.encode([reference, answer], convert_to_tensor=True)
-    similarity = util.cos_sim(embeddings[0], embeddings[1]).item()
-    return _clamp(similarity)
+    if model is None or util is None:
+        return _clamp(_fallback_semantic_similarity(reference, answer))
+
+    try:
+        embeddings = model.encode([reference, answer], convert_to_tensor=True)
+        similarity = util.cos_sim(embeddings[0], embeddings[1]).item()
+        return _clamp(similarity)
+    except Exception:
+        return _clamp(_fallback_semantic_similarity(reference, answer))
 
 
 def _calculate_semantic_metrics(case: dict, answer: str, rouge_l: float, semantic_similarity: float) -> dict:
