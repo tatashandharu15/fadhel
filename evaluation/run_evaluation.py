@@ -2,6 +2,7 @@ import csv
 import json
 import os
 import re
+from datetime import datetime
 from functools import lru_cache
 from pathlib import Path
 from statistics import mean
@@ -152,6 +153,256 @@ EVAL_CASES = [
         "query": "Apa itu mobil listrik?",
         "reference": "Mobil listrik adalah kendaraan yang digerakkan motor listrik dengan sumber energi utama dari baterai yang dapat diisi ulang.",
         "expected_keywords": ["mobil", "listrik", "kendaraan", "motor", "baterai"],
+    },
+    {
+        "query": "Kenapa mobil sulit dihidupkan saat pagi hari?",
+        "reference": "Mobil sulit dihidupkan saat pagi hari biasanya disebabkan oleh aki yang lemah, sistem pengapian yang kurang optimal, atau suplai bahan bakar yang tidak lancar.",
+        "expected_keywords": ["mobil", "sulit", "dihidupkan", "pagi", "aki", "pengapian", "bahan", "bakar"],
+    },
+    {
+        "query": "Apa penyebab mobil terasa tersendat saat akselerasi?",
+        "reference": "Mobil terasa tersendat saat akselerasi biasanya disebabkan oleh gangguan pada suplai bahan bakar, sistem pengapian, injektor, atau throttle body yang kotor.",
+        "expected_keywords": ["mobil", "tersendat", "akselerasi", "bahan", "bakar", "pengapian", "injektor", "throttle"],
+    },
+    {
+        "query": "Kenapa knalpot mobil mengeluarkan asap hitam?",
+        "reference": "Asap hitam pada knalpot mobil biasanya menandakan campuran bahan bakar terlalu kaya sehingga pembakaran tidak sempurna.",
+        "expected_keywords": ["knalpot", "mobil", "asap", "hitam", "bahan", "bakar", "pembakaran"],
+    },
+    {
+        "query": "Apa penyebab mesin mobil cepat panas saat macet?",
+        "reference": "Mesin mobil cepat panas saat macet biasanya disebabkan oleh sistem pendingin yang kurang optimal, seperti radiator kotor, kipas pendingin bermasalah, atau coolant berkurang.",
+        "expected_keywords": ["mesin", "mobil", "panas", "macet", "pendingin", "radiator", "kipas", "coolant"],
+    },
+    {
+        "query": "Kenapa setir mobil terasa berat saat diputar?",
+        "reference": "Setir mobil terasa berat saat diputar biasanya disebabkan oleh gangguan pada sistem power steering, tekanan ban rendah, atau komponen kemudi yang aus.",
+        "expected_keywords": ["setir", "mobil", "berat", "power", "steering", "ban", "kemudi"],
+    },
+    {
+        "query": "Apa fungsi radiator pada mobil?",
+        "reference": "Radiator berfungsi membuang panas dari cairan pendingin agar suhu mesin mobil tetap stabil saat bekerja.",
+        "expected_keywords": ["radiator", "mobil", "panas", "pendingin", "suhu", "mesin"],
+    },
+    {
+        "query": "Kenapa rem mobil berbunyi saat digunakan?",
+        "reference": "Rem mobil berbunyi saat digunakan biasanya disebabkan oleh kampas rem yang menipis, cakram kotor, atau permukaan rem yang tidak rata.",
+        "expected_keywords": ["rem", "mobil", "berbunyi", "kampas", "cakram", "kotor"],
+    },
+    {
+        "query": "Apa penyebab aki mobil cepat soak?",
+        "reference": "Aki mobil cepat soak biasanya disebabkan oleh sistem pengisian yang tidak normal, usia aki yang menurun, atau adanya arus bocor pada kelistrikan.",
+        "expected_keywords": ["aki", "mobil", "soak", "pengisian", "arus", "bocor", "kelistrikan"],
+    },
+    {
+        "query": "Apa fungsi oli mesin pada mobil?",
+        "reference": "Oli mesin berfungsi melumasi komponen internal mesin, mengurangi gesekan, membantu pendinginan, dan menjaga kebersihan mesin.",
+        "expected_keywords": ["oli", "mesin", "mobil", "melumasi", "gesekan", "pendinginan"],
+    },
+    {
+        "query": "Apa perbedaan transmisi manual dan otomatis pada mobil?",
+        "reference": "Transmisi manual membutuhkan perpindahan gigi secara langsung oleh pengemudi, sedangkan transmisi otomatis berpindah gigi secara otomatis sesuai kondisi berkendara.",
+        "expected_keywords": ["transmisi", "manual", "otomatis", "gigi", "pengemudi"],
+    },
+    {
+        "query": "Apa fungsi turbo pada mesin mobil?",
+        "reference": "Turbo berfungsi meningkatkan jumlah udara yang masuk ke mesin sehingga tenaga dan efisiensi mesin dapat meningkat.",
+        "expected_keywords": ["turbo", "mesin", "mobil", "udara", "tenaga", "efisiensi"],
+    },
+    {
+        "query": "Kenapa konsumsi bensin mobil terasa lebih boros dari biasanya?",
+        "reference": "Konsumsi bensin mobil yang boros biasanya disebabkan oleh pembakaran yang tidak efisien, filter udara kotor, injektor bermasalah, atau tekanan ban rendah.",
+        "expected_keywords": ["bensin", "mobil", "boros", "pembakaran", "filter", "udara", "injektor", "ban"],
+    },
+    {
+        "query": "Apa penyebab mobil bergetar saat idle?",
+        "reference": "Mobil bergetar saat idle biasanya disebabkan oleh pembakaran yang tidak stabil, busi kotor, injektor kurang optimal, atau engine mounting melemah.",
+        "expected_keywords": ["mobil", "bergetar", "idle", "busi", "injektor", "engine", "mounting"],
+    },
+    {
+        "query": "Apa arti lampu check engine yang menyala?",
+        "reference": "Lampu check engine menandakan ada gangguan yang terdeteksi pada sistem mesin, sensor, atau sistem emisi kendaraan.",
+        "expected_keywords": ["check", "engine", "gangguan", "mesin", "sensor", "emisi"],
+    },
+    {
+        "query": "Apa perbedaan mobil hybrid dan mobil listrik?",
+        "reference": "Mobil hybrid menggabungkan mesin pembakaran dan motor listrik, sedangkan mobil listrik hanya menggunakan motor listrik dengan sumber energi dari baterai.",
+        "expected_keywords": ["mobil", "hybrid", "listrik", "mesin", "motor", "baterai"],
+    },
+    {
+        "query": "Apa fungsi catalytic converter pada mobil?",
+        "reference": "Catalytic converter berfungsi mengurangi kandungan gas berbahaya pada emisi kendaraan sebelum keluar melalui knalpot.",
+        "expected_keywords": ["catalytic", "converter", "mobil", "emisi", "gas", "knalpot"],
+    },
+    {
+        "query": "Kenapa AC mobil tidak dingin?",
+        "reference": "AC mobil tidak dingin dapat disebabkan oleh refrigeran berkurang, kompresor melemah, evaporator kotor, atau kipas kondensor bermasalah.",
+        "expected_keywords": ["ac", "mobil", "dingin", "refrigeran", "kompresor", "evaporator", "kondensor"],
+    },
+    {
+        "query": "Apa penyebab mobil limbung saat menikung?",
+        "reference": "Mobil limbung saat menikung biasanya disebabkan oleh suspensi melemah, tekanan ban tidak sesuai, atau kondisi kaki-kaki yang kurang baik.",
+        "expected_keywords": ["mobil", "limbung", "menikung", "suspensi", "ban", "kaki"],
+    },
+    {
+        "query": "Kenapa mobil sulit berakselerasi saat menanjak?",
+        "reference": "Mobil sulit berakselerasi saat menanjak biasanya disebabkan oleh tenaga mesin menurun, pembakaran tidak optimal, atau transmisi yang tidak bekerja maksimal.",
+        "expected_keywords": ["mobil", "akselerasi", "menanjak", "tenaga", "mesin", "pembakaran", "transmisi"],
+    },
+    {
+        "query": "Apa fungsi power steering pada mobil?",
+        "reference": "Power steering berfungsi meringankan putaran setir agar pengemudi lebih mudah mengendalikan mobil.",
+        "expected_keywords": ["power", "steering", "mobil", "setir", "mengendalikan"],
+    },
+    {
+        "query": "Kenapa rem motor saya berbunyi berdecit saat digunakan terutama di kecepatan rendah?",
+        "reference": "Rem motor yang berbunyi berdecit di kecepatan rendah biasanya disebabkan oleh kampas rem aus, permukaan rem kotor, atau material kampas yang mengeras.",
+        "expected_keywords": ["rem", "motor", "berdecit", "kampas", "kotor", "kecepatan", "rendah"],
+    },
+    {
+        "query": "Motor terasa bergetar saat langsam atau idle apa penyebabnya?",
+        "reference": "Motor bergetar saat langsam atau idle biasanya disebabkan oleh pembakaran yang tidak stabil, busi lemah, setelan idle tidak tepat, atau dudukan mesin bermasalah.",
+        "expected_keywords": ["motor", "bergetar", "langsam", "idle", "busi", "pembakaran"],
+    },
+    {
+        "query": "Kenapa motor sulit dihidupkan saat pagi hari?",
+        "reference": "Motor sulit dihidupkan saat pagi hari biasanya disebabkan oleh aki lemah, busi kurang baik, atau suplai bahan bakar yang tidak lancar.",
+        "expected_keywords": ["motor", "sulit", "dihidupkan", "pagi", "aki", "busi", "bahan", "bakar"],
+    },
+    {
+        "query": "Motor tersendat saat digas kenapa hal ini bisa terjadi?",
+        "reference": "Motor tersendat saat digas biasanya disebabkan oleh karburator atau injektor bermasalah, suplai bahan bakar terganggu, atau busi lemah.",
+        "expected_keywords": ["motor", "tersendat", "digas", "karburator", "injektor", "bahan", "bakar", "busi"],
+    },
+    {
+        "query": "Kenapa knalpot motor mengeluarkan asap hitam?",
+        "reference": "Asap hitam pada knalpot motor menandakan campuran bahan bakar terlalu kaya sehingga pembakaran tidak sempurna.",
+        "expected_keywords": ["knalpot", "motor", "asap", "hitam", "bahan", "bakar", "pembakaran"],
+    },
+    {
+        "query": "Motor terasa kurang bertenaga saat digunakan apa penyebabnya?",
+        "reference": "Motor kurang bertenaga biasanya disebabkan oleh filter udara kotor, busi melemah, suplai bahan bakar tidak optimal, atau kompresi mesin menurun.",
+        "expected_keywords": ["motor", "kurang", "bertenaga", "filter", "udara", "busi", "bahan", "bakar", "kompresi"],
+    },
+    {
+        "query": "Kenapa lampu motor terlihat redup saat dinyalakan?",
+        "reference": "Lampu motor yang redup biasanya menunjukkan masalah pada aki, sistem pengisian, spul, atau regulator.",
+        "expected_keywords": ["lampu", "motor", "redup", "aki", "pengisian", "spul", "regulator"],
+    },
+    {
+        "query": "Motor cepat panas saat digunakan dalam perjalanan jauh kenapa?",
+        "reference": "Motor cepat panas dalam perjalanan jauh biasanya disebabkan oleh pelumasan yang kurang optimal, kualitas oli menurun, atau sistem pendinginan tidak bekerja maksimal.",
+        "expected_keywords": ["motor", "panas", "perjalanan", "jauh", "pelumasan", "oli", "pendinginan"],
+    },
+    {
+        "query": "Kenapa suara mesin motor terdengar lebih kasar dari biasanya?",
+        "reference": "Suara mesin motor yang kasar biasanya disebabkan oleh pelumasan kurang baik, oli menurun, atau adanya keausan pada komponen internal mesin.",
+        "expected_keywords": ["suara", "mesin", "motor", "kasar", "pelumasan", "oli", "keausan"],
+    },
+    {
+        "query": "Motor terasa berat saat dikendarai apa penyebabnya?",
+        "reference": "Motor terasa berat saat dikendarai bisa disebabkan oleh tekanan ban kurang, rem seret, rantai terlalu kencang, atau sistem transmisi kurang optimal.",
+        "expected_keywords": ["motor", "berat", "dikendarai", "ban", "rem", "rantai", "transmisi"],
+    },
+    {
+        "query": "Rantai motor berbunyi kasar saat jalan kenapa?",
+        "reference": "Rantai motor berbunyi kasar biasanya disebabkan oleh kurang pelumasan, setelan rantai tidak tepat, atau rantai dan gear yang mulai aus.",
+        "expected_keywords": ["rantai", "motor", "berbunyi", "kasar", "pelumasan", "gear", "aus"],
+    },
+    {
+        "query": "Motor tidak stabil saat kecepatan tinggi apa penyebabnya?",
+        "reference": "Motor tidak stabil saat kecepatan tinggi biasanya disebabkan oleh ban tidak seimbang, velg kurang lurus, atau suspensi yang melemah.",
+        "expected_keywords": ["motor", "tidak", "stabil", "kecepatan", "tinggi", "ban", "velg", "suspensi"],
+    },
+    {
+        "query": "Motor brebet saat jalan pelan kenapa bisa begitu?",
+        "reference": "Motor brebet saat jalan pelan umumnya disebabkan oleh suplai bahan bakar yang tidak stabil, karburator kotor, atau setelan idle yang kurang tepat.",
+        "expected_keywords": ["motor", "brebet", "jalan", "pelan", "bahan", "bakar", "karburator", "idle"],
+    },
+    {
+        "query": "Motor tiba tiba mati saat dikendarai apa penyebabnya?",
+        "reference": "Motor yang tiba-tiba mati saat dikendarai bisa disebabkan oleh gangguan pada sistem bahan bakar, pengapian, aki, atau kelistrikan.",
+        "expected_keywords": ["motor", "mati", "dikendarai", "bahan", "bakar", "pengapian", "aki", "kelistrikan"],
+    },
+    {
+        "query": "Starter elektrik motor tidak berfungsi kenapa?",
+        "reference": "Starter elektrik motor yang tidak berfungsi biasanya disebabkan oleh aki lemah, relay starter bermasalah, atau dinamo starter yang tidak bekerja optimal.",
+        "expected_keywords": ["starter", "elektrik", "motor", "aki", "relay", "dinamo"],
+    },
+    {
+        "query": "Kenapa motor sulit dinyalakan saat kondisi panas?",
+        "reference": "Motor sulit dinyalakan saat kondisi panas biasanya disebabkan oleh sistem pengapian atau bahan bakar yang tidak bekerja optimal saat suhu mesin tinggi.",
+        "expected_keywords": ["motor", "sulit", "dinyalakan", "panas", "pengapian", "bahan", "bakar"],
+    },
+    {
+        "query": "Konsumsi bensin motor terasa lebih boros dari biasanya kenapa?",
+        "reference": "Konsumsi bensin motor yang boros biasanya disebabkan oleh pembakaran tidak efisien, filter udara kotor, injektor bermasalah, atau gaya berkendara yang agresif.",
+        "expected_keywords": ["bensin", "motor", "boros", "pembakaran", "filter", "udara", "injektor"],
+    },
+    {
+        "query": "Tercium bau bensin dari motor apa penyebabnya?",
+        "reference": "Bau bensin dari motor biasanya menandakan adanya kebocoran pada sistem bahan bakar, selang bensin, atau campuran bahan bakar yang terlalu kaya.",
+        "expected_keywords": ["bau", "bensin", "motor", "kebocoran", "selang", "bahan", "bakar"],
+    },
+    {
+        "query": "Rem motor terasa kurang pakem saat digunakan kenapa?",
+        "reference": "Rem motor yang kurang pakem biasanya disebabkan oleh kampas rem aus, minyak rem berkurang, atau permukaan rem yang kotor.",
+        "expected_keywords": ["rem", "motor", "kurang", "pakem", "kampas", "minyak", "kotor"],
+    },
+    {
+        "query": "Motor terasa limbung saat menikung apa penyebabnya?",
+        "reference": "Motor terasa limbung saat menikung biasanya disebabkan oleh suspensi yang melemah, tekanan ban tidak sesuai, atau kondisi ban yang sudah kurang baik.",
+        "expected_keywords": ["motor", "limbung", "menikung", "suspensi", "ban"],
+    },
+    {
+        "query": "Apa perbedaan rem cakram dan rem tromol pada kendaraan?",
+        "reference": "Rem cakram menggunakan piringan dan kaliper sehingga respons pengereman biasanya lebih baik, sedangkan rem tromol memakai mekanisme tertutup yang umumnya lebih sederhana dan ekonomis.",
+        "expected_keywords": ["rem", "cakram", "tromol", "piringan", "kaliper", "pengereman"],
+    },
+    {
+        "query": "Apa fungsi aki pada mobil dan motor?",
+        "reference": "Aki berfungsi menyimpan dan menyuplai energi listrik untuk starter, lampu, klakson, dan sistem kelistrikan kendaraan.",
+        "expected_keywords": ["aki", "mobil", "motor", "energi", "listrik", "starter", "lampu", "kelistrikan"],
+    },
+    {
+        "query": "Kenapa kendaraan terasa bergetar saat kecepatan tinggi?",
+        "reference": "Kendaraan yang bergetar saat kecepatan tinggi biasanya disebabkan oleh ban yang tidak seimbang, velg kurang lurus, atau suspensi dan bearing yang bermasalah.",
+        "expected_keywords": ["kendaraan", "bergetar", "kecepatan", "tinggi", "ban", "velg", "suspensi", "bearing"],
+    },
+    {
+        "query": "Apa penyebab suara mesin menjadi kasar setelah dipakai lama?",
+        "reference": "Suara mesin yang menjadi kasar setelah dipakai lama biasanya disebabkan oleh kualitas oli menurun, pelumasan kurang optimal, atau keausan komponen mesin.",
+        "expected_keywords": ["suara", "mesin", "kasar", "oli", "pelumasan", "keausan"],
+    },
+    {
+        "query": "Bagaimana cara kerja sistem injeksi bahan bakar?",
+        "reference": "Sistem injeksi bahan bakar bekerja dengan mengatur jumlah dan waktu penyemprotan bahan bakar secara presisi berdasarkan data sensor dan kendali ECU.",
+        "expected_keywords": ["injeksi", "bahan", "bakar", "penyemprotan", "sensor", "ecu"],
+    },
+    {
+        "query": "Apa fungsi suspensi pada mobil dan motor?",
+        "reference": "Suspensi berfungsi meredam guncangan dari permukaan jalan agar kendaraan tetap nyaman dan stabil saat digunakan.",
+        "expected_keywords": ["suspensi", "mobil", "motor", "guncangan", "nyaman", "stabil"],
+    },
+    {
+        "query": "Kenapa kendaraan terasa kurang responsif saat gas ditarik?",
+        "reference": "Kendaraan yang kurang responsif saat gas ditarik biasanya disebabkan oleh suplai bahan bakar yang kurang lancar, throttle body kotor, atau sistem pengapian yang tidak optimal.",
+        "expected_keywords": ["kendaraan", "kurang", "responsif", "gas", "bahan", "bakar", "throttle", "pengapian"],
+    },
+    {
+        "query": "Apa penyebab kendaraan cepat kehabisan bahan bakar?",
+        "reference": "Kendaraan cepat kehabisan bahan bakar biasanya disebabkan oleh pembakaran yang tidak efisien, gaya berkendara agresif, atau masalah pada sistem bahan bakar dan tekanan ban.",
+        "expected_keywords": ["kendaraan", "kehabisan", "bahan", "bakar", "pembakaran", "ban"],
+    },
+    {
+        "query": "Apa fungsi filter udara pada mesin kendaraan?",
+        "reference": "Filter udara berfungsi menyaring kotoran dari udara sebelum masuk ke mesin agar proses pembakaran tetap bersih dan efisien.",
+        "expected_keywords": ["filter", "udara", "mesin", "kendaraan", "kotoran", "pembakaran"],
+    },
+    {
+        "query": "Kenapa kendaraan sulit dinyalakan setelah terkena hujan?",
+        "reference": "Kendaraan yang sulit dinyalakan setelah terkena hujan biasanya disebabkan oleh kelembapan pada sistem pengapian atau gangguan pada komponen kelistrikan.",
+        "expected_keywords": ["kendaraan", "sulit", "dinyalakan", "hujan", "kelembapan", "pengapian", "kelistrikan"],
     },
 ]
 
@@ -326,7 +577,8 @@ def _calculate_confidence_score(retrieval_score: float, rouge_l: float, bleu: fl
 
 
 def _write_csv(rows: list[dict]) -> None:
-    CSV_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    csv_path = _resolve_writable_output_path(CSV_OUTPUT_PATH)
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "query",
         "response",
@@ -344,11 +596,22 @@ def _write_csv(rows: list[dict]) -> None:
         "latency_ms",
         "retrieval_score",
     ]
-    with CSV_OUTPUT_PATH.open("w", newline="", encoding="utf-8") as csvfile:
+    with csv_path.open("w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in rows:
             writer.writerow({name: row.get(name, "") for name in fieldnames})
+
+
+def _resolve_writable_output_path(path: Path) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with path.open("a", encoding="utf-8"):
+            pass
+        return path
+    except PermissionError:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        return path.with_name(f"{path.stem}_{timestamp}{path.suffix}")
 
 
 def _order_detail_row(row: dict) -> dict:
@@ -492,7 +755,8 @@ def evaluate() -> dict:
         "avg_latency_ms": float(mean([r["latency_ms"] for r in success])) if success else 0.0,
         "avg_retrieval_score": float(mean([r["retrieval_score"] for r in success])) if success else 0.0,
     }
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    json_output_path = _resolve_writable_output_path(OUTPUT_PATH)
+    json_output_path.parent.mkdir(parents=True, exist_ok=True)
     ordered_rows = [_order_detail_row(row) for row in rows]
     ordered_summary = _order_summary(summary)
     ordered_result = {
@@ -503,7 +767,11 @@ def evaluate() -> dict:
         "summary": ordered_summary,
         "details": ordered_rows,
     }
-    OUTPUT_PATH.write_text(json.dumps(ordered_result, indent=2, ensure_ascii=False))
+    ordered_result["output_files"] = {
+        "json": str(json_output_path),
+        "csv": str(_resolve_writable_output_path(CSV_OUTPUT_PATH)),
+    }
+    json_output_path.write_text(json.dumps(ordered_result, indent=2, ensure_ascii=False))
     _write_csv(ordered_rows)
     return ordered_result
 
